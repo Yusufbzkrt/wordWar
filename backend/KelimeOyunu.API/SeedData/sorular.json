@@ -1,0 +1,562 @@
+[
+    {
+        "kategori": "Yapay Zeka ve Robotik",
+        "soru": "Bilim kurgu filmlerinde veya gerçek hayatta robotların yaptığı veya kullanıldığı işler nelerdir?",
+        "gecerliCevaplar": [
+            "temizlik",
+            "ameliyat",
+            "kaynak",
+            "taşıma",
+            "montaj",
+            "boyama",
+            "bomba imha",
+            "paketleme",
+            "savunma",
+            "keşif",
+            "garsonluk",
+            "rehberlik",
+            "madencilik",
+            "arama kurtarma",
+            "eğitim",
+            "eğlence",
+            "tarım"
+        ],
+        "populerCevaplar": [
+            "temizlik",
+            "ameliyat"
+        ]
+    },
+    {
+        "kategori": "Yapay Zeka ve Robotik",
+        "soru": "Yapay zeka veya bilgisayar bilimi dendiğinde insanların aklına gelen temel terimler nelerdir?",
+        "gecerliCevaplar": [
+            "robot",
+            "algoritma",
+            "veri",
+            "yazılım",
+            "kodlama",
+            "makine öğrenmesi",
+            "sohbet botu",
+            "sanal asistan",
+            "otonom",
+            "siborg",
+            "android",
+            "teknoloji",
+            "otomasyon",
+            "bulut",
+            "işlemci",
+            "yapay sinir ağı",
+            "simülasyon"
+        ],
+        "populerCevaplar": [
+            "robot",
+            "yazılım"
+        ]
+    },
+    {
+        "kategori": "Yapay Zeka ve Robotik",
+        "soru": "Robotik ve elektronik projelerinde (örneğin arduino) en çok kullanılan temel parçalar nelerdir?",
+        "gecerliCevaplar": [
+            "kablo",
+            "motor",
+            "pil",
+            "sensör",
+            "çip",
+            "direnç",
+            "led",
+            "batarya",
+            "anakart",
+            "işlemci",
+            "lehim",
+            "buton",
+            "anahtar",
+            "röle",
+            "mikrodenetleyici",
+            "transistör",
+            "ekran",
+            "kondansatör"
+        ],
+        "populerCevaplar": [
+            "kablo",
+            "pil"
+        ]
+    },
+    {
+        "kategori": "Siber Güvenlik",
+        "soru": "İnternette veya bilgisayarda güvenliğimizi tehdit eden unsurlar ve siber saldırı terimleri nelerdir?",
+        "gecerliCevaplar": [
+            "virüs",
+            "hacker",
+            "truva atı",
+            "solucan",
+            "fidye yazılımı",
+            "casus yazılım",
+            "spam",
+            "oltalama",
+            "ddos",
+            "botnet",
+            "sızıntı",
+            "dolandırıcılık",
+            "şifre kırma",
+            "siber zorbalık",
+            "kimlik hırsızlığı",
+            "güvenlik açığı",
+            "arka kapı"
+        ],
+        "populerCevaplar": [
+            "virüs",
+            "hacker"
+        ]
+    },
+    {
+        "kategori": "Siber Güvenlik",
+        "soru": "Bilgisayarımızı ve dijital hesaplarımızı korumak için kullandığımız yöntemler ve araçlar nelerdir?",
+        "gecerliCevaplar": [
+            "şifre",
+            "antivirüs",
+            "güvenlik duvarı",
+            "vpn",
+            "parmak izi",
+            "yüz tanıma",
+            "iki adımlı doğrulama",
+            "yedekleme",
+            "güncelleme",
+            "şifreleme",
+            "pin kodu",
+            "gizli soru",
+            "captcha",
+            "proxy",
+            "ssl",
+            "biyometrik",
+            "token"
+        ],
+        "populerCevaplar": [
+            "şifre",
+            "antivirüs"
+        ]
+    },
+    {
+        "kategori": "Geleneksel Türk Yemekleri",
+        "soru": "Türkiye'de evlerde ve lokantalarda en çok tüketilen çorba çeşitleri nelerdir?",
+        "gecerliCevaplar": [
+            "mercimek",
+            "ezogelin",
+            "tarhana",
+            "yayla",
+            "işkembe",
+            "domates",
+            "tavuk suyu",
+            "kelle paça",
+            "mantar",
+            "şehriye",
+            "brokoli",
+            "sebze",
+            "yoğurt",
+            "düğün",
+            "mahluta",
+            "beyran",
+            "süzme mercimek",
+            "arabaşı"
+        ],
+        "populerCevaplar": [
+            "mercimek",
+            "ezogelin"
+        ]
+    },
+    {
+        "kategori": "Geleneksel Türk Yemekleri",
+        "soru": "Türk mutfağının en çok sevilen şerbetli veya sütlü tatlılarına örnekler verin.",
+        "gecerliCevaplar": [
+            "baklava",
+            "sütlaç",
+            "künefe",
+            "kadayıf",
+            "kazandibi",
+            "tulumba",
+            "şekerpare",
+            "güllaç",
+            "revani",
+            "kemalpaşa",
+            "lokma",
+            "aşure",
+            "tavukgöğsü",
+            "supangle",
+            "muhallebi",
+            "irmik helvası",
+            "keşkül",
+            "şöbiyet",
+            "trileçe"
+        ],
+        "populerCevaplar": [
+            "baklava",
+            "sütlaç"
+        ]
+    },
+    {
+        "kategori": "Geleneksel Türk Yemekleri",
+        "soru": "Türk aile yapısında akşam yemeklerinde sıklıkla yapılan klasik tencere yemekleri nelerdir?",
+        "gecerliCevaplar": [
+            "kuru fasulye",
+            "nohut",
+            "taze fasulye",
+            "karnıyarık",
+            "yaprak sarma",
+            "biber dolması",
+            "bamya",
+            "kapuska",
+            "bezelye",
+            "ıspanak",
+            "pırasa",
+            "türlü",
+            "patates yemeği",
+            "mercimek yemeği",
+            "patlıcan oturtma",
+            "güveç",
+            "sulu köfte"
+        ],
+        "populerCevaplar": [
+            "kuru fasulye",
+            "taze fasulye"
+        ]
+    },
+    {
+        "kategori": "E-Ticaret",
+        "soru": "İnternetten online alışveriş yaparken uygulamalarda sıkça karşılaştığımız veya kullandığımız kelimeler nelerdir?",
+        "gecerliCevaplar": [
+            "sepet",
+            "kargo",
+            "indirim",
+            "kampanya",
+            "kupon",
+            "sipariş",
+            "iade",
+            "fatura",
+            "kredi kartı",
+            "taksit",
+            "teslimat",
+            "yorum",
+            "puan",
+            "stok",
+            "favoriler",
+            "adres",
+            "kurye",
+            "iade kodu",
+            "promosyon",
+            "hediye çeki"
+        ],
+        "populerCevaplar": [
+            "sepet",
+            "kargo"
+        ]
+    },
+    {
+        "kategori": "E-Ticaret",
+        "soru": "E-ticaret sitelerinde en çok satılan elektronik ev aletleri veya kişisel bakım ürünleri nelerdir?",
+        "gecerliCevaplar": [
+            "telefon",
+            "kulaklık",
+            "televizyon",
+            "akıllı saat",
+            "tablet",
+            "robot süpürge",
+            "saç kurutma makinesi",
+            "tıraş makinesi",
+            "kahve makinesi",
+            "ütü",
+            "blender",
+            "laptop",
+            "şarj aleti",
+            "hoparlör",
+            "powerbank",
+            "epilatör",
+            "vantilatör",
+            "fırın"
+        ],
+        "populerCevaplar": [
+            "telefon",
+            "kulaklık"
+        ]
+    },
+    {
+        "kategori": "Coğrafya",
+        "soru": "Türkiye'nin denize kıyısı olan, yaz turizmiyle veya limanıyla bilinen şehirlerinden bazıları nelerdir?",
+        "gecerliCevaplar": [
+            "antalya",
+            "izmir",
+            "istanbul",
+            "muğla",
+            "mersin",
+            "trabzon",
+            "samsun",
+            "ordu",
+            "giresun",
+            "rize",
+            "artvin",
+            "sinop",
+            "zonguldak",
+            "bartın",
+            "kastamonu",
+            "bursa",
+            "balıkesir",
+            "çanakkale",
+            "aydın",
+            "adana",
+            "hatay"
+        ],
+        "populerCevaplar": [
+            "antalya",
+            "izmir"
+        ]
+    },
+    {
+        "kategori": "Coğrafya",
+        "soru": "Dünyada en çok turist çeken veya adı Türkiye'de en çok bilinen Avrupa ülkeleri hangileridir?",
+        "gecerliCevaplar": [
+            "almanya",
+            "fransa",
+            "italya",
+            "ispanya",
+            "ingiltere",
+            "hollanda",
+            "yunanistan",
+            "belçika",
+            "isviçre",
+            "avusturya",
+            "portekiz",
+            "norveç",
+            "isveç",
+            "danimarka",
+            "finlandiya",
+            "polonya",
+            "çekya",
+            "macaristan",
+            "romanya",
+            "irlanda"
+        ],
+        "populerCevaplar": [
+            "almanya",
+            "fransa"
+        ]
+    },
+    {
+        "kategori": "Coğrafya",
+        "soru": "Dünyada ve ülkemizde yaşanan büyük doğal afetler veya sert doğa/iklim olayları nelerdir?",
+        "gecerliCevaplar": [
+            "deprem",
+            "sel",
+            "fırtına",
+            "kasırga",
+            "hortum",
+            "çığ",
+            "heyelan",
+            "tsunami",
+            "kuraklık",
+            "orman yangını",
+            "yıldırım",
+            "dolu",
+            "kar",
+            "yağmur",
+            "sis",
+            "don",
+            "yanardağ patlaması",
+            "erozyon"
+        ],
+        "populerCevaplar": [
+            "deprem",
+            "sel"
+        ]
+    },
+    {
+        "kategori": "Moda ve Giyim",
+        "soru": "Kış aylarında bizi soğuktan korumak için özellikle giydiğimiz veya taktığımız eşyalar nelerdir?",
+        "gecerliCevaplar": [
+            "mont",
+            "kaban",
+            "bere",
+            "atkı",
+            "eldiven",
+            "kazak",
+            "bot",
+            "hırka",
+            "çizme",
+            "yelek",
+            "kalın çorap",
+            "termal içlik",
+            "yağmurluk",
+            "palto",
+            "ceket",
+            "kulaklık",
+            "boyunluk"
+        ],
+        "populerCevaplar": [
+            "mont",
+            "bere"
+        ]
+    },
+    {
+        "kategori": "Moda ve Giyim",
+        "soru": "Kadınların günlük hayatta veya özel günlerde kıyafetlerini tamamlamak için kullandığı aksesuarlar ve takılar nelerdir?",
+        "gecerliCevaplar": [
+            "çanta",
+            "küpe",
+            "kolye",
+            "yüzük",
+            "bileklik",
+            "saat",
+            "güneş gözlüğü",
+            "toka",
+            "şal",
+            "kemer",
+            "fular",
+            "broş",
+            "halhal",
+            "saç bandı",
+            "piercing",
+            "taç",
+            "şapka"
+        ],
+        "populerCevaplar": [
+            "çanta",
+            "küpe"
+        ]
+    },
+    {
+        "kategori": "Moda ve Giyim",
+        "soru": "Günlük hayatta, sporda veya özel davetlerde giyilen ayakkabı çeşitleri nelerdir?",
+        "gecerliCevaplar": [
+            "spor ayakkabı",
+            "bot",
+            "çizme",
+            "topuklu ayakkabı",
+            "babet",
+            "sandalet",
+            "terlik",
+            "mokasen",
+            "stiletto",
+            "sneaker",
+            "koşu ayakkabısı",
+            "krampon",
+            "oxford",
+            "dolgu topuk",
+            "platform",
+            "espadril"
+        ],
+        "populerCevaplar": [
+            "spor ayakkabı",
+            "bot"
+        ]
+    },
+    {
+        "kategori": "Günlük Yaşam",
+        "soru": "İnsanların sabah uyanınca evden çıkmadan önce yaptığı rutin kişisel bakım veya hazırlık işleri nelerdir?",
+        "gecerliCevaplar": [
+            "yüz yıkamak",
+            "diş fırçalamak",
+            "kahvaltı yapmak",
+            "giyinmek",
+            "tuvalete gitmek",
+            "çay içmek",
+            "kahve içmek",
+            "yatak toplamak",
+            "saç taramak",
+            "makyaj yapmak",
+            "alarm kapatmak",
+            "duş almak",
+            "parfüm sıkmak",
+            "ayakkabı giymek",
+            "çanta hazırlamak",
+            "su içmek"
+        ],
+        "populerCevaplar": [
+            "yüz yıkamak",
+            "diş fırçalamak"
+        ]
+    },
+    {
+        "kategori": "Günlük Yaşam",
+        "soru": "Bir süpermarkette veya manavda satılan genellikle yeşil renkli olan sebze ve meyveler nelerdir?",
+        "gecerliCevaplar": [
+            "elma",
+            "armut",
+            "erik",
+            "kivi",
+            "üzüm",
+            "marul",
+            "ıspanak",
+            "brokoli",
+            "salatalık",
+            "biber",
+            "kabak",
+            "taze fasulye",
+            "bezelye",
+            "roka",
+            "maydanoz",
+            "nane",
+            "dereotu",
+            "yeşil soğan",
+            "kereviz",
+            "enginar",
+            "avokado"
+        ],
+        "populerCevaplar": [
+            "elma",
+            "salatalık"
+        ]
+    },
+    {
+        "kategori": "Günlük Yaşam",
+        "soru": "Standart bir evin salonunda veya oturma odasında bulunan temel eşyalar ve mobilyalar nelerdir?",
+        "gecerliCevaplar": [
+            "koltuk",
+            "televizyon",
+            "sehpa",
+            "halı",
+            "perde",
+            "yastık",
+            "televizyon ünitesi",
+            "kitaplık",
+            "tablo",
+            "saat",
+            "vazo",
+            "çiçek",
+            "avize",
+            "lamba",
+            "biblo",
+            "kumanda",
+            "puf",
+            "masa",
+            "sandalye"
+        ],
+        "populerCevaplar": [
+            "koltuk",
+            "televizyon"
+        ]
+    },
+    {
+        "kategori": "Günlük Yaşam",
+        "soru": "İnsanların boş zamanlarında, tatillerde veya hafta sonlarında dinlenmek ve eğlenmek için yaptığı hobiler/aktiviteler nelerdir?",
+        "gecerliCevaplar": [
+            "kitap okumak",
+            "müzik dinlemek",
+            "film izlemek",
+            "dizi izlemek",
+            "spor yapmak",
+            "yürüyüş yapmak",
+            "oyun oynamak",
+            "yemek yapmak",
+            "fotoğraf çekmek",
+            "resim yapmak",
+            "bisiklet sürmek",
+            "yüzmek",
+            "dans etmek",
+            "kamp yapmak",
+            "balık tutmak",
+            "örgü örmek",
+            "seyahat etmek"
+        ],
+        "populerCevaplar": [
+            "kitap okumak",
+            "müzik dinlemek"
+        ]
+    }
+]

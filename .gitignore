@@ -1,0 +1,19 @@
+# === C# / .NET Klasör ve Dosyaları ===
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+appsettings.Development.json
+
+# === React / Node.js Klasörleri ===
+node_modules/
+build/
+dist/
+.env
+
+# === Genel IDE Dosyaları (VS Code / Visual Studio) ===
+.vscode/
+.vs/
+*.user
+*.suo
