@@ -92,6 +92,51 @@ Oyunun ilk yayınlandığı dönemde eşleştirme sürelerinin uzamasını ve oy
   3. **Cevap Tüketimi:** Veritabanından o soruya ait `gecerliCevaplar` listesini alır, rastgele seçerek `GameManager`'a iletir ve kullandığı cevabı kendi listesinden çıkarır (aynı cevabı iki kez vermemek için).
 
 ---
+## 10. Oyun İçi Dinamik Avatar Sistemi (Düello Görünümü)
+
+Oyun esnasında oyuncuların rekabet hissini artırmak, stresi hissettirmek ve ekranı canlandırmak için **Dinamik Avatar Sistemi** kullanılacaktır. Oyuncular sadece boş bir metin kutusuna değil, masada oturan ve anlık duruma tepki veren karakterlere bakarak yarışacaklardır.
+
+### 10.1. Görsel Konsept ve Animasyon Durumları (State Machine)
+Her oyuncunun ekranın kendi tarafında, bilgisayar başında oturan (yandan görünümlü) bir avatarı bulunacaktır. Avatarlar oyuncunun cinsiyetine/seçimine göre (Kız/Erkek) belirlenecek ve maçın gidişatına göre şu 4 temel animasyon durumundan (GIF veya Lottie) birine geçecektir:
+
+* **Normal Bekleyiş (`idle`):** Süre varken sakince ekrana bakan, göz kırpan veya ufak nefes alma hareketleri yapan standart durum.
+* **Fikir Geldi / Yazıyor (`typing`):** Kullanıcı klavyede tuşa bastığı an devreye giren, yüzünde bir "buldum" ifadesiyle hareketlenip bilgisayara bir şeyler yazdığı durum.
+* **Gergin Bekleyiş (`stressed_idle`):** Kalan süre **10 saniyenin altına** düştüğünde devreye giren; avatarın paniklediği, terlediği ve ekrana endişeyle baktığı durum.
+* **Gergin Yazıyor (`stressed_typing`):** Süre 10 saniyenin altındayken oyuncu klavyeye basarsa devreye giren; panik halinde, hızlı hızlı ve stresle yazı yazma animasyonu.
+
+### 10.2. Tetikleyiciler ve Haberleşme (SignalR)
+Avatar hareketlerinin anlık ve senkronize çalışması için Frontend ve Backend birlikte çalışacaktır:
+
+* **Yerel Oyuncu (Local):** Kullanıcının kendi cihazındaki klavye vuruşları React üzerinden dinlenir. Tuşa basıldığında avatar `typing` moduna geçer. Yazma işlemi bittikten 800ms sonra (Debounce mantığı ile) tekrar `idle` duruma döner.
+* **Rakip Oyuncu (Opponent):** Rakibin yazdığını anlık görebilmek için SignalR üzerinden `PlayerIsTyping` sinyali kullanılır. Rakip klavyeye dokunduğunda Backend bu durumu alır ve senin ekranındaki rakip avatarı `typing` durumuna geçirir.
+* **Zaman Tetikleyicisi:** Oyun sayacı (timer) sürekli dinlenir. Sayaç stres eşiğine (son 10 saniye) indiğinde, her iki avatarın da `State` durumu otomatik olarak gergin (stressed) versiyonlara güncellenir.
+
+---
+
+*(İlgili Task Listelerine Eklenecek Maddeler)*
+
+## 11. Üst Bilgi (Header) ve Jeton Sistemi
+
+Arayüzdeki "Selam, [Kullanıcı Adı]" ibaresi kaldırılarak, üst bar daha minimalist ve doğrudan oyun ekonomisine odaklanan bir tasarıma geçirilecektir. Oyuncuların maça girme hakları "Jeton" mekaniği ile yönetilecektir.
+
+### 11.1. Jeton Sistemi Kuralları
+* **Başlangıç:** Oyuna yeni kayıt olan her kullanıcının hesabına standart olarak **10 Jeton** tanımlanır. (Maksimum kapasite 10'dur).
+* **Oyun Bedeli:** Eşleştirme sistemine dahil olup her yeni bir maça (düelloya) girildiğinde kullanıcının bakiyesinden **1 Jeton** eksilir.
+* **Yenilenme (Regen):** Kullanıcının jeton sayısı maksimum kapasitenin (10) altındaysa, her **7 dakikada bir** hesaba otomatik olarak 1 Jeton eklenir.
+
+### 11.2. Teknik Altyapı ve Ekran Tasarımı
+* **Frontend (React) Görünümü:** Üst barda Jeton ikonunun yanında mevcut bakiye yazacaktır. Eğer jeton sayısı 10'un altındaysa, hemen yanında bir sonraki jetonun gelmesine kalan süreyi gösteren canlı bir geri sayım (Örn: `04:59`) yer alacaktır. Jeton bittiğinde (0 olduğunda) "Oyna" butonu pasif hale gelecektir.
+* **Backend (C#) Hesaplaması:** Sunucu performansını korumak için arka planda her saniye çalışan bir sayaç (Timer) kullanılmayacaktır. Veritabanında `User` tablosunda `LastJetonUpdateTime` (Son Jeton Güncelleme Zamanı) tutulacaktır. Kullanıcı oyuna girdiğinde veya arayüzü yenilediğinde: `(Şu anki zaman - Son Güncelleme Zamanı) / 7 dakika` formülü ile hak ettiği jetonlar hesaplanıp bakiyesine eklenecektir.
+
+
+**Frontend Görevleri (React):**
+* `DuelAvatar.jsx` bileşeninin oluşturulması; avatar görsellerinin `gender`, `isTyping` ve `timeLeft` parametrelerine göre otomatik değişmesi.
+* Input alanına debounce mantığı eklenerek kullanıcının "yazıyor..." durumunun algılanması.
+* Rakibin yazma durumunu dinlemek için SignalR `on("OpponentIsTyping")` bağlantısının kurulması.
+
+**Backend Görevleri (C#):**
+* `GameHub.cs` içerisine `SendTypingStatus(string gameId, bool isTyping)` metodunun eklenmesi.
+* Oyuncuların klavye dokunuşlarını performans sorunu yaratmadan, aynı odadaki rakibe anlık olarak iletecek soket altyapısının kurulması.
 
 ### Frontend (React & Tailwind CSS)
 1. **`GameBoard` Bileşeni:** Gizli kutucuklar olmadan cevapları anlık alt alta (feed) listeleyen, altta Joker butonlarını barındıran oyun arayüzü. Bölüm 6'daki renk paleti kullanılmalıdır.

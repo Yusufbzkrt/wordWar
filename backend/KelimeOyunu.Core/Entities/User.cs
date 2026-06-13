@@ -10,6 +10,8 @@ public class User
     public int TotalWins { get; set; } = 0;
     public int TotalLosses { get; set; } = 0;
     public DateTime? LastAdRewardTime { get; set; }
+    public int Tokens { get; set; } = 10; // Başlangıç jetonu
+    public DateTime LastTokenUpdateTime { get; set; } = DateTime.UtcNow;
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
     // Navigation Properties

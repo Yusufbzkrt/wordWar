@@ -31,7 +31,9 @@ public record UserProfileDto(
     int Diamonds,
     int TotalWins,
     int TotalLosses,
-    DateTime? LastAdRewardTime
+    DateTime? LastAdRewardTime,
+    int Tokens,
+    DateTime LastTokenUpdateTime
 );
 
 public record LeaderboardEntryDto(

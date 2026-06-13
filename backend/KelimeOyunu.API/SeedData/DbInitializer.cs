@@ -5,12 +5,16 @@ using Microsoft.EntityFrameworkCore;
 
 namespace KelimeOyunu.API.SeedData;
 
-public class QuestionSeedDto
+public class GeneratedQuestion
 {
-    public string Kategori { get; set; } = string.Empty;
-    public string Soru { get; set; } = string.Empty;
-    public List<string> GecerliCevaplar { get; set; } = new();
-    public List<string> PopulerCevaplar { get; set; } = new();
+    public string Question { get; set; } = string.Empty;
+    public List<GeneratedAnswer> Answers { get; set; } = new();
+}
+
+public class GeneratedAnswer
+{
+    public string Text { get; set; } = string.Empty;
+    public bool IsPopular { get; set; }
 }
 
 public static class DbInitializer
@@ -23,7 +27,7 @@ public static class DbInitializer
 
         try
         {
-            var seedFilePath = Path.Combine(app.Environment.ContentRootPath, "SeedData", "sorular.json");
+            var seedFilePath = Path.Combine(app.Environment.ContentRootPath, "..", "KelimeOyunu.Infrastructure", "Data", "questions.json");
             
             if (!File.Exists(seedFilePath))
             {
@@ -33,7 +37,7 @@ public static class DbInitializer
 
             var jsonData = await File.ReadAllTextAsync(seedFilePath);
             var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
-            var questionsDto = JsonSerializer.Deserialize<List<QuestionSeedDto>>(jsonData, options);
+            var questionsDto = JsonSerializer.Deserialize<List<GeneratedQuestion>>(jsonData, options);
 
             if (questionsDto == null || !questionsDto.Any())
                 return;
@@ -43,25 +47,25 @@ public static class DbInitializer
             foreach (var dto in questionsDto)
             {
                 // Aynı soru veritabanında var mı kontrol et
-                bool exists = await context.Questions.AnyAsync(q => q.Text == dto.Soru);
+                bool exists = await context.Questions.AnyAsync(q => q.Text == dto.Question);
                 if (!exists)
                 {
                     var question = new Question
                     {
                         Id = Guid.NewGuid(),
-                        Text = dto.Soru,
-                        Category = dto.Kategori,
+                        Text = dto.Question,
+                        Category = "Genel", // Kategori üretilmediyse genel diyelim
                         CreatedAt = DateTime.UtcNow
                     };
 
-                    foreach (var cevap in dto.GecerliCevaplar)
+                    foreach (var cevap in dto.Answers)
                     {
                         var answer = new Answer
                         {
                             Id = Guid.NewGuid(),
                             QuestionId = question.Id,
-                            Text = cevap,
-                            IsPopular = dto.PopulerCevaplar.Contains(cevap)
+                            Text = cevap.Text,
+                            IsPopular = cevap.IsPopular
                         };
                         question.Answers.Add(answer);
                     }

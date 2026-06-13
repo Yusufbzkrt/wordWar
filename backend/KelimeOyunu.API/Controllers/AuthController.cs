@@ -41,7 +41,7 @@ public class AuthController : ControllerBase
         await _context.SaveChangesAsync();
 
         var token = GenerateToken(user);
-        return Ok(new AuthResponseDto(token, new UserProfileDto(user.Id, user.Username, user.Gold, user.Diamonds, 0, 0, null)));
+        return Ok(new AuthResponseDto(token, new UserProfileDto(user.Id, user.Username, user.Gold, user.Diamonds, 0, 0, null, user.Tokens, user.LastTokenUpdateTime)));
     }
 
     [HttpPost("login")]
@@ -57,7 +57,7 @@ public class AuthController : ControllerBase
         await _questManager.GetOrAssignDailyQuestsAsync(user.Id);
         await _questManager.TrackEventAsync(user.Id, KelimeOyunu.Core.Enums.QuestEventType.Login);
 
-        return Ok(new AuthResponseDto(token, new UserProfileDto(user.Id, user.Username, user.Gold, user.Diamonds, user.TotalWins, user.TotalLosses, user.LastAdRewardTime)));
+        return Ok(new AuthResponseDto(token, new UserProfileDto(user.Id, user.Username, user.Gold, user.Diamonds, user.TotalWins, user.TotalLosses, user.LastAdRewardTime, user.Tokens, user.LastTokenUpdateTime)));
     }
 
     private string GenerateToken(User user)

@@ -68,7 +68,7 @@ public class GameManager : IGameManager
             GameSessionId = sessionId,
             QuestionId = question.Id,
             RoundNumber = roundNumber,
-            ActiveTurnPlayerId = session.Player1Id, // İlk sırayı Player1'e verelim
+            ActiveTurnPlayerId = roundNumber % 2 != 0 ? session.Player1Id : session.Player2Id, // Tek turlarda Player1, çift turlarda Player2 başlar
             Result = RoundResult.InProgress
         };
 

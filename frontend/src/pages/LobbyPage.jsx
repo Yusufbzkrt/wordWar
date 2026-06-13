@@ -145,17 +145,75 @@ export default function LobbyPage() {
   const totalGames = (user?.totalWins || 0) + (user?.totalLosses || 0);
   const winRate = totalGames > 0 ? Math.round((user.totalWins / totalGames) * 100) : 0;
 
+  const [localTokens, setLocalTokens] = useState(user?.tokens || 10);
+  const [tokenTimer, setTokenTimer] = useState(null);
+
+  useEffect(() => {
+    if (!user) return;
+    
+    const calculateTokens = () => {
+      // Backend'den veri gelmemişse veya eski sürümse varsayılan değerleri kullan
+      const currentTokens = user.tokens !== undefined ? user.tokens : 10;
+      
+      if (currentTokens >= 10 || !user.lastTokenUpdateTime) {
+        setLocalTokens(currentTokens >= 10 ? 10 : currentTokens);
+        setTokenTimer(null);
+        return;
+      }
+      
+      const lastUpdate = new Date(user.lastTokenUpdateTime).getTime();
+      const now = new Date().getTime();
+      const diffMinutes = (now - lastUpdate) / 1000 / 60;
+      
+      const earned = Math.floor(diffMinutes / 7);
+      const newTokens = Math.min(10, currentTokens + earned);
+      
+      setLocalTokens(newTokens);
+      
+      if (newTokens < 10) {
+        const remainingSeconds = Math.floor((7 * 60) - (((now - lastUpdate) / 1000) % (7 * 60)));
+        const m = Math.floor(remainingSeconds / 60).toString().padStart(2, '0');
+        const s = (remainingSeconds % 60).toString().padStart(2, '0');
+        setTokenTimer(`${m}:${s}`);
+      } else {
+        setTokenTimer(null);
+      }
+    };
+
+    calculateTokens();
+    const interval = setInterval(calculateTokens, 1000);
+    return () => clearInterval(interval);
+  }, [user]);
+
   return (
     <div className="page" style={{ paddingBottom: '100px' }}>
       {/* Üst Header Alanı */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '32px', paddingTop: '10px' }}>
-        <div>
-          <h2 style={{ fontSize: '1.6rem', fontWeight: 900, letterSpacing: '-0.03em', lineHeight: '1.2' }}>
-            Selam, <span className="gradient-text">{user?.username}</span> 👋
-          </h2>
-          <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', fontWeight: 500, marginTop: '4px' }}>Meydan okumaya hazır mısın?</p>
+        <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+          <div className="glass" style={{ padding: '8px 16px', borderRadius: 'var(--radius-full)', display: 'flex', alignItems: 'center', gap: '16px', border: '1px solid rgba(251, 191, 36, 0.4)', background: 'rgba(251, 191, 36, 0.1)' }}>
+            <div style={{ display: 'flex', marginLeft: '6px' }}>
+              {[...Array(10)].map((_, i) => (
+                <div key={i} style={{
+                  width: '8px',
+                  height: '24px',
+                  borderRadius: '3px',
+                  marginLeft: '-4px', // Tırtıklı dizilim (overlap)
+                  background: i < localTokens ? 'linear-gradient(to right, #f59e0b, #fcd34d 50%, #d97706)' : 'rgba(0,0,0,0.6)',
+                  backgroundImage: i < localTokens ? 'repeating-linear-gradient(to bottom, transparent, transparent 2px, rgba(0,0,0,0.2) 2px, rgba(0,0,0,0.2) 4px)' : 'none',
+                  border: i < localTokens ? '1px solid #d97706' : '1px solid rgba(255,255,255,0.1)',
+                  boxShadow: i < localTokens ? '2px 0 4px rgba(0,0,0,0.3)' : 'none',
+                  zIndex: 10 - i,
+                  transition: 'all 0.3s'
+                }} />
+              ))}
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column' }}>
+              <span style={{ fontWeight: 900, fontSize: '1rem', lineHeight: 1, color: 'white', textShadow: '0 0 10px rgba(251,191,36,0.5)' }}>{localTokens} / 10</span>
+              {tokenTimer && <span style={{ fontSize: '0.7rem', color: '#fcd34d', fontWeight: 800, marginTop: '2px' }}>{tokenTimer}</span>}
+            </div>
+          </div>
         </div>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', alignItems: 'flex-end' }}>
+        <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
           <div className="glass" style={{ padding: '6px 12px', borderRadius: 'var(--radius-full)', display: 'flex', alignItems: 'center', gap: '6px', fontWeight: 800, fontSize: '0.85rem' }}>
             <span style={{ color: 'var(--gold)', textShadow: '0 0 10px var(--gold-glow)' }}>🪙</span> 
             {user?.gold || 0}
@@ -183,9 +241,9 @@ export default function LobbyPage() {
           <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '32px', fontWeight: 500 }}>Gerçek zamanlı, 30 saniyelik arena.</p>
           
           {!searching ? (
-            <button className="btn btn-lg btn-full" onClick={handleSearch} disabled={!connected} 
-              style={{ background: 'var(--bg-primary)', color: 'var(--accent-cyan)', fontSize: '1.2rem', padding: '18px', boxShadow: '0 8px 32px rgba(0,0,0,0.5)', borderRadius: 'var(--radius-xl)', border: '2px solid rgba(6, 182, 212, 0.4)', textTransform: 'uppercase', letterSpacing: '2px' }}>
-              Rakip Bul
+            <button className="btn btn-lg btn-full" onClick={handleSearch} disabled={!connected || localTokens < 1} 
+              style={{ background: localTokens < 1 ? 'rgba(255,255,255,0.05)' : 'var(--bg-primary)', color: localTokens < 1 ? 'var(--text-muted)' : 'var(--accent-cyan)', fontSize: '1.2rem', padding: '18px', boxShadow: localTokens < 1 ? 'none' : '0 8px 32px rgba(0,0,0,0.5)', borderRadius: 'var(--radius-xl)', border: localTokens < 1 ? '2px solid rgba(255,255,255,0.1)' : '2px solid rgba(6, 182, 212, 0.4)', textTransform: 'uppercase', letterSpacing: '2px', transition: 'all 0.3s' }}>
+              {localTokens < 1 ? 'YETERLİ JETON YOK' : 'Rakip Bul (1 🪙)'}
             </button>
           ) : (
             <div style={{ background: 'rgba(11, 15, 25, 0.8)', padding: '24px', borderRadius: 'var(--radius-xl)', backdropFilter: 'blur(20px)', border: '1px solid rgba(6, 182, 212, 0.3)' }}>

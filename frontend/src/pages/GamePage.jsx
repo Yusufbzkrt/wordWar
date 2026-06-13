@@ -4,6 +4,7 @@ import { useToast } from '../contexts/ToastContext';
 import { useTimer } from '../hooks/useTimer';
 import { GAME } from '../utils/constants';
 import { api } from '../services/api';
+import DuelAvatar from '../components/DuelAvatar';
 
 export default function GamePage({ gameState: initialState, connection, onGameEnd }) {
   const { user, updateUser } = useAuth();
@@ -20,12 +21,22 @@ export default function GamePage({ gameState: initialState, connection, onGameEn
   const [hint, setHint] = useState(null);
   const [changeRequestedByMe, setChangeRequestedByMe] = useState(false);
   const [changeRequestedByOpponent, setChangeRequestedByOpponent] = useState(false);
+  
+  const [isOpponentTyping, setIsOpponentTyping] = useState(false);
+  const [isLocalTyping, setIsLocalTyping] = useState(false);
+  const typingTimeoutRef = useRef(null);
   const [isStartingUp, setIsStartingUp] = useState(false);
   const [startupTimer, setStartupTimer] = useState(10);
   const inputRef = useRef(null);
+  const answersEndRef = useRef(null);
 
-  const isPlayer1 = user?.id === initialState?.player1Name ? true : false;
-  const isMyTurn = user?.id === activeTurnPlayerId;
+  // Auto-scroll to the bottom of the answers feed
+  useEffect(() => {
+    answersEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [answers]);
+
+  const isPlayer1 = (gameState?.player1Name || '').toLowerCase() === (user?.username || '').toLowerCase();
+  const isMyTurn = String(user?.id || '').toLowerCase() === String(activeTurnPlayerId || '').toLowerCase();
 
   const startIntermission = useCallback(() => {
     setIsStartingUp(true);
@@ -118,11 +129,15 @@ export default function GamePage({ gameState: initialState, connection, onGameEn
       setAnswers(prev => [...prev, { ...data, submittedAnswer: data.answer, isOpponent: true, id: Date.now() }]);
     });
 
+    connection.on('OpponentIsTyping', (isTyping) => {
+      setIsOpponentTyping(isTyping);
+    });
+
     connection.on('TurnChanged', (newTurnPlayerId) => {
       setActiveTurnPlayerId(newTurnPlayerId);
       timer.reset(GAME.ROUND_DURATION);
       timer.start();
-      if (newTurnPlayerId === user?.id) {
+      if (String(newTurnPlayerId || '').toLowerCase() === String(user?.id || '').toLowerCase()) {
           addToast("Sıra Sende!", "info");
       }
     });
@@ -191,14 +206,39 @@ export default function GamePage({ gameState: initialState, connection, onGameEn
     });
 
     return () => {
-      ['AnswerResult', 'OpponentScoreUpdate', 'OpponentAnswer', 'TurnChanged', 'RoundEnded', 'NewRound', 'JokerResult', 'HintResult', 'RematchStarted', 'RematchRequested', 'ChangeQuestionRequested', 'QuestionChanged']
+      ['AnswerResult', 'OpponentScoreUpdate', 'OpponentAnswer', 'TurnChanged', 'RoundEnded', 'NewRound', 'JokerResult', 'HintResult', 'RematchStarted', 'RematchRequested', 'ChangeQuestionRequested', 'QuestionChanged', 'OpponentIsTyping']
         .forEach(e => connection.off(e));
     };
   }, [connection]);
 
+  const handleInputChange = (e) => {
+    setAnswer(e.target.value);
+    
+    if (!isLocalTyping && connection && gameState?.sessionId) {
+      setIsLocalTyping(true);
+      connection.invoke('SendTypingStatus', gameState.sessionId, true).catch(console.error);
+    }
+
+    if (typingTimeoutRef.current) {
+      clearTimeout(typingTimeoutRef.current);
+    }
+
+    typingTimeoutRef.current = setTimeout(() => {
+      setIsLocalTyping(false);
+      if (connection && gameState?.sessionId) {
+        connection.invoke('SendTypingStatus', gameState.sessionId, false).catch(console.error);
+      }
+    }, 800);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!answer.trim() || !connection || roundEnded || !isMyTurn) return;
+    if (!answer.trim() || !connection || roundEnded) return;
+
+    if (!isMyTurn) {
+      addToast('Şu an sıra rakipte!', 'warning');
+      return;
+    }
 
     const isAlreadyFound = answers.some(a => 
       a.isCorrect && 
@@ -217,9 +257,10 @@ export default function GamePage({ gameState: initialState, connection, onGameEn
     try {
       await connection.invoke('SubmitAnswer', { sessionId: gameState.sessionId, roundId: gameState.roundId, answer: answer.trim() });
       setAnswer('');
-      inputRef.current?.focus();
-    } catch {
-      addToast('Cevap gönderilemedi', 'error');
+      if (inputRef.current) inputRef.current.focus();
+    } catch (err) {
+      console.error('SubmitAnswer error:', err);
+      addToast('Cevap gönderilirken hata oluştu!', 'error');
     }
   };
 
@@ -256,23 +297,112 @@ export default function GamePage({ gameState: initialState, connection, onGameEn
   // ======== MATCH ENDED SCREEN ========
   if (matchEnded) {
     const won = matchResult?.winnerId === user?.id;
+    const myName = user?.username || 'Sen';
+    const opponentName = isPlayer1 ? gameState?.player2Name : gameState?.player1Name;
+    const myWins = isPlayer1 ? matchResult?.player1Wins : matchResult?.player2Wins;
+    const opponentWins = !isPlayer1 ? matchResult?.player1Wins : matchResult?.player2Wins;
+    const iWon = matchResult?.winnerId === user?.id;
+    const opponentWon = matchResult?.winnerId !== user?.id && matchResult?.winnerId != null;
+
     return (
       <div className="page" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', paddingBottom: 16 }}>
-        <div className="card" style={{ textAlign: 'center', padding: '40px 24px', width: '100%', background: won ? 'linear-gradient(135deg, rgba(34,197,94,0.1), rgba(16,185,129,0.1))' : 'linear-gradient(135deg, rgba(239,68,68,0.1), rgba(249,115,22,0.1))', borderColor: won ? 'rgba(34,197,94,0.3)' : 'rgba(239,68,68,0.3)' }}>
-          <div style={{ fontSize: '4rem', marginBottom: '16px' }}>{won ? '🏆' : '😔'}</div>
-          <h2 style={{ fontSize: '1.6rem', fontWeight: 900, color: won ? 'var(--correct)' : 'var(--wrong)', textTransform: 'uppercase', letterSpacing: '2px' }}>{won ? 'ZAFer' : 'BOZGun'}</h2>
-          <p style={{ color: 'var(--text-secondary)', margin: '8px 0 24px', fontSize: '0.9rem' }}>{won ? 'Arenanın hakimi sensin!' : 'Daha fazla pratik yapmalısın...'}</p>
+        <div className={`glass animate-slide-up`} style={{ 
+          textAlign: 'center', 
+          padding: '40px 24px', 
+          width: '100%', 
+          maxWidth: '420px',
+          background: won ? 'linear-gradient(135deg, rgba(16,185,129,0.15), rgba(6,78,59,0.4))' : 'linear-gradient(135deg, rgba(220,38,38,0.15), rgba(69,10,10,0.4))', 
+          border: `1px solid ${won ? 'rgba(16,185,129,0.4)' : 'rgba(220,38,38,0.4)'}`,
+          borderRadius: 'var(--radius-xl)',
+          boxShadow: `0 20px 50px -10px ${won ? 'rgba(16,185,129,0.3)' : 'rgba(220,38,38,0.3)'}`
+        }}>
           
+          {/* İkon */}
+          <div style={{ position: 'relative', width: 120, height: 120, margin: '0 auto 24px' }}>
+            <div className="absolute inset-0 rounded-full animate-pulse-slow" style={{ background: won ? 'var(--correct)' : 'var(--wrong)', opacity: 0.2, filter: 'blur(20px)' }} />
+            {won ? (
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--correct)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full relative z-10 animate-bounce" style={{ filter: 'drop-shadow(0 0 15px var(--correct-glow))' }}>
+                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
+                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
+                <path d="M4 22h16" />
+                <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
+                <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
+                <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
+              </svg>
+            ) : (
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--wrong)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full relative z-10" style={{ filter: 'drop-shadow(0 0 15px var(--wrong-glow))' }}>
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+                <path d="M9.5 9h5" />
+                <path d="M12 12l2.5-3" />
+                <path d="M12 12l-2.5-3" />
+              </svg>
+            )}
+          </div>
+          
+          <h2 style={{ fontSize: '2.5rem', fontWeight: 900, color: 'white', textTransform: 'uppercase', letterSpacing: '4px', textShadow: `0 0 20px ${won ? 'var(--correct-glow)' : 'var(--wrong-glow)'}`, marginBottom: '8px' }}>
+            {won ? 'ZAFER' : 'BOZGUN'}
+          </h2>
+          
+          <p style={{ color: 'rgba(255,255,255,0.7)', margin: '0 0 32px', fontSize: '1rem', fontWeight: 500 }}>
+            {won ? 'Arenanın mutlak hakimi sensin!' : 'Daha fazla pratik yapmalısın...'}
+          </p>
+          
+          {/* Skor Panosu */}
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '32px', gap: '16px' }}>
+            <div className="glass" style={{ flex: 1, padding: '20px 16px', background: 'rgba(0,0,0,0.5)', borderRadius: '16px', border: iWon ? '1px solid rgba(34,197,94,0.4)' : '1px solid rgba(255,255,255,0.05)', position: 'relative', overflow: 'hidden' }}>
+               {iWon && <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 4, background: 'var(--correct)', boxShadow: '0 0 10px var(--correct)' }} />}
+               <div style={{ fontSize: '1rem', color: iWon ? 'var(--correct)' : 'var(--text-secondary)', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '8px', textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap' }}>{myName}</div>
+               <div style={{ fontSize: '3rem', fontWeight: 900, color: iWon ? 'var(--correct)' : 'white', textShadow: iWon ? '0 0 20px var(--correct-glow)' : 'none', lineHeight: 1 }}>{myWins || 0}</div>
+               <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: 8, letterSpacing: 2 }}>TUR</div>
+            </div>
+
+            <div style={{ fontSize: '1.2rem', fontWeight: 900, color: 'var(--accent-pink)', opacity: 0.8, fontStyle: 'italic' }}>VS</div>
+
+            <div className="glass" style={{ flex: 1, padding: '20px 16px', background: 'rgba(0,0,0,0.5)', borderRadius: '16px', border: opponentWon ? '1px solid rgba(34,197,94,0.4)' : '1px solid rgba(255,255,255,0.05)', position: 'relative', overflow: 'hidden' }}>
+               {opponentWon && <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 4, background: 'var(--correct)', boxShadow: '0 0 10px var(--correct)' }} />}
+               <div style={{ fontSize: '1rem', color: opponentWon ? 'var(--correct)' : 'var(--text-secondary)', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '8px', textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap' }}>{opponentName || 'Rakip'}</div>
+               <div style={{ fontSize: '3rem', fontWeight: 900, color: opponentWon ? 'var(--correct)' : 'white', textShadow: opponentWon ? '0 0 20px var(--correct-glow)' : 'none', lineHeight: 1 }}>{opponentWins || 0}</div>
+               <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: 8, letterSpacing: 2 }}>TUR</div>
+            </div>
+          </div>
+
           {won && (
-            <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', marginBottom: '24px' }}>
-              <div className="badge badge-gold" style={{ fontSize: '1rem', padding: '8px 16px' }}>🪙 +{GAME.MATCH_WIN_GOLD}</div>
-              <div className="badge badge-diamond" style={{ fontSize: '1rem', padding: '8px 16px' }}>💎 +{GAME.MATCH_WIN_DIAMONDS}</div>
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', marginBottom: '32px' }}>
+              <div className="badge badge-gold" style={{ fontSize: '1rem', padding: '10px 20px', boxShadow: '0 0 20px var(--gold-glow)' }}>🪙 +{GAME.MATCH_WIN_GOLD}</div>
+              <div className="badge badge-diamond" style={{ fontSize: '1rem', padding: '10px 20px', boxShadow: '0 0 20px var(--diamond-glow)' }}>💎 +{GAME.MATCH_WIN_DIAMONDS}</div>
             </div>
           )}
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-            <button className="btn btn-primary btn-lg btn-full" onClick={handleRematch}>🔄 Rövanş İste</button>
-            <button className="btn btn-ghost btn-full" onClick={onGameEnd}>🏠 Lobiye Dön</button>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+            <button className="btn btn-lg btn-full" onClick={handleRematch} style={{ 
+              background: 'linear-gradient(135deg, var(--accent), var(--accent-hover))', 
+              color: 'white', border: '1px solid var(--accent-glow)', 
+              fontWeight: 800, fontSize: '1.1rem', letterSpacing: '2px', 
+              boxShadow: '0 8px 25px var(--accent-glow)',
+              display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px' 
+            }}>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 2v6h-6"></path>
+                <path d="M3 12a9 9 0 0 1 15-6.7L21 8"></path>
+                <path d="M3 22v-6h6"></path>
+                <path d="M21 12a9 9 0 0 1-15 6.7L3 16"></path>
+              </svg>
+              RÖVANŞ İSTE
+            </button>
+            <button className="btn btn-full" onClick={onGameEnd} style={{ 
+              background: 'rgba(0,0,0,0.4)', 
+              color: 'var(--text-secondary)', border: '1px solid rgba(255,255,255,0.1)', 
+              fontWeight: 700, fontSize: '1rem', letterSpacing: '1px', padding: '14px',
+              display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px',
+              transition: 'all 0.3s'
+            }}>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                <polyline points="16 17 21 12 16 7"></polyline>
+                <line x1="21" y1="12" x2="9" y2="12"></line>
+              </svg>
+              LOBİYE DÖN
+            </button>
           </div>
         </div>
       </div>
@@ -380,16 +510,38 @@ export default function GamePage({ gameState: initialState, connection, onGameEn
         {hint && <div style={{ marginTop: '12px', color: 'var(--diamond)', fontSize: '0.9rem', fontWeight: 700, filter: 'drop-shadow(0 0 5px var(--diamond-glow))' }}>💡 İpucu: "{hint}..." ile başlar</div>}
       </div>
 
-      {/* Skor (VS Ekranı) */}
-      <div className="glass" style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center', padding: '16px', marginBottom: '16px', borderRadius: 'var(--radius-lg)' }}>
-        <div style={{ textAlign: 'center', opacity: isMyTurn ? 1 : 0.4, transform: isMyTurn ? 'scale(1.1)' : 'scale(0.9)', transition: 'all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1)' }}>
-          <div style={{ fontSize: '0.75rem', color: isMyTurn ? 'white' : 'var(--text-muted)', fontWeight: 800, letterSpacing: '1px' }}>{gameState?.player1Name || 'Sen'} {isMyTurn && '⏳'}</div>
-          <div style={{ fontSize: '2rem', fontWeight: 900, color: 'var(--correct)', textShadow: isMyTurn ? '0 0 20px var(--correct-glow)' : 'none' }}>{myScore}</div>
+      {/* Skor (VS Ekranı) ve Avatarlar */}
+      <div className="glass" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', padding: '16px', marginBottom: '16px', borderRadius: 'var(--radius-lg)' }}>
+        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', opacity: isMyTurn ? 1 : 0.6, transform: isMyTurn ? 'scale(1.05)' : 'scale(0.95)', transition: 'all 0.4s' }}>
+          <DuelAvatar 
+            isOpponent={false} 
+            isTyping={isLocalTyping} 
+            timeLeft={timer.seconds} 
+            playerName={isPlayer1 ? gameState?.player1Name : gameState?.player2Name} 
+            gender="boy" 
+            isActive={isMyTurn}
+          />
+          <div style={{ fontSize: '2rem', fontWeight: 900, color: 'var(--correct)', textShadow: isMyTurn ? '0 0 20px var(--correct-glow)' : 'none', marginTop: '8px' }}>
+            {myScore}
+          </div>
         </div>
-        <div style={{ fontSize: '1.2rem', color: 'var(--accent-pink)', fontWeight: 900, fontStyle: 'italic', opacity: 0.8 }}>VS</div>
-        <div style={{ textAlign: 'center', opacity: !isMyTurn ? 1 : 0.4, transform: !isMyTurn ? 'scale(1.1)' : 'scale(0.9)', transition: 'all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1)' }}>
-          <div style={{ fontSize: '0.75rem', color: !isMyTurn ? 'white' : 'var(--text-muted)', fontWeight: 800, letterSpacing: '1px' }}>{gameState?.player2Name || 'Rakip'} {!isMyTurn && '⏳'}</div>
-          <div style={{ fontSize: '2rem', fontWeight: 900, color: 'var(--wrong)', textShadow: !isMyTurn ? '0 0 20px var(--wrong-glow)' : 'none' }}>{opponentScore}</div>
+        
+        <div style={{ padding: '24px 0', fontSize: '1.2rem', color: 'var(--accent-pink)', fontWeight: 900, fontStyle: 'italic', opacity: 0.8 }}>
+          VS
+        </div>
+        
+        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', opacity: !isMyTurn ? 1 : 0.6, transform: !isMyTurn ? 'scale(1.05)' : 'scale(0.95)', transition: 'all 0.4s' }}>
+          <DuelAvatar 
+            isOpponent={true} 
+            isTyping={isOpponentTyping} 
+            timeLeft={timer.seconds} 
+            playerName={isPlayer1 ? gameState?.player2Name : gameState?.player1Name} 
+            gender="girl" 
+            isActive={!isMyTurn}
+          />
+          <div style={{ fontSize: '2rem', fontWeight: 900, color: 'var(--wrong)', textShadow: !isMyTurn ? '0 0 20px var(--wrong-glow)' : 'none', marginTop: '8px' }}>
+            {opponentScore}
+          </div>
         </div>
       </div>
 
@@ -414,6 +566,7 @@ export default function GamePage({ gameState: initialState, connection, onGameEn
               {a.isPopular && <span className="badge badge-gold" style={{ fontSize: '0.7rem', boxShadow: '0 0 10px var(--gold-glow)' }}>🪙+10</span>}
             </div>
           ))}
+          <div ref={answersEndRef} />
         </div>
       </div>
 
@@ -431,8 +584,8 @@ export default function GamePage({ gameState: initialState, connection, onGameEn
 
       {/* Cevap Girişi */}
       <form onSubmit={handleSubmit} style={{ display: 'flex', gap: '8px', background: 'rgba(0,0,0,0.4)', padding: '8px', borderRadius: 'var(--radius-lg)', border: '1px solid rgba(255,255,255,0.05)' }}>
-        <input ref={inputRef} type="text" placeholder={isMyTurn ? "Cevabını yaz..." : "Sıra rakipte..."} value={answer} onChange={e => setAnswer(e.target.value)} disabled={roundEnded || !isMyTurn} autoFocus autoComplete="off" style={{ flex: 1, padding: '14px 16px', background: 'transparent', border: 'none', color: 'white', fontSize: '1rem', outline: 'none', opacity: (!isMyTurn || roundEnded) ? 0.5 : 1 }} />
-        <button className="btn" type="submit" disabled={roundEnded || !answer.trim() || !isMyTurn} style={{ padding: '12px 24px', background: 'linear-gradient(135deg, var(--accent), var(--accent-hover))', color: 'white', borderRadius: 'var(--radius-md)', border: 'none', opacity: (!isMyTurn || roundEnded) ? 0.5 : 1, boxShadow: '0 4px 12px var(--accent-glow)' }}>Gönder</button>
+        <input ref={inputRef} type="text" placeholder={isMyTurn ? "Cevabını yaz..." : "Sıra rakipte..."} value={answer} onChange={handleInputChange} disabled={roundEnded} autoFocus autoComplete="off" style={{ flex: 1, padding: '14px 16px', background: 'transparent', border: 'none', color: 'white', fontSize: '1rem', outline: 'none', opacity: (roundEnded) ? 0.5 : 1 }} />
+        <button className="btn" type="submit" disabled={roundEnded || !answer.trim()} style={{ padding: '12px 24px', background: 'linear-gradient(135deg, var(--accent), var(--accent-hover))', color: 'white', borderRadius: 'var(--radius-md)', border: 'none', opacity: (roundEnded) ? 0.5 : 1, boxShadow: '0 4px 12px var(--accent-glow)' }}>Gönder</button>
       </form>
         </>
       )}

@@ -16,4 +16,6 @@ public interface IEconomyManager
     Task<bool> CanClaimAdRewardAsync(Guid userId);
     Task ClaimAdRewardAsync(Guid userId);
     Task<UserProfileDto> GetBalanceAsync(Guid userId);
+    Task<bool> ConsumeMatchTokenAsync(Guid userId);
+    Task RefundMatchTokenAsync(Guid userId);
 }

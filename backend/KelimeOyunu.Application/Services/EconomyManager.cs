@@ -70,6 +70,65 @@ public class EconomyManager : IEconomyManager
     public async Task<UserProfileDto> GetBalanceAsync(Guid userId)
     {
         var user = await _context.Users.FindAsync(userId) ?? throw new InvalidOperationException("Kullanıcı bulunamadı.");
-        return new UserProfileDto(user.Id, user.Username, user.Gold, user.Diamonds, user.TotalWins, user.TotalLosses, user.LastAdRewardTime);
+        CalculateAndGrantTokens(user);
+        await _context.SaveChangesAsync();
+        return new UserProfileDto(user.Id, user.Username, user.Gold, user.Diamonds, user.TotalWins, user.TotalLosses, user.LastAdRewardTime, user.Tokens, user.LastTokenUpdateTime);
+    }
+
+    private void CalculateAndGrantTokens(User user)
+    {
+        if (user.Tokens >= 10) 
+        {
+            user.LastTokenUpdateTime = DateTime.UtcNow;
+            return;
+        }
+        
+        var timePassed = DateTime.UtcNow - user.LastTokenUpdateTime;
+        int tokensToAdd = (int)(timePassed.TotalMinutes / 7);
+        
+        if (tokensToAdd > 0)
+        {
+            user.Tokens = Math.Min(10, user.Tokens + tokensToAdd);
+            if (user.Tokens == 10)
+            {
+                user.LastTokenUpdateTime = DateTime.UtcNow;
+            }
+            else
+            {
+                user.LastTokenUpdateTime = user.LastTokenUpdateTime.AddMinutes(tokensToAdd * 7);
+            }
+        }
+    }
+
+    public async Task<bool> ConsumeMatchTokenAsync(Guid userId)
+    {
+        var user = await _context.Users.FindAsync(userId) ?? throw new InvalidOperationException("Kullanıcı bulunamadı.");
+        CalculateAndGrantTokens(user);
+        
+        if (user.Tokens > 0)
+        {
+            if (user.Tokens == 10)
+            {
+                user.LastTokenUpdateTime = DateTime.UtcNow; // Started consuming, start timer
+            }
+            user.Tokens--;
+            await _context.SaveChangesAsync();
+            return true;
+        }
+        return false;
+    }
+
+    public async Task RefundMatchTokenAsync(Guid userId)
+    {
+        var user = await _context.Users.FindAsync(userId);
+        if (user != null && user.Tokens < 10)
+        {
+            user.Tokens++;
+            if (user.Tokens == 10)
+            {
+                user.LastTokenUpdateTime = DateTime.UtcNow;
+            }
+            await _context.SaveChangesAsync();
+        }
     }
 }

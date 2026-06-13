@@ -54,6 +54,16 @@ public class GameHub : Hub
     public async Task SearchMatch()
     {
         var userId = GetUserId();
+        
+        using var scope = _scopeFactory.CreateScope();
+        var ecoManager = scope.ServiceProvider.GetRequiredService<IEconomyManager>();
+        
+        if (!await ecoManager.ConsumeMatchTokenAsync(userId))
+        {
+            await Clients.Caller.SendAsync("MatchSearchError", "Yeterli Jeton Yok!");
+            return;
+        }
+
         await _sessionManager.AddToQueueAsync(userId, Context.ConnectionId);
 
         var opponentId = await _sessionManager.FindMatchAsync(userId);
@@ -143,7 +153,13 @@ public class GameHub : Hub
     public async Task CancelSearch()
     {
         var userId = GetUserId();
-        await _sessionManager.RemoveFromQueueAsync(userId);
+        bool wasInQueue = await _sessionManager.RemoveFromQueueAsync(userId);
+        if (wasInQueue)
+        {
+            using var scope = _scopeFactory.CreateScope();
+            var ecoManager = scope.ServiceProvider.GetRequiredService<IEconomyManager>();
+            await ecoManager.RefundMatchTokenAsync(userId);
+        }
         await Clients.Caller.SendAsync("SearchCancelled");
     }
 
@@ -425,6 +441,21 @@ public class GameHub : Hub
         else
         {
             if (oppConn != null) await Clients.Client(oppConn).SendAsync("ChangeQuestionRequested", userId);
+        }
+    }
+
+    public async Task SendTypingStatus(Guid sessionId, bool isTyping)
+    {
+        var userId = GetUserId();
+        var session = await _gameManager.GetSessionAsync(sessionId);
+        if (session == null) return;
+        
+        var opponentId = session.Player1Id == userId ? session.Player2Id : session.Player1Id;
+        var oppConn = _sessionManager.GetConnectionId(opponentId);
+        
+        if (oppConn != null)
+        {
+            await Clients.Client(oppConn).SendAsync("OpponentIsTyping", isTyping);
         }
     }
 }

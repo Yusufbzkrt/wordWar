@@ -158,10 +158,31 @@ public class BotManager : IBotManager
                     continue; // Mesajı yolladıktan sonra başa dönüp asıl kelimeyi bulmaya/yanlış yapmaya çalışsın.
                 }
 
-                // Sıra botta, normal düşünme süresi
-                int delayMin = 4000;
-                int delayMax = 8000;
-                await Task.Delay(_random.Next(delayMin, delayMax));
+                // Sıra botta, düşünme süresi (1-3 saniye)
+                await Task.Delay(_random.Next(1000, 3000));
+
+                var sessionManager = _scopeFactory.CreateScope().ServiceProvider.GetRequiredService<ISessionManager>();
+                var opponentId = session.Player1Id == botId ? session.Player2Id : session.Player1Id;
+                var oppConn = sessionManager.GetConnectionId(opponentId);
+
+                // Yazıyor... durumunu gönder
+                if (oppConn != null)
+                {
+                    using var typingScope = _scopeFactory.CreateScope();
+                    var hubContext = typingScope.ServiceProvider.GetRequiredService<IHubContext<GameHub>>();
+                    await hubContext.Clients.Client(oppConn).SendAsync("OpponentIsTyping", true);
+                }
+
+                // Yazma süresi (kelime uzunluğuna göre simülasyon, ortalama 1-4 saniye)
+                await Task.Delay(_random.Next(1500, 4000));
+
+                // Yazmayı bitir
+                if (oppConn != null)
+                {
+                    using var typingScope = _scopeFactory.CreateScope();
+                    var hubContext = typingScope.ServiceProvider.GetRequiredService<IHubContext<GameHub>>();
+                    await hubContext.Clients.Client(oppConn).SendAsync("OpponentIsTyping", false);
+                }
 
                 using var executionScope = _scopeFactory.CreateScope();
                 var executionDb = executionScope.ServiceProvider.GetRequiredService<AppDbContext>();
@@ -194,10 +215,6 @@ public class BotManager : IBotManager
 
                 var gm = executionScope.ServiceProvider.GetRequiredService<IGameManager>();
                 var result = await gm.SubmitAnswerAsync(sessionId, roundId, botId, chosenAnswer);
-
-                var sessionManager = executionScope.ServiceProvider.GetRequiredService<ISessionManager>();
-                var opponentId = session.Player1Id == botId ? session.Player2Id : session.Player1Id;
-                var oppConn = sessionManager.GetConnectionId(opponentId);
                 
                 if (oppConn != null)
                 {
@@ -214,13 +231,11 @@ public class BotManager : IBotManager
 
                 if (result.IsCorrect)
                 {
-                    var updatedSession = await gm.GetSessionAsync(sessionId);
-                    var updatedRound = updatedSession?.Rounds.FirstOrDefault(r => r.Id == roundId);
-                    
-                    if (updatedRound != null && oppConn != null)
+                    if (oppConn != null)
                     {
                         var hubContext = executionScope.ServiceProvider.GetRequiredService<IHubContext<GameHub>>();
-                        await hubContext.Clients.Client(oppConn).SendAsync("TurnChanged", updatedRound.ActiveTurnPlayerId);
+                        // Bot doğru cevapladığında sıra kesinlikle rakibe (user) geçer.
+                        await hubContext.Clients.Client(oppConn).SendAsync("TurnChanged", opponentId);
                     }
                     // Döngü kırılmaz, bir sonraki tur için sıra beklemeye geçer
                 }

@@ -1,0 +1,8551 @@
+[
+  {
+    "Question": "Periyodik Tablo\u0027daki Soy Gazlar",
+    "Answers": [
+      {
+        "Text": "Helyum",
+        "IsPopular": true
+      },
+      {
+        "Text": "Neon",
+        "IsPopular": true
+      },
+      {
+        "Text": "Argon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kripton",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ksenon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Radon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Oganesson",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "\u0130kinci D\u00FCnya Sava\u015F\u0131\u0027nda Mihver Devletleri",
+    "Answers": [
+      {
+        "Text": "Almanya",
+        "IsPopular": true
+      },
+      {
+        "Text": "Japonya",
+        "IsPopular": true
+      },
+      {
+        "Text": "\u0130talya",
+        "IsPopular": false
+      },
+      {
+        "Text": "Macaristan",
+        "IsPopular": false
+      },
+      {
+        "Text": "Romanya",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bulgaristan",
+        "IsPopular": false
+      },
+      {
+        "Text": "Finlandiya",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tayland",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Kahvalt\u0131da S\u0131k\u00E7a T\u00FCketilen Yiyecekler",
+    "Answers": [
+      {
+        "Text": "Peynir",
+        "IsPopular": true
+      },
+      {
+        "Text": "Zeytin",
+        "IsPopular": true
+      },
+      {
+        "Text": "Yumurta",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bal",
+        "IsPopular": false
+      },
+      {
+        "Text": "Re\u00E7el",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tereya\u011F\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Domates",
+        "IsPopular": false
+      },
+      {
+        "Text": "Salatal\u0131k",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sucuk",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sosis",
+        "IsPopular": false
+      },
+      {
+        "Text": "Simit",
+        "IsPopular": false
+      },
+      {
+        "Text": "Po\u011Fa\u00E7a",
+        "IsPopular": false
+      },
+      {
+        "Text": "B\u00F6rek",
+        "IsPopular": false
+      },
+      {
+        "Text": "Menemen",
+        "IsPopular": false
+      },
+      {
+        "Text": "Pankek",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "UEFA \u015Eampiyonlar Ligi\u0027ni En \u00C7ok Kazanan Kul\u00FCpler",
+    "Answers": [
+      {
+        "Text": "Real Madrid",
+        "IsPopular": true
+      },
+      {
+        "Text": "Barcelona",
+        "IsPopular": true
+      },
+      {
+        "Text": "AC Milan",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bayern M\u00FCnih",
+        "IsPopular": false
+      },
+      {
+        "Text": "Liverpool",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ajax",
+        "IsPopular": false
+      },
+      {
+        "Text": "Manchester United",
+        "IsPopular": false
+      },
+      {
+        "Text": "Inter Milan",
+        "IsPopular": false
+      },
+      {
+        "Text": "Benfica",
+        "IsPopular": false
+      },
+      {
+        "Text": "Juventus",
+        "IsPopular": false
+      },
+      {
+        "Text": "Porto",
+        "IsPopular": false
+      },
+      {
+        "Text": "Borussia Dortmund",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "T\u00FCrkiye\u0027de Yeti\u015Fen K\u0131rm\u0131z\u0131 Renkli Meyveler",
+    "Answers": [
+      {
+        "Text": "\u00C7ilek",
+        "IsPopular": true
+      },
+      {
+        "Text": "Kiraz",
+        "IsPopular": true
+      },
+      {
+        "Text": "Vi\u015Fne",
+        "IsPopular": false
+      },
+      {
+        "Text": "Nar",
+        "IsPopular": false
+      },
+      {
+        "Text": "Elma",
+        "IsPopular": false
+      },
+      {
+        "Text": "Karpuz",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ahududu",
+        "IsPopular": false
+      },
+      {
+        "Text": "K\u0131z\u0131lc\u0131k",
+        "IsPopular": false
+      },
+      {
+        "Text": "B\u00F6\u011F\u00FCrtlen",
+        "IsPopular": false
+      },
+      {
+        "Text": "Erik",
+        "IsPopular": false
+      },
+      {
+        "Text": "K\u0131rm\u0131z\u0131 \u00DCz\u00FCm",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ku\u015Fburnu",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Klasik Bat\u0131 M\u00FCzi\u011Fi Bestecileri",
+    "Answers": [
+      {
+        "Text": "Mozart",
+        "IsPopular": true
+      },
+      {
+        "Text": "Beethoven",
+        "IsPopular": true
+      },
+      {
+        "Text": "Bach",
+        "IsPopular": false
+      },
+      {
+        "Text": "Vivaldi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Chopin",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tchaikovsky",
+        "IsPopular": false
+      },
+      {
+        "Text": "Verdi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Wagner",
+        "IsPopular": false
+      },
+      {
+        "Text": "Brahms",
+        "IsPopular": false
+      },
+      {
+        "Text": "Debussy",
+        "IsPopular": false
+      },
+      {
+        "Text": "Stravinsky",
+        "IsPopular": false
+      },
+      {
+        "Text": "Schubert",
+        "IsPopular": false
+      },
+      {
+        "Text": "Haydn",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Afrika Savanlar\u0131nda Ya\u015Fayan B\u00FCy\u00FCk Memeliler",
+    "Answers": [
+      {
+        "Text": "Aslan",
+        "IsPopular": true
+      },
+      {
+        "Text": "Fil",
+        "IsPopular": true
+      },
+      {
+        "Text": "Z\u00FCrafa",
+        "IsPopular": false
+      },
+      {
+        "Text": "Zebra",
+        "IsPopular": false
+      },
+      {
+        "Text": "Gergedan",
+        "IsPopular": false
+      },
+      {
+        "Text": "Su Ayg\u0131r\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7ita",
+        "IsPopular": false
+      },
+      {
+        "Text": "Leopar",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bufalo",
+        "IsPopular": false
+      },
+      {
+        "Text": "Antilop",
+        "IsPopular": false
+      },
+      {
+        "Text": "Gnu",
+        "IsPopular": false
+      },
+      {
+        "Text": "S\u0131rtlan",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Yayg\u0131n Kullan\u0131lan Web Taray\u0131c\u0131lar\u0131",
+    "Answers": [
+      {
+        "Text": "Google Chrome",
+        "IsPopular": true
+      },
+      {
+        "Text": "Mozilla Firefox",
+        "IsPopular": true
+      },
+      {
+        "Text": "Microsoft Edge",
+        "IsPopular": false
+      },
+      {
+        "Text": "Safari",
+        "IsPopular": false
+      },
+      {
+        "Text": "Opera",
+        "IsPopular": false
+      },
+      {
+        "Text": "Brave",
+        "IsPopular": false
+      },
+      {
+        "Text": "Vivaldi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Yandex Browser",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tor Browser",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "T\u00FCrk Edebiyat\u0131\u0027n\u0131n Tanzimat D\u00F6nemi Yazarlar\u0131",
+    "Answers": [
+      {
+        "Text": "Nam\u0131k Kemal",
+        "IsPopular": true
+      },
+      {
+        "Text": "\u015Einasi",
+        "IsPopular": true
+      },
+      {
+        "Text": "Ziya Pa\u015Fa",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ahmet Mithat Efendi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Recaizade Mahmut Ekrem",
+        "IsPopular": false
+      },
+      {
+        "Text": "Abd\u00FClhak Hamit Tarhan",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sami Pa\u015Fazade Sezai",
+        "IsPopular": false
+      },
+      {
+        "Text": "Nabizade Naz\u0131m",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Avrupa \u00DClkelerinin Pop\u00FCler Ba\u015Fkentleri",
+    "Answers": [
+      {
+        "Text": "Paris",
+        "IsPopular": true
+      },
+      {
+        "Text": "Londra",
+        "IsPopular": true
+      },
+      {
+        "Text": "Roma",
+        "IsPopular": false
+      },
+      {
+        "Text": "Berlin",
+        "IsPopular": false
+      },
+      {
+        "Text": "Madrid",
+        "IsPopular": false
+      },
+      {
+        "Text": "Amsterdam",
+        "IsPopular": false
+      },
+      {
+        "Text": "Br\u00FCksel",
+        "IsPopular": false
+      },
+      {
+        "Text": "Viyana",
+        "IsPopular": false
+      },
+      {
+        "Text": "Prag",
+        "IsPopular": false
+      },
+      {
+        "Text": "Lizbon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Atina",
+        "IsPopular": false
+      },
+      {
+        "Text": "Stockholm",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kopenhag",
+        "IsPopular": false
+      },
+      {
+        "Text": "Helsinki",
+        "IsPopular": false
+      },
+      {
+        "Text": "Dublin",
+        "IsPopular": false
+      },
+      {
+        "Text": "Oslo",
+        "IsPopular": false
+      },
+      {
+        "Text": "Var\u015Fova",
+        "IsPopular": false
+      },
+      {
+        "Text": "Budape\u015Fte",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Marvel Sinematik Evreni\u0027ndeki S\u00FCper Kahramanlar",
+    "Answers": [
+      {
+        "Text": "Demir Adam",
+        "IsPopular": true
+      },
+      {
+        "Text": "Kaptan Amerika",
+        "IsPopular": true
+      },
+      {
+        "Text": "Thor",
+        "IsPopular": false
+      },
+      {
+        "Text": "Hulk",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kara Dul",
+        "IsPopular": false
+      },
+      {
+        "Text": "Hawkeye",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00D6r\u00FCmcek Adam",
+        "IsPopular": false
+      },
+      {
+        "Text": "Doctor Strange",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kara Panter",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kaptan Marvel",
+        "IsPopular": false
+      },
+      {
+        "Text": "Scarlet Witch",
+        "IsPopular": false
+      },
+      {
+        "Text": "Vision",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ant-Man",
+        "IsPopular": false
+      },
+      {
+        "Text": "Falcon",
+        "IsPopular": false
+      },
+      {
+        "Text": "K\u0131\u015F Askeri",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Yunan Mitolojisi\u0027ndeki Olimpos Tanr\u0131lar\u0131",
+    "Answers": [
+      {
+        "Text": "Zeus",
+        "IsPopular": true
+      },
+      {
+        "Text": "Hera",
+        "IsPopular": true
+      },
+      {
+        "Text": "Poseidon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Demeter",
+        "IsPopular": false
+      },
+      {
+        "Text": "Athena",
+        "IsPopular": false
+      },
+      {
+        "Text": "Apollo",
+        "IsPopular": false
+      },
+      {
+        "Text": "Artemis",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ares",
+        "IsPopular": false
+      },
+      {
+        "Text": "Afrodit",
+        "IsPopular": false
+      },
+      {
+        "Text": "Hephaistos",
+        "IsPopular": false
+      },
+      {
+        "Text": "Hermes",
+        "IsPopular": false
+      },
+      {
+        "Text": "Dionysos",
+        "IsPopular": false
+      },
+      {
+        "Text": "Hades",
+        "IsPopular": false
+      },
+      {
+        "Text": "Hestia",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Sa\u011Fl\u0131k Sekt\u00F6r\u00FCndeki Meslekler",
+    "Answers": [
+      {
+        "Text": "Doktor",
+        "IsPopular": true
+      },
+      {
+        "Text": "Hem\u015Fire",
+        "IsPopular": true
+      },
+      {
+        "Text": "Eczac\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Di\u015F Hekimi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Fizyoterapist",
+        "IsPopular": false
+      },
+      {
+        "Text": "Psikolog",
+        "IsPopular": false
+      },
+      {
+        "Text": "Diyetisyen",
+        "IsPopular": false
+      },
+      {
+        "Text": "Veteriner",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ameliyat Teknisyeni",
+        "IsPopular": false
+      },
+      {
+        "Text": "Laborant",
+        "IsPopular": false
+      },
+      {
+        "Text": "Radyolog",
+        "IsPopular": false
+      },
+      {
+        "Text": "Anestezi Uzman\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "T\u0131bbi Sekreter",
+        "IsPopular": false
+      },
+      {
+        "Text": "Paramedik",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "D\u00FCnyaca \u00DCnl\u00FC Otomobil Markalar\u0131",
+    "Answers": [
+      {
+        "Text": "Mercedes-Benz",
+        "IsPopular": true
+      },
+      {
+        "Text": "BMW",
+        "IsPopular": true
+      },
+      {
+        "Text": "Audi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Volkswagen",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ford",
+        "IsPopular": false
+      },
+      {
+        "Text": "Toyota",
+        "IsPopular": false
+      },
+      {
+        "Text": "Honda",
+        "IsPopular": false
+      },
+      {
+        "Text": "Hyundai",
+        "IsPopular": false
+      },
+      {
+        "Text": "Renault",
+        "IsPopular": false
+      },
+      {
+        "Text": "Peugeot",
+        "IsPopular": false
+      },
+      {
+        "Text": "Fiat",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ferrari",
+        "IsPopular": false
+      },
+      {
+        "Text": "Lamborghini",
+        "IsPopular": false
+      },
+      {
+        "Text": "Porsche",
+        "IsPopular": false
+      },
+      {
+        "Text": "Volvo",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tesla",
+        "IsPopular": false
+      },
+      {
+        "Text": "Nissan",
+        "IsPopular": false
+      },
+      {
+        "Text": "Chevrolet",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "G\u00FCne\u015F Sistemi\u0027ndeki Gezegenler",
+    "Answers": [
+      {
+        "Text": "D\u00FCnya",
+        "IsPopular": true
+      },
+      {
+        "Text": "Mars",
+        "IsPopular": true
+      },
+      {
+        "Text": "Merk\u00FCr",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ven\u00FCs",
+        "IsPopular": false
+      },
+      {
+        "Text": "J\u00FCpiter",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sat\u00FCrn",
+        "IsPopular": false
+      },
+      {
+        "Text": "Uran\u00FCs",
+        "IsPopular": false
+      },
+      {
+        "Text": "Nept\u00FCn",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Klasik Kutu ve Masa Oyunlar\u0131",
+    "Answers": [
+      {
+        "Text": "Satran\u00E7",
+        "IsPopular": true
+      },
+      {
+        "Text": "Tavla",
+        "IsPopular": true
+      },
+      {
+        "Text": "Monopoly",
+        "IsPopular": false
+      },
+      {
+        "Text": "Scrabble",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tabu",
+        "IsPopular": false
+      },
+      {
+        "Text": "Risk",
+        "IsPopular": false
+      },
+      {
+        "Text": "K\u0131zma Birader",
+        "IsPopular": false
+      },
+      {
+        "Text": "Uno",
+        "IsPopular": false
+      },
+      {
+        "Text": "Jenga",
+        "IsPopular": false
+      },
+      {
+        "Text": "Dama",
+        "IsPopular": false
+      },
+      {
+        "Text": "Okey",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kelime Oyunu",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7anak Okey",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Yemek Yap\u0131m\u0131nda Kullan\u0131lan Baharatlar",
+    "Answers": [
+      {
+        "Text": "Karabiber",
+        "IsPopular": true
+      },
+      {
+        "Text": "Kimyon",
+        "IsPopular": true
+      },
+      {
+        "Text": "Pul Biber",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kekik",
+        "IsPopular": false
+      },
+      {
+        "Text": "Nane",
+        "IsPopular": false
+      },
+      {
+        "Text": "Zerde\u00E7al",
+        "IsPopular": false
+      },
+      {
+        "Text": "K\u00F6ri",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tar\u00E7\u0131n",
+        "IsPopular": false
+      },
+      {
+        "Text": "Karanfil",
+        "IsPopular": false
+      },
+      {
+        "Text": "Yenibahar",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sumak",
+        "IsPopular": false
+      },
+      {
+        "Text": "K\u0131rm\u0131z\u0131 Biber",
+        "IsPopular": false
+      },
+      {
+        "Text": "Biberiye",
+        "IsPopular": false
+      },
+      {
+        "Text": "Keklikotu",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "D\u00FCnyaca \u00DCnl\u00FC An\u0131tsal Yap\u0131lar",
+    "Answers": [
+      {
+        "Text": "Eyfel Kulesi",
+        "IsPopular": true
+      },
+      {
+        "Text": "\u00C7in Seddi",
+        "IsPopular": true
+      },
+      {
+        "Text": "Kolezyum",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tac Mahal",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00D6zg\u00FCrl\u00FCk Heykeli",
+        "IsPopular": false
+      },
+      {
+        "Text": "Giza Piramitleri",
+        "IsPopular": false
+      },
+      {
+        "Text": "Big Ben",
+        "IsPopular": false
+      },
+      {
+        "Text": "Pisa Kulesi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sidney Opera Binas\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Cristo Redentor",
+        "IsPopular": false
+      },
+      {
+        "Text": "Petra",
+        "IsPopular": false
+      },
+      {
+        "Text": "Machu Picchu",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ayasofya",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "G\u00FCndelik Hayatta Giyilen \u00DCst Giyim Par\u00E7alar\u0131",
+    "Answers": [
+      {
+        "Text": "Ti\u015F\u00F6rt",
+        "IsPopular": true
+      },
+      {
+        "Text": "G\u00F6mlek",
+        "IsPopular": true
+      },
+      {
+        "Text": "Kazak",
+        "IsPopular": false
+      },
+      {
+        "Text": "S\u00FCveter",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ceket",
+        "IsPopular": false
+      },
+      {
+        "Text": "H\u0131rka",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sweatshirt",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bluz",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tunik",
+        "IsPopular": false
+      },
+      {
+        "Text": "Yelek",
+        "IsPopular": false
+      },
+      {
+        "Text": "Palto",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kaban",
+        "IsPopular": false
+      },
+      {
+        "Text": "Mont",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kap\u00FC\u015Fonlu",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Nobel \u00D6d\u00FCl\u00FC Verilen Alanlar",
+    "Answers": [
+      {
+        "Text": "Bar\u0131\u015F",
+        "IsPopular": true
+      },
+      {
+        "Text": "Edebiyat",
+        "IsPopular": true
+      },
+      {
+        "Text": "Fizik",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kimya",
+        "IsPopular": false
+      },
+      {
+        "Text": "T\u0131p",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ekonomi",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "\u00DCnl\u00FC Teknoloji \u015Eirketleri",
+    "Answers": [
+      {
+        "Text": "Apple",
+        "IsPopular": true
+      },
+      {
+        "Text": "Samsung",
+        "IsPopular": true
+      },
+      {
+        "Text": "Microsoft",
+        "IsPopular": false
+      },
+      {
+        "Text": "Google",
+        "IsPopular": false
+      },
+      {
+        "Text": "Amazon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Meta",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sony",
+        "IsPopular": false
+      },
+      {
+        "Text": "IBM",
+        "IsPopular": false
+      },
+      {
+        "Text": "Intel",
+        "IsPopular": false
+      },
+      {
+        "Text": "Oracle",
+        "IsPopular": false
+      },
+      {
+        "Text": "Huawei",
+        "IsPopular": false
+      },
+      {
+        "Text": "Xiaomi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tesla",
+        "IsPopular": false
+      },
+      {
+        "Text": "Adobe",
+        "IsPopular": false
+      },
+      {
+        "Text": "SAP",
+        "IsPopular": false
+      },
+      {
+        "Text": "Nvidia",
+        "IsPopular": false
+      },
+      {
+        "Text": "Qualcomm",
+        "IsPopular": false
+      },
+      {
+        "Text": "Cisco",
+        "IsPopular": false
+      },
+      {
+        "Text": "Netflix",
+        "IsPopular": false
+      },
+      {
+        "Text": "Spotify",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "T\u00FCrk Mutfa\u011F\u0131ndan \u00C7orbalar",
+    "Answers": [
+      {
+        "Text": "Mercimek",
+        "IsPopular": true
+      },
+      {
+        "Text": "Ezogelin",
+        "IsPopular": true
+      },
+      {
+        "Text": "Tarhana",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u0130\u015Fkembe",
+        "IsPopular": false
+      },
+      {
+        "Text": "Yayla",
+        "IsPopular": false
+      },
+      {
+        "Text": "Domates",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tavuk Suyu",
+        "IsPopular": false
+      },
+      {
+        "Text": "D\u00FC\u011F\u00FCn",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sebze",
+        "IsPopular": false
+      },
+      {
+        "Text": "Mantar",
+        "IsPopular": false
+      },
+      {
+        "Text": "Pa\u00E7a",
+        "IsPopular": false
+      },
+      {
+        "Text": "Araba\u015F\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Beyran",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tutma\u00E7",
+        "IsPopular": false
+      },
+      {
+        "Text": "Eri\u015Fte",
+        "IsPopular": false
+      },
+      {
+        "Text": "Brokoli",
+        "IsPopular": false
+      },
+      {
+        "Text": "Yo\u011Furtlu",
+        "IsPopular": false
+      },
+      {
+        "Text": "Anal\u0131 K\u0131zl\u0131",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "D\u00FCnyaca \u00DCnl\u00FC Futbol Kul\u00FCpleri (Avrupa)",
+    "Answers": [
+      {
+        "Text": "Real Madrid",
+        "IsPopular": true
+      },
+      {
+        "Text": "Barcelona",
+        "IsPopular": true
+      },
+      {
+        "Text": "Manchester United",
+        "IsPopular": false
+      },
+      {
+        "Text": "Liverpool",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bayern M\u00FCnih",
+        "IsPopular": false
+      },
+      {
+        "Text": "Juventus",
+        "IsPopular": false
+      },
+      {
+        "Text": "AC Milan",
+        "IsPopular": false
+      },
+      {
+        "Text": "Inter Milan",
+        "IsPopular": false
+      },
+      {
+        "Text": "Paris Saint-Germain",
+        "IsPopular": false
+      },
+      {
+        "Text": "Chelsea",
+        "IsPopular": false
+      },
+      {
+        "Text": "Arsenal",
+        "IsPopular": false
+      },
+      {
+        "Text": "Manchester City",
+        "IsPopular": false
+      },
+      {
+        "Text": "Borussia Dortmund",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ajax",
+        "IsPopular": false
+      },
+      {
+        "Text": "Porto",
+        "IsPopular": false
+      },
+      {
+        "Text": "Benfica",
+        "IsPopular": false
+      },
+      {
+        "Text": "Roma",
+        "IsPopular": false
+      },
+      {
+        "Text": "Atl\u00E9tico Madrid",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tottenham",
+        "IsPopular": false
+      },
+      {
+        "Text": "Napoli",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "\u00DCnl\u00FC Ressamlar",
+    "Answers": [
+      {
+        "Text": "Van Gogh",
+        "IsPopular": true
+      },
+      {
+        "Text": "Picasso",
+        "IsPopular": true
+      },
+      {
+        "Text": "Leonardo da Vinci",
+        "IsPopular": false
+      },
+      {
+        "Text": "Claude Monet",
+        "IsPopular": false
+      },
+      {
+        "Text": "Salvador Dal\u00ED",
+        "IsPopular": false
+      },
+      {
+        "Text": "Frida Kahlo",
+        "IsPopular": false
+      },
+      {
+        "Text": "Rembrandt",
+        "IsPopular": false
+      },
+      {
+        "Text": "Michelangelo",
+        "IsPopular": false
+      },
+      {
+        "Text": "Raphael",
+        "IsPopular": false
+      },
+      {
+        "Text": "Edgar Degas",
+        "IsPopular": false
+      },
+      {
+        "Text": "Pierre-Auguste Renoir",
+        "IsPopular": false
+      },
+      {
+        "Text": "Gustave Klimt",
+        "IsPopular": false
+      },
+      {
+        "Text": "Andy Warhol",
+        "IsPopular": false
+      },
+      {
+        "Text": "Jan Vermeer",
+        "IsPopular": false
+      },
+      {
+        "Text": "Paul C\u00E9zanne",
+        "IsPopular": false
+      },
+      {
+        "Text": "Henri Matisse",
+        "IsPopular": false
+      },
+      {
+        "Text": "Jackson Pollock",
+        "IsPopular": false
+      },
+      {
+        "Text": "Georgia O\u0027Keeffe",
+        "IsPopular": false
+      },
+      {
+        "Text": "Johannes Vermeer",
+        "IsPopular": false
+      },
+      {
+        "Text": "Francisco Goya",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "D\u00FCnyadaki \u00DCnl\u00FC \u00C7\u00F6ller",
+    "Answers": [
+      {
+        "Text": "Sahra",
+        "IsPopular": true
+      },
+      {
+        "Text": "Gobi",
+        "IsPopular": true
+      },
+      {
+        "Text": "Atacama",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kalahari",
+        "IsPopular": false
+      },
+      {
+        "Text": "Arabistan",
+        "IsPopular": false
+      },
+      {
+        "Text": "B\u00FCy\u00FCk Kum",
+        "IsPopular": false
+      },
+      {
+        "Text": "Patagonya",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sonoran",
+        "IsPopular": false
+      },
+      {
+        "Text": "Mojave",
+        "IsPopular": false
+      },
+      {
+        "Text": "Taklamakan",
+        "IsPopular": false
+      },
+      {
+        "Text": "Gibson",
+        "IsPopular": false
+      },
+      {
+        "Text": "Karakum",
+        "IsPopular": false
+      },
+      {
+        "Text": "Thar",
+        "IsPopular": false
+      },
+      {
+        "Text": "Namib",
+        "IsPopular": false
+      },
+      {
+        "Text": "Simpson",
+        "IsPopular": false
+      },
+      {
+        "Text": "B\u00FCy\u00FCk Victoria",
+        "IsPopular": false
+      },
+      {
+        "Text": "Chihuahuan",
+        "IsPopular": false
+      },
+      {
+        "Text": "Lut",
+        "IsPopular": false
+      },
+      {
+        "Text": "Dasht-e Kavir",
+        "IsPopular": false
+      },
+      {
+        "Text": "Dasht-e Lut",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "T\u00FCm Zamanlar\u0131n En Bilinen Bilim Kurgu Filmleri",
+    "Answers": [
+      {
+        "Text": "Y\u0131ld\u0131z Sava\u015Flar\u0131: B\u00F6l\u00FCm IV - Yeni Bir Umut",
+        "IsPopular": true
+      },
+      {
+        "Text": "Matrix",
+        "IsPopular": true
+      },
+      {
+        "Text": "Avatar",
+        "IsPopular": false
+      },
+      {
+        "Text": "Blade Runner",
+        "IsPopular": false
+      },
+      {
+        "Text": "Interstellar",
+        "IsPopular": false
+      },
+      {
+        "Text": "Dune",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ba\u015Flang\u0131\u00E7 (Inception)",
+        "IsPopular": false
+      },
+      {
+        "Text": "Terminator 2: K\u0131yamet G\u00FCn\u00FC",
+        "IsPopular": false
+      },
+      {
+        "Text": "Gelece\u011Fe D\u00F6n\u00FC\u015F",
+        "IsPopular": false
+      },
+      {
+        "Text": "Alien",
+        "IsPopular": false
+      },
+      {
+        "Text": "E.T. D\u0131\u015F D\u00FCnya",
+        "IsPopular": false
+      },
+      {
+        "Text": "2001: Bir Uzay Destan\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Mad Max: Fury Road",
+        "IsPopular": false
+      },
+      {
+        "Text": "Metropolis",
+        "IsPopular": false
+      },
+      {
+        "Text": "Uzay Yolu (Star Trek)",
+        "IsPopular": false
+      },
+      {
+        "Text": "V for Vendetta",
+        "IsPopular": false
+      },
+      {
+        "Text": "Robocop",
+        "IsPopular": false
+      },
+      {
+        "Text": "Wall-E",
+        "IsPopular": false
+      },
+      {
+        "Text": "Truman Show",
+        "IsPopular": false
+      },
+      {
+        "Text": "District 9",
+        "IsPopular": false
+      },
+      {
+        "Text": "Arrival",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Bir Mutfakta Bulunabilecek Temel Gere\u00E7ler",
+    "Answers": [
+      {
+        "Text": "Buzdolab\u0131",
+        "IsPopular": true
+      },
+      {
+        "Text": "Tencere",
+        "IsPopular": true
+      },
+      {
+        "Text": "F\u0131r\u0131n",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ocak",
+        "IsPopular": false
+      },
+      {
+        "Text": "Mikrodalga",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bula\u015F\u0131k Makinesi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tava",
+        "IsPopular": false
+      },
+      {
+        "Text": "B\u0131\u00E7ak",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7atal",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ka\u015F\u0131k",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bardak",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tabak",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kupa",
+        "IsPopular": false
+      },
+      {
+        "Text": "Mikser",
+        "IsPopular": false
+      },
+      {
+        "Text": "Blender",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ekmek K\u0131zartma Makinesi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Su Is\u0131t\u0131c\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kahve Makinesi",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7aydanl\u0131k",
+        "IsPopular": false
+      },
+      {
+        "Text": "S\u00FCzge\u00E7",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kesme Tahtas\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kep\u00E7e",
+        "IsPopular": false
+      },
+      {
+        "Text": "Spatula",
+        "IsPopular": false
+      },
+      {
+        "Text": "Rende",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7\u0131rp\u0131c\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Konserve A\u00E7aca\u011F\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tirbu\u015Fon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tost Makinesi",
+        "IsPopular": false
+      },
+      {
+        "Text": "S\u00FCrahi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Fincan",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kase",
+        "IsPopular": false
+      },
+      {
+        "Text": "Nihale",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00D6l\u00E7\u00FC Kab\u0131",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "T\u00FCrkiye\u0027nin Pop\u00FCler Ulusal Parklar\u0131",
+    "Answers": [
+      {
+        "Text": "G\u00F6reme Tarihi Milli Park\u0131",
+        "IsPopular": true
+      },
+      {
+        "Text": "Yedig\u00F6ller Milli Park\u0131",
+        "IsPopular": true
+      },
+      {
+        "Text": "Ku\u015F Cenneti Milli Park\u0131 (Manyas G\u00F6l\u00FC)",
+        "IsPopular": false
+      },
+      {
+        "Text": "Dilek Yar\u0131madas\u0131-B\u00FCy\u00FCk Menderes Deltas\u0131 Milli Park\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Uluda\u011F Milli Park\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Alada\u011Flar Milli Park\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "K\u00F6pr\u00FCl\u00FC Kanyon Milli Park\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Munzur Vadisi Milli Park\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kazda\u011F\u0131 Milli Park\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Beyda\u011Flar\u0131 Sahil Milli Park\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sakl\u0131kent Kanyonu Milli Park\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ka\u00E7kar Da\u011Flar\u0131 Milli Park\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bo\u011Fazk\u00F6y-Alacah\u00F6y\u00FCk Milli Park\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Alt\u0131ndere Vadisi Milli Park\u0131 (S\u00FCmela Manast\u0131r\u0131)",
+        "IsPopular": false
+      },
+      {
+        "Text": "Hatila Vadisi Milli Park\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Karatepe-Aslanta\u015F Milli Park\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7aml\u0131hem\u015Fin Ayder Milli Park\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ba\u015Fkomutan Tarihi Milli Park\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Gala G\u00F6l\u00FC Milli Park\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sultan Sazl\u0131\u011F\u0131 Milli Park\u0131",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "En \u00C7ok Bilinen Kutu Oyunlar\u0131",
+    "Answers": [
+      {
+        "Text": "Monopoly",
+        "IsPopular": true
+      },
+      {
+        "Text": "Tabu",
+        "IsPopular": true
+      },
+      {
+        "Text": "Scrabble",
+        "IsPopular": false
+      },
+      {
+        "Text": "Jenga",
+        "IsPopular": false
+      },
+      {
+        "Text": "Uno",
+        "IsPopular": false
+      },
+      {
+        "Text": "Okey",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tavla",
+        "IsPopular": false
+      },
+      {
+        "Text": "Satran\u00E7",
+        "IsPopular": false
+      },
+      {
+        "Text": "K\u0131zma Birader",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kelime Oyunu",
+        "IsPopular": false
+      },
+      {
+        "Text": "Trivial Pursuit",
+        "IsPopular": false
+      },
+      {
+        "Text": "Risk",
+        "IsPopular": false
+      },
+      {
+        "Text": "Dixit",
+        "IsPopular": false
+      },
+      {
+        "Text": "Catan",
+        "IsPopular": false
+      },
+      {
+        "Text": "Mangala",
+        "IsPopular": false
+      },
+      {
+        "Text": "Dama",
+        "IsPopular": false
+      },
+      {
+        "Text": "Reversi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Go",
+        "IsPopular": false
+      },
+      {
+        "Text": "Zeka K\u00FCp\u00FC (Rubik\u0027s Cube)",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bil Bakal\u0131m Kim",
+        "IsPopular": false
+      },
+      {
+        "Text": "Connect 4",
+        "IsPopular": false
+      },
+      {
+        "Text": "Uno Flip",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kelimatik",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Yaz Olimpiyat Oyunlar\u0131nda Yer Alan Spor Dallar\u0131",
+    "Answers": [
+      {
+        "Text": "Atletizm",
+        "IsPopular": true
+      },
+      {
+        "Text": "Y\u00FCzme",
+        "IsPopular": true
+      },
+      {
+        "Text": "Basketbol",
+        "IsPopular": false
+      },
+      {
+        "Text": "Futbol",
+        "IsPopular": false
+      },
+      {
+        "Text": "Voleybol",
+        "IsPopular": false
+      },
+      {
+        "Text": "G\u00FCre\u015F",
+        "IsPopular": false
+      },
+      {
+        "Text": "Boks",
+        "IsPopular": false
+      },
+      {
+        "Text": "Jimnastik",
+        "IsPopular": false
+      },
+      {
+        "Text": "Halter",
+        "IsPopular": false
+      },
+      {
+        "Text": "Eskrim",
+        "IsPopular": false
+      },
+      {
+        "Text": "Judo",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tekvando",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kano",
+        "IsPopular": false
+      },
+      {
+        "Text": "K\u00FCrek",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bisiklet",
+        "IsPopular": false
+      },
+      {
+        "Text": "Masa Tenisi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tenis",
+        "IsPopular": false
+      },
+      {
+        "Text": "Badminton",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ok\u00E7uluk",
+        "IsPopular": false
+      },
+      {
+        "Text": "Binicilik",
+        "IsPopular": false
+      },
+      {
+        "Text": "Golf",
+        "IsPopular": false
+      },
+      {
+        "Text": "Hokey",
+        "IsPopular": false
+      },
+      {
+        "Text": "Hentbol",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sutopu",
+        "IsPopular": false
+      },
+      {
+        "Text": "Artistik Y\u00FCzme",
+        "IsPopular": false
+      },
+      {
+        "Text": "Dal\u0131\u015F",
+        "IsPopular": false
+      },
+      {
+        "Text": "At\u0131c\u0131l\u0131k",
+        "IsPopular": false
+      },
+      {
+        "Text": "Modern Pentatlon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Yelken",
+        "IsPopular": false
+      },
+      {
+        "Text": "Triatlon",
+        "IsPopular": false
+      },
+      {
+        "Text": "S\u00F6rf",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kaykay",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sportif T\u0131rman\u0131\u015F",
+        "IsPopular": false
+      },
+      {
+        "Text": "Karate",
+        "IsPopular": false
+      },
+      {
+        "Text": "Beyzbol/Softbol",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Periyodik Tablo\u0027daki Elementler",
+    "Answers": [
+      {
+        "Text": "Oksijen",
+        "IsPopular": true
+      },
+      {
+        "Text": "Demir",
+        "IsPopular": true
+      },
+      {
+        "Text": "Hidrojen",
+        "IsPopular": false
+      },
+      {
+        "Text": "Helyum",
+        "IsPopular": false
+      },
+      {
+        "Text": "Karbon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Azot",
+        "IsPopular": false
+      },
+      {
+        "Text": "Flor",
+        "IsPopular": false
+      },
+      {
+        "Text": "Neon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sodyum",
+        "IsPopular": false
+      },
+      {
+        "Text": "Magnezyum",
+        "IsPopular": false
+      },
+      {
+        "Text": "Al\u00FCminyum",
+        "IsPopular": false
+      },
+      {
+        "Text": "Silisyum",
+        "IsPopular": false
+      },
+      {
+        "Text": "Fosfor",
+        "IsPopular": false
+      },
+      {
+        "Text": "K\u00FCk\u00FCrt",
+        "IsPopular": false
+      },
+      {
+        "Text": "Klor",
+        "IsPopular": false
+      },
+      {
+        "Text": "Argon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Potasyum",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kalsiyum",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bak\u0131r",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7inko",
+        "IsPopular": false
+      },
+      {
+        "Text": "G\u00FCm\u00FC\u015F",
+        "IsPopular": false
+      },
+      {
+        "Text": "Alt\u0131n",
+        "IsPopular": false
+      },
+      {
+        "Text": "C\u0131va",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kur\u015Fun",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Mutfakta Bulunan Gere\u00E7ler",
+    "Answers": [
+      {
+        "Text": "Tencere",
+        "IsPopular": true
+      },
+      {
+        "Text": "B\u0131\u00E7ak",
+        "IsPopular": true
+      },
+      {
+        "Text": "Tava",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7atal",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ka\u015F\u0131k",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tabak",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bardak",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kase",
+        "IsPopular": false
+      },
+      {
+        "Text": "Fincan",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kep\u00E7e",
+        "IsPopular": false
+      },
+      {
+        "Text": "Spatula",
+        "IsPopular": false
+      },
+      {
+        "Text": "Rende",
+        "IsPopular": false
+      },
+      {
+        "Text": "S\u00FCzge\u00E7",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kesme Tahtas\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Mikser",
+        "IsPopular": false
+      },
+      {
+        "Text": "Blender",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ekmek K\u0131zartma Makinesi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Su Is\u0131t\u0131c\u0131s\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "F\u0131r\u0131n Tepsisi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Saklama Kab\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tuzluk",
+        "IsPopular": false
+      },
+      {
+        "Text": "Biberlik",
+        "IsPopular": false
+      },
+      {
+        "Text": "A\u00E7acak",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tirbu\u015Fon",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Pop\u00FCler M\u00FCzik Aletleri",
+    "Answers": [
+      {
+        "Text": "Gitar",
+        "IsPopular": true
+      },
+      {
+        "Text": "Piyano",
+        "IsPopular": true
+      },
+      {
+        "Text": "Keman",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bateri",
+        "IsPopular": false
+      },
+      {
+        "Text": "Fl\u00FCt",
+        "IsPopular": false
+      },
+      {
+        "Text": "Saksafon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Trompet",
+        "IsPopular": false
+      },
+      {
+        "Text": "Klarinet",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7ello",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kontrbas",
+        "IsPopular": false
+      },
+      {
+        "Text": "Akordeon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ud",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ba\u011Flama",
+        "IsPopular": false
+      },
+      {
+        "Text": "Org",
+        "IsPopular": false
+      },
+      {
+        "Text": "M\u0131z\u0131ka",
+        "IsPopular": false
+      },
+      {
+        "Text": "Mandolin",
+        "IsPopular": false
+      },
+      {
+        "Text": "Arp",
+        "IsPopular": false
+      },
+      {
+        "Text": "Trombon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Darbuka",
+        "IsPopular": false
+      },
+      {
+        "Text": "Saz",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kanun",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ney",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Kahvalt\u0131da T\u00FCketilenler",
+    "Answers": [
+      {
+        "Text": "Peynir",
+        "IsPopular": true
+      },
+      {
+        "Text": "Yumurta",
+        "IsPopular": true
+      },
+      {
+        "Text": "Zeytin",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ekmek",
+        "IsPopular": false
+      },
+      {
+        "Text": "Domates",
+        "IsPopular": false
+      },
+      {
+        "Text": "Salatal\u0131k",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bal",
+        "IsPopular": false
+      },
+      {
+        "Text": "Re\u00E7el",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tereya\u011F\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Salam",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sosis",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sucuk",
+        "IsPopular": false
+      },
+      {
+        "Text": "Simit",
+        "IsPopular": false
+      },
+      {
+        "Text": "Po\u011Fa\u00E7a",
+        "IsPopular": false
+      },
+      {
+        "Text": "B\u00F6rek",
+        "IsPopular": false
+      },
+      {
+        "Text": "Menemen",
+        "IsPopular": false
+      },
+      {
+        "Text": "Pankek",
+        "IsPopular": false
+      },
+      {
+        "Text": "M\u0131s\u0131r Gevre\u011Fi",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7ay",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kahve",
+        "IsPopular": false
+      },
+      {
+        "Text": "S\u00FCt",
+        "IsPopular": false
+      },
+      {
+        "Text": "Meyve Suyu",
+        "IsPopular": false
+      },
+      {
+        "Text": "Helva",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tahin-Pekmez",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Olimpik Yaz Sporlar\u0131",
+    "Answers": [
+      {
+        "Text": "Futbol",
+        "IsPopular": true
+      },
+      {
+        "Text": "Y\u00FCzme",
+        "IsPopular": true
+      },
+      {
+        "Text": "Atletizm",
+        "IsPopular": false
+      },
+      {
+        "Text": "Basketbol",
+        "IsPopular": false
+      },
+      {
+        "Text": "Voleybol",
+        "IsPopular": false
+      },
+      {
+        "Text": "Hentbol",
+        "IsPopular": false
+      },
+      {
+        "Text": "G\u00FCre\u015F",
+        "IsPopular": false
+      },
+      {
+        "Text": "Boks",
+        "IsPopular": false
+      },
+      {
+        "Text": "Jimnastik",
+        "IsPopular": false
+      },
+      {
+        "Text": "Halter",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tekvando",
+        "IsPopular": false
+      },
+      {
+        "Text": "Judo",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kano",
+        "IsPopular": false
+      },
+      {
+        "Text": "K\u00FCrek",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ok\u00E7uluk",
+        "IsPopular": false
+      },
+      {
+        "Text": "Eskrim",
+        "IsPopular": false
+      },
+      {
+        "Text": "Binicilik",
+        "IsPopular": false
+      },
+      {
+        "Text": "Yelken",
+        "IsPopular": false
+      },
+      {
+        "Text": "Badminton",
+        "IsPopular": false
+      },
+      {
+        "Text": "Masa Tenisi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tenis",
+        "IsPopular": false
+      },
+      {
+        "Text": "Golf",
+        "IsPopular": false
+      },
+      {
+        "Text": "Hokey",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ragbi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Plaj Voleybolu",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Do\u011Fada Yayg\u0131n Bulunan Elementler",
+    "Answers": [
+      {
+        "Text": "Oksijen",
+        "IsPopular": true
+      },
+      {
+        "Text": "Hidrojen",
+        "IsPopular": true
+      },
+      {
+        "Text": "Azot",
+        "IsPopular": false
+      },
+      {
+        "Text": "Karbon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Demir",
+        "IsPopular": false
+      },
+      {
+        "Text": "Al\u00FCminyum",
+        "IsPopular": false
+      },
+      {
+        "Text": "Silisyum",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kalsiyum",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sodyum",
+        "IsPopular": false
+      },
+      {
+        "Text": "Potasyum",
+        "IsPopular": false
+      },
+      {
+        "Text": "Magnezyum",
+        "IsPopular": false
+      },
+      {
+        "Text": "K\u00FCk\u00FCrt",
+        "IsPopular": false
+      },
+      {
+        "Text": "Klor",
+        "IsPopular": false
+      },
+      {
+        "Text": "Helyum",
+        "IsPopular": false
+      },
+      {
+        "Text": "Neon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Argon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bak\u0131r",
+        "IsPopular": false
+      },
+      {
+        "Text": "G\u00FCm\u00FC\u015F",
+        "IsPopular": false
+      },
+      {
+        "Text": "Alt\u0131n",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7inko",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Mutfakta Bulunan Yayg\u0131n E\u015Fyalar",
+    "Answers": [
+      {
+        "Text": "Buzdolab\u0131",
+        "IsPopular": true
+      },
+      {
+        "Text": "F\u0131r\u0131n",
+        "IsPopular": true
+      },
+      {
+        "Text": "Ocak",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bula\u015F\u0131k Makinesi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Mikrodalga",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tencere",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tava",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tabak",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bardak",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7atal",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ka\u015F\u0131k",
+        "IsPopular": false
+      },
+      {
+        "Text": "B\u0131\u00E7ak",
+        "IsPopular": false
+      },
+      {
+        "Text": "Su Is\u0131t\u0131c\u0131s\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kahve Makinesi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Blender",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tost Makinesi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kesme Tahtas\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "S\u00FCrahi",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7\u00F6p Kovas\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Baharatl\u0131k",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Pop\u00FCler M\u00FCzik Aletleri",
+    "Answers": [
+      {
+        "Text": "Piyano",
+        "IsPopular": true
+      },
+      {
+        "Text": "Gitar",
+        "IsPopular": true
+      },
+      {
+        "Text": "Keman",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bateri",
+        "IsPopular": false
+      },
+      {
+        "Text": "Fl\u00FCt",
+        "IsPopular": false
+      },
+      {
+        "Text": "Saksafon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Klarnet",
+        "IsPopular": false
+      },
+      {
+        "Text": "Trompet",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7ello",
+        "IsPopular": false
+      },
+      {
+        "Text": "Akordeon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ba\u011Flama",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ud",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ney",
+        "IsPopular": false
+      },
+      {
+        "Text": "Darbuka",
+        "IsPopular": false
+      },
+      {
+        "Text": "Org",
+        "IsPopular": false
+      },
+      {
+        "Text": "M\u0131z\u0131ka",
+        "IsPopular": false
+      },
+      {
+        "Text": "Arp",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kontrbas",
+        "IsPopular": false
+      },
+      {
+        "Text": "Yan Fl\u00FCt",
+        "IsPopular": false
+      },
+      {
+        "Text": "Zurna",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Tak\u0131m Halinde Oynanan Sporlar",
+    "Answers": [
+      {
+        "Text": "Futbol",
+        "IsPopular": true
+      },
+      {
+        "Text": "Basketbol",
+        "IsPopular": true
+      },
+      {
+        "Text": "Voleybol",
+        "IsPopular": false
+      },
+      {
+        "Text": "Hentbol",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ragbi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Amerikan Futbolu",
+        "IsPopular": false
+      },
+      {
+        "Text": "Buz Hokeyi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Su Topu",
+        "IsPopular": false
+      },
+      {
+        "Text": "Beyzbol",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kriket",
+        "IsPopular": false
+      },
+      {
+        "Text": "Curling",
+        "IsPopular": false
+      },
+      {
+        "Text": "K\u00FCrek",
+        "IsPopular": false
+      },
+      {
+        "Text": "Senkronize Y\u00FCzme",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bocce",
+        "IsPopular": false
+      },
+      {
+        "Text": "Lacrosse",
+        "IsPopular": false
+      },
+      {
+        "Text": "Polo",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ultimate Frizbi",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7im Hokeyi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bowling (Tak\u0131m)",
+        "IsPopular": false
+      },
+      {
+        "Text": "Atletizm (Bayrak Yar\u0131\u015F\u0131)",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "G\u00FCnl\u00FCk Hayatta T\u00FCketilen Meyveler",
+    "Answers": [
+      {
+        "Text": "Elma",
+        "IsPopular": true
+      },
+      {
+        "Text": "Portakal",
+        "IsPopular": true
+      },
+      {
+        "Text": "Muz",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7ilek",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00DCz\u00FCm",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u015Eeftali",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kiraz",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kay\u0131s\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Armut",
+        "IsPopular": false
+      },
+      {
+        "Text": "Karpuz",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kavun",
+        "IsPopular": false
+      },
+      {
+        "Text": "Mandalina",
+        "IsPopular": false
+      },
+      {
+        "Text": "Limon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kivi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ananas",
+        "IsPopular": false
+      },
+      {
+        "Text": "Nar",
+        "IsPopular": false
+      },
+      {
+        "Text": "Erik",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u0130ncir",
+        "IsPopular": false
+      },
+      {
+        "Text": "Avokado",
+        "IsPopular": false
+      },
+      {
+        "Text": "Hurma",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Yayg\u0131n olarak kullan\u0131lan web taray\u0131c\u0131lar\u0131",
+    "Answers": [
+      {
+        "Text": "Google Chrome",
+        "IsPopular": true
+      },
+      {
+        "Text": "Mozilla Firefox",
+        "IsPopular": true
+      },
+      {
+        "Text": "Microsoft Edge",
+        "IsPopular": false
+      },
+      {
+        "Text": "Apple Safari",
+        "IsPopular": false
+      },
+      {
+        "Text": "Opera",
+        "IsPopular": false
+      },
+      {
+        "Text": "Brave",
+        "IsPopular": false
+      },
+      {
+        "Text": "Vivaldi",
+        "IsPopular": false
+      },
+      {
+        "Text": "DuckDuckGo Taray\u0131c\u0131s\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Samsung Internet",
+        "IsPopular": false
+      },
+      {
+        "Text": "Yandex Taray\u0131c\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tor Taray\u0131c\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Maxthon",
+        "IsPopular": false
+      },
+      {
+        "Text": "UC Browser",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Mutfakta bulunan elektrikli aletler",
+    "Answers": [
+      {
+        "Text": "Buzdolab\u0131",
+        "IsPopular": true
+      },
+      {
+        "Text": "F\u0131r\u0131n",
+        "IsPopular": true
+      },
+      {
+        "Text": "Mikrodalga F\u0131r\u0131n",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bula\u015F\u0131k Makinesi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Su Is\u0131t\u0131c\u0131s\u0131 (Kettle)",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kahve Makinesi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Blender",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tost Makinesi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ekmek K\u0131zartma Makinesi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Mikser",
+        "IsPopular": false
+      },
+      {
+        "Text": "Mutfak Robotu",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7ay Makinesi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Frit\u00F6z",
+        "IsPopular": false
+      },
+      {
+        "Text": "Derin Dondurucu",
+        "IsPopular": false
+      },
+      {
+        "Text": "Waffle Makinesi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ekmek Yapma Makinesi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Meyve S\u0131kaca\u011F\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Izgara Makinesi",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Okyanuslarda ya\u015Fayan deniz canl\u0131lar\u0131",
+    "Answers": [
+      {
+        "Text": "Balina",
+        "IsPopular": true
+      },
+      {
+        "Text": "K\u00F6pek Bal\u0131\u011F\u0131",
+        "IsPopular": true
+      },
+      {
+        "Text": "Yunus",
+        "IsPopular": false
+      },
+      {
+        "Text": "Fok",
+        "IsPopular": false
+      },
+      {
+        "Text": "Deniz Anas\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ahtapot",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kalamar",
+        "IsPopular": false
+      },
+      {
+        "Text": "Yenge\u00E7",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u0130stiridye",
+        "IsPopular": false
+      },
+      {
+        "Text": "Midye",
+        "IsPopular": false
+      },
+      {
+        "Text": "Deniz Y\u0131ld\u0131z\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Deniz At\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Penguen",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kaplan Bal\u0131\u011F\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Deniz Kaplumba\u011Fas\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Orka",
+        "IsPopular": false
+      },
+      {
+        "Text": "Palya\u00E7o Bal\u0131\u011F\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Manta Vatozu",
+        "IsPopular": false
+      },
+      {
+        "Text": "Mercan",
+        "IsPopular": false
+      },
+      {
+        "Text": "Deniz H\u0131yar\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Deniz Kirpisi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Morina",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ton Bal\u0131\u011F\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Deniz Aslan\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Deniz Samuru",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Pop\u00FCler masa oyunlar\u0131",
+    "Answers": [
+      {
+        "Text": "Monopoly",
+        "IsPopular": true
+      },
+      {
+        "Text": "Tabu",
+        "IsPopular": true
+      },
+      {
+        "Text": "Scrabble",
+        "IsPopular": false
+      },
+      {
+        "Text": "Jenga",
+        "IsPopular": false
+      },
+      {
+        "Text": "K\u0131zma Birader",
+        "IsPopular": false
+      },
+      {
+        "Text": "Okey",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tavla",
+        "IsPopular": false
+      },
+      {
+        "Text": "Satran\u00E7",
+        "IsPopular": false
+      },
+      {
+        "Text": "Dama",
+        "IsPopular": false
+      },
+      {
+        "Text": "Trivial Pursuit",
+        "IsPopular": false
+      },
+      {
+        "Text": "Uno",
+        "IsPopular": false
+      },
+      {
+        "Text": "Dixit",
+        "IsPopular": false
+      },
+      {
+        "Text": "Catan",
+        "IsPopular": false
+      },
+      {
+        "Text": "Risk",
+        "IsPopular": false
+      },
+      {
+        "Text": "Cluedo",
+        "IsPopular": false
+      },
+      {
+        "Text": "Go",
+        "IsPopular": false
+      },
+      {
+        "Text": "Domino",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kelime Oyunu",
+        "IsPopular": false
+      },
+      {
+        "Text": "5 Ta\u015F",
+        "IsPopular": false
+      },
+      {
+        "Text": "Mangala",
+        "IsPopular": false
+      },
+      {
+        "Text": "Reversi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Connect 4",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Kahvalt\u0131da t\u00FCketilen yiyecek ve i\u00E7ecekler",
+    "Answers": [
+      {
+        "Text": "Peynir",
+        "IsPopular": true
+      },
+      {
+        "Text": "Yumurta",
+        "IsPopular": true
+      },
+      {
+        "Text": "Zeytin",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ekmek",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tereya\u011F\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bal",
+        "IsPopular": false
+      },
+      {
+        "Text": "Re\u00E7el",
+        "IsPopular": false
+      },
+      {
+        "Text": "Domates",
+        "IsPopular": false
+      },
+      {
+        "Text": "Salatal\u0131k",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sucuk",
+        "IsPopular": false
+      },
+      {
+        "Text": "Past\u0131rma",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sosis",
+        "IsPopular": false
+      },
+      {
+        "Text": "Simit",
+        "IsPopular": false
+      },
+      {
+        "Text": "Po\u011Fa\u00E7a",
+        "IsPopular": false
+      },
+      {
+        "Text": "B\u00F6rek",
+        "IsPopular": false
+      },
+      {
+        "Text": "Menemen",
+        "IsPopular": false
+      },
+      {
+        "Text": "Pankek",
+        "IsPopular": false
+      },
+      {
+        "Text": "Waffle",
+        "IsPopular": false
+      },
+      {
+        "Text": "M\u0131s\u0131r Gevre\u011Fi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Yo\u011Furt",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7ay",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kahve",
+        "IsPopular": false
+      },
+      {
+        "Text": "S\u00FCt",
+        "IsPopular": false
+      },
+      {
+        "Text": "Portakal Suyu",
+        "IsPopular": false
+      },
+      {
+        "Text": "Vi\u015Fne Suyu",
+        "IsPopular": false
+      },
+      {
+        "Text": "Krep",
+        "IsPopular": false
+      },
+      {
+        "Text": "Salam",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Bilgisayar\u0131n Temel Donan\u0131m Bile\u015Fenleri",
+    "Answers": [
+      {
+        "Text": "CPU (\u0130\u015Flemci)",
+        "IsPopular": true
+      },
+      {
+        "Text": "RAM (Bellek)",
+        "IsPopular": true
+      },
+      {
+        "Text": "Anakart",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ekran Kart\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sabit Disk (HDD/SSD)",
+        "IsPopular": false
+      },
+      {
+        "Text": "G\u00FC\u00E7 Kayna\u011F\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kasa",
+        "IsPopular": false
+      },
+      {
+        "Text": "Klavye",
+        "IsPopular": false
+      },
+      {
+        "Text": "Fare",
+        "IsPopular": false
+      },
+      {
+        "Text": "Monit\u00F6r",
+        "IsPopular": false
+      },
+      {
+        "Text": "Hoparl\u00F6r",
+        "IsPopular": false
+      },
+      {
+        "Text": "Webcam",
+        "IsPopular": false
+      },
+      {
+        "Text": "A\u011F Kart\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ses Kart\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Fan/So\u011Futucu",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Kahvalt\u0131da T\u00FCketilen Yiyecekler (T\u00FCrk Kahvalt\u0131s\u0131 Odakl\u0131)",
+    "Answers": [
+      {
+        "Text": "Zeytin",
+        "IsPopular": true
+      },
+      {
+        "Text": "Peynir",
+        "IsPopular": true
+      },
+      {
+        "Text": "Yumurta",
+        "IsPopular": false
+      },
+      {
+        "Text": "Domates",
+        "IsPopular": false
+      },
+      {
+        "Text": "Salatal\u0131k",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bal",
+        "IsPopular": false
+      },
+      {
+        "Text": "Re\u00E7el",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tereya\u011F\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ekmek",
+        "IsPopular": false
+      },
+      {
+        "Text": "Simit",
+        "IsPopular": false
+      },
+      {
+        "Text": "Po\u011Fa\u00E7a",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sucuk",
+        "IsPopular": false
+      },
+      {
+        "Text": "Menemen",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7ay",
+        "IsPopular": false
+      },
+      {
+        "Text": "Meyve Suyu",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "D\u00FCnyaca \u00DCnl\u00FC M\u00FCzik Enstr\u00FCmanlar\u0131",
+    "Answers": [
+      {
+        "Text": "Piyano",
+        "IsPopular": true
+      },
+      {
+        "Text": "Gitar",
+        "IsPopular": true
+      },
+      {
+        "Text": "Keman",
+        "IsPopular": false
+      },
+      {
+        "Text": "Davul",
+        "IsPopular": false
+      },
+      {
+        "Text": "Fl\u00FCt",
+        "IsPopular": false
+      },
+      {
+        "Text": "Saksafon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Trompet",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7ello",
+        "IsPopular": false
+      },
+      {
+        "Text": "Akordeon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bateri",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bas Gitar",
+        "IsPopular": false
+      },
+      {
+        "Text": "Klarnet",
+        "IsPopular": false
+      },
+      {
+        "Text": "Arp",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ud",
+        "IsPopular": false
+      },
+      {
+        "Text": "Mandolin",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "D\u00FCnyadaki B\u00FCy\u00FCk Okyanuslar ve \u00D6nemli Denizler",
+    "Answers": [
+      {
+        "Text": "Pasifik Okyanusu",
+        "IsPopular": true
+      },
+      {
+        "Text": "Atlantik Okyanusu",
+        "IsPopular": true
+      },
+      {
+        "Text": "Hint Okyanusu",
+        "IsPopular": false
+      },
+      {
+        "Text": "Arktik Okyanusu",
+        "IsPopular": false
+      },
+      {
+        "Text": "G\u00FCney Okyanusu",
+        "IsPopular": false
+      },
+      {
+        "Text": "Akdeniz",
+        "IsPopular": false
+      },
+      {
+        "Text": "Karadeniz",
+        "IsPopular": false
+      },
+      {
+        "Text": "K\u0131z\u0131ldeniz",
+        "IsPopular": false
+      },
+      {
+        "Text": "Balt\u0131k Denizi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ege Denizi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Marmara Denizi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kuzey Denizi",
+        "IsPopular": false
+      },
+      {
+        "Text": "G\u00FCney \u00C7in Denizi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bering Denizi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Hazar Denizi",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Olimpik Spor Dallar\u0131 (Yaz Olimpiyatlar\u0131 Odakl\u0131)",
+    "Answers": [
+      {
+        "Text": "Atletizm",
+        "IsPopular": true
+      },
+      {
+        "Text": "Y\u00FCzme",
+        "IsPopular": true
+      },
+      {
+        "Text": "Jimnastik",
+        "IsPopular": false
+      },
+      {
+        "Text": "Basketbol",
+        "IsPopular": false
+      },
+      {
+        "Text": "Futbol",
+        "IsPopular": false
+      },
+      {
+        "Text": "Voleybol",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tenis",
+        "IsPopular": false
+      },
+      {
+        "Text": "Boks",
+        "IsPopular": false
+      },
+      {
+        "Text": "G\u00FCre\u015F",
+        "IsPopular": false
+      },
+      {
+        "Text": "Halter",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ok\u00E7uluk",
+        "IsPopular": false
+      },
+      {
+        "Text": "Judo",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tekvando",
+        "IsPopular": false
+      },
+      {
+        "Text": "Eskrim",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bisiklet",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Pop\u00FCler Programlama Dilleri",
+    "Answers": [
+      {
+        "Text": "Python",
+        "IsPopular": true
+      },
+      {
+        "Text": "JavaScript",
+        "IsPopular": true
+      },
+      {
+        "Text": "Java",
+        "IsPopular": false
+      },
+      {
+        "Text": "C#",
+        "IsPopular": false
+      },
+      {
+        "Text": "C\u002B\u002B",
+        "IsPopular": false
+      },
+      {
+        "Text": "PHP",
+        "IsPopular": false
+      },
+      {
+        "Text": "Go",
+        "IsPopular": false
+      },
+      {
+        "Text": "Swift",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kotlin",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ruby",
+        "IsPopular": false
+      },
+      {
+        "Text": "TypeScript",
+        "IsPopular": false
+      },
+      {
+        "Text": "R",
+        "IsPopular": false
+      },
+      {
+        "Text": "SQL",
+        "IsPopular": false
+      },
+      {
+        "Text": "Rust",
+        "IsPopular": false
+      },
+      {
+        "Text": "Dart",
+        "IsPopular": false
+      },
+      {
+        "Text": "Scala",
+        "IsPopular": false
+      },
+      {
+        "Text": "Perl",
+        "IsPopular": false
+      },
+      {
+        "Text": "MATLAB",
+        "IsPopular": false
+      },
+      {
+        "Text": "Lisp",
+        "IsPopular": false
+      },
+      {
+        "Text": "Fortran",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Kahve \u00C7e\u015Fitleri ve \u0130simleri",
+    "Answers": [
+      {
+        "Text": "T\u00FCrk Kahvesi",
+        "IsPopular": true
+      },
+      {
+        "Text": "Latte",
+        "IsPopular": true
+      },
+      {
+        "Text": "Espresso",
+        "IsPopular": false
+      },
+      {
+        "Text": "Cappuccino",
+        "IsPopular": false
+      },
+      {
+        "Text": "Americano",
+        "IsPopular": false
+      },
+      {
+        "Text": "Mocha",
+        "IsPopular": false
+      },
+      {
+        "Text": "Macchiato",
+        "IsPopular": false
+      },
+      {
+        "Text": "Flat White",
+        "IsPopular": false
+      },
+      {
+        "Text": "Filtre Kahve",
+        "IsPopular": false
+      },
+      {
+        "Text": "Cold Brew",
+        "IsPopular": false
+      },
+      {
+        "Text": "Frappuccino",
+        "IsPopular": false
+      },
+      {
+        "Text": "Cortado",
+        "IsPopular": false
+      },
+      {
+        "Text": "Affogato",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ristretto",
+        "IsPopular": false
+      },
+      {
+        "Text": "Lungo",
+        "IsPopular": false
+      },
+      {
+        "Text": "Iced Latte",
+        "IsPopular": false
+      },
+      {
+        "Text": "Doppio",
+        "IsPopular": false
+      },
+      {
+        "Text": "Irish Coffee",
+        "IsPopular": false
+      },
+      {
+        "Text": "Chemex",
+        "IsPopular": false
+      },
+      {
+        "Text": "V60",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "D\u00FCnyadaki \u00DCnl\u00FC Da\u011Flar ve Zirveler",
+    "Answers": [
+      {
+        "Text": "Everest",
+        "IsPopular": true
+      },
+      {
+        "Text": "Kilimanjaro",
+        "IsPopular": true
+      },
+      {
+        "Text": "K2",
+        "IsPopular": false
+      },
+      {
+        "Text": "Mont Blanc",
+        "IsPopular": false
+      },
+      {
+        "Text": "Fuji",
+        "IsPopular": false
+      },
+      {
+        "Text": "Matterhorn",
+        "IsPopular": false
+      },
+      {
+        "Text": "Elbrus",
+        "IsPopular": false
+      },
+      {
+        "Text": "Denali",
+        "IsPopular": false
+      },
+      {
+        "Text": "Aconcagua",
+        "IsPopular": false
+      },
+      {
+        "Text": "Vinson Massif",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kangchenjunga",
+        "IsPopular": false
+      },
+      {
+        "Text": "Lhotse",
+        "IsPopular": false
+      },
+      {
+        "Text": "Makalu",
+        "IsPopular": false
+      },
+      {
+        "Text": "Cho Oyu",
+        "IsPopular": false
+      },
+      {
+        "Text": "Manaslu",
+        "IsPopular": false
+      },
+      {
+        "Text": "Nanga Parbat",
+        "IsPopular": false
+      },
+      {
+        "Text": "Annapurna",
+        "IsPopular": false
+      },
+      {
+        "Text": "Broad Peak",
+        "IsPopular": false
+      },
+      {
+        "Text": "Gasherbrum II",
+        "IsPopular": false
+      },
+      {
+        "Text": "Shishapangma",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "M\u00FCzik Aletleri \u00C7e\u015Fitleri",
+    "Answers": [
+      {
+        "Text": "Piyano",
+        "IsPopular": true
+      },
+      {
+        "Text": "Gitar",
+        "IsPopular": true
+      },
+      {
+        "Text": "Keman",
+        "IsPopular": false
+      },
+      {
+        "Text": "Davul",
+        "IsPopular": false
+      },
+      {
+        "Text": "Fl\u00FCt",
+        "IsPopular": false
+      },
+      {
+        "Text": "Saksafon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Klarnet",
+        "IsPopular": false
+      },
+      {
+        "Text": "Trompet",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7ello",
+        "IsPopular": false
+      },
+      {
+        "Text": "Akordeon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Arp",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bateri",
+        "IsPopular": false
+      },
+      {
+        "Text": "Obua",
+        "IsPopular": false
+      },
+      {
+        "Text": "Fagot",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ba\u011Flama",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ud",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ney",
+        "IsPopular": false
+      },
+      {
+        "Text": "Zurna",
+        "IsPopular": false
+      },
+      {
+        "Text": "Mandolin",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ukulele",
+        "IsPopular": false
+      },
+      {
+        "Text": "M\u0131z\u0131ka",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ksilofon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Djembe",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tuba",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kontrbas",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Bir Otel Odas\u0131nda Bulunabilecek E\u015Fyalar",
+    "Answers": [
+      {
+        "Text": "Yatak",
+        "IsPopular": true
+      },
+      {
+        "Text": "Televizyon",
+        "IsPopular": true
+      },
+      {
+        "Text": "Komodin",
+        "IsPopular": false
+      },
+      {
+        "Text": "Lamba",
+        "IsPopular": false
+      },
+      {
+        "Text": "Telefon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Dolap",
+        "IsPopular": false
+      },
+      {
+        "Text": "Klima",
+        "IsPopular": false
+      },
+      {
+        "Text": "Minibar",
+        "IsPopular": false
+      },
+      {
+        "Text": "Masa",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sandalye",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ayna",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sa\u00E7 Kurutma Makinesi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Havlu",
+        "IsPopular": false
+      },
+      {
+        "Text": "Terlik",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u015Eampuan",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sabun",
+        "IsPopular": false
+      },
+      {
+        "Text": "Perde",
+        "IsPopular": false
+      },
+      {
+        "Text": "Balkon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Su Is\u0131t\u0131c\u0131s\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7ay/Kahve Seti",
+        "IsPopular": false
+      },
+      {
+        "Text": "Banyo",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tuvalet",
+        "IsPopular": false
+      },
+      {
+        "Text": "K\u00FCvet/Du\u015F",
+        "IsPopular": false
+      },
+      {
+        "Text": "Klozet",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kasa",
+        "IsPopular": false
+      },
+      {
+        "Text": "Priz",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7\u00F6p Kovas\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Elbise Ask\u0131s\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Valiz Sehpas\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kahve Makinesi",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Ak\u0131ll\u0131 Telefon Uygulamalar\u0131",
+    "Answers": [
+      {
+        "Text": "WhatsApp",
+        "IsPopular": true
+      },
+      {
+        "Text": "Instagram",
+        "IsPopular": true
+      },
+      {
+        "Text": "TikTok",
+        "IsPopular": false
+      },
+      {
+        "Text": "YouTube",
+        "IsPopular": false
+      },
+      {
+        "Text": "Spotify",
+        "IsPopular": false
+      },
+      {
+        "Text": "Netflix",
+        "IsPopular": false
+      },
+      {
+        "Text": "Google Haritalar",
+        "IsPopular": false
+      },
+      {
+        "Text": "Trendyol",
+        "IsPopular": false
+      },
+      {
+        "Text": "Getir",
+        "IsPopular": false
+      },
+      {
+        "Text": "Yemeksepeti",
+        "IsPopular": false
+      },
+      {
+        "Text": "X (Twitter)",
+        "IsPopular": false
+      },
+      {
+        "Text": "Facebook",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sahibinden",
+        "IsPopular": false
+      },
+      {
+        "Text": "LinkedIn",
+        "IsPopular": false
+      },
+      {
+        "Text": "Google Chrome",
+        "IsPopular": false
+      },
+      {
+        "Text": "Gmail",
+        "IsPopular": false
+      },
+      {
+        "Text": "Telegram",
+        "IsPopular": false
+      },
+      {
+        "Text": "Pinterest",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "D\u00FCnya \u00DCzerindeki B\u00FCy\u00FCk \u00C7\u00F6ller",
+    "Answers": [
+      {
+        "Text": "Sahra",
+        "IsPopular": true
+      },
+      {
+        "Text": "Gobi",
+        "IsPopular": true
+      },
+      {
+        "Text": "Atacama",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kalahari",
+        "IsPopular": false
+      },
+      {
+        "Text": "Arabistan",
+        "IsPopular": false
+      },
+      {
+        "Text": "B\u00FCy\u00FCk Kum (Avustralya)",
+        "IsPopular": false
+      },
+      {
+        "Text": "Patagonya",
+        "IsPopular": false
+      },
+      {
+        "Text": "Taklamakan",
+        "IsPopular": false
+      },
+      {
+        "Text": "Namib",
+        "IsPopular": false
+      },
+      {
+        "Text": "B\u00FCy\u00FCk Viktorya",
+        "IsPopular": false
+      },
+      {
+        "Text": "Karakum",
+        "IsPopular": false
+      },
+      {
+        "Text": "K\u0131z\u0131lkum",
+        "IsPopular": false
+      },
+      {
+        "Text": "Gibson",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sonoran",
+        "IsPopular": false
+      },
+      {
+        "Text": "Mojave",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "T\u00FCrk Kahvesi Yan\u0131nda Sunulanlar",
+    "Answers": [
+      {
+        "Text": "Lokum",
+        "IsPopular": true
+      },
+      {
+        "Text": "Su",
+        "IsPopular": true
+      },
+      {
+        "Text": "\u00C7ikolata",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kurabiye",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kolonya",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kek",
+        "IsPopular": false
+      },
+      {
+        "Text": "Baklava",
+        "IsPopular": false
+      },
+      {
+        "Text": "Meyve",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u015Eekerleme",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ac\u0131badem Kurabiyesi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tuzlu Kurabiye",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sohbet",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kahve yan\u0131 lik\u00F6r\u00FC",
+        "IsPopular": false
+      },
+      {
+        "Text": "Nargile (baz\u0131 mekanlarda)",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "D\u00FCnyaca \u00DCnl\u00FC M\u00FCzeler",
+    "Answers": [
+      {
+        "Text": "Louvre M\u00FCzesi",
+        "IsPopular": true
+      },
+      {
+        "Text": "British Museum",
+        "IsPopular": true
+      },
+      {
+        "Text": "Metropolitan Sanat M\u00FCzesi (MET)",
+        "IsPopular": false
+      },
+      {
+        "Text": "Uffizi Galerisi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Rijksmuseum",
+        "IsPopular": false
+      },
+      {
+        "Text": "Prado M\u00FCzesi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Hermitage M\u00FCzesi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Vatikan M\u00FCzeleri",
+        "IsPopular": false
+      },
+      {
+        "Text": "Modern Sanat M\u00FCzesi (MoMA)",
+        "IsPopular": false
+      },
+      {
+        "Text": "Smithsonian Enstit\u00FCs\u00FC",
+        "IsPopular": false
+      },
+      {
+        "Text": "Akropolis M\u00FCzesi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Topkap\u0131 Saray\u0131 M\u00FCzesi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Pergamon M\u00FCzesi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Orsay M\u00FCzesi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tate Modern",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Olimpiyat Yaz Oyunlar\u0131 Bran\u015Flar\u0131",
+    "Answers": [
+      {
+        "Text": "Atletizm",
+        "IsPopular": true
+      },
+      {
+        "Text": "Y\u00FCzme",
+        "IsPopular": true
+      },
+      {
+        "Text": "Basketbol",
+        "IsPopular": false
+      },
+      {
+        "Text": "Futbol",
+        "IsPopular": false
+      },
+      {
+        "Text": "Voleybol",
+        "IsPopular": false
+      },
+      {
+        "Text": "Jimnastik",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tenis",
+        "IsPopular": false
+      },
+      {
+        "Text": "G\u00FCre\u015F",
+        "IsPopular": false
+      },
+      {
+        "Text": "Boks",
+        "IsPopular": false
+      },
+      {
+        "Text": "Halter",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ok\u00E7uluk",
+        "IsPopular": false
+      },
+      {
+        "Text": "Judo",
+        "IsPopular": false
+      },
+      {
+        "Text": "Eskrim",
+        "IsPopular": false
+      },
+      {
+        "Text": "Masa Tenisi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tekvando",
+        "IsPopular": false
+      },
+      {
+        "Text": "K\u00FCrek",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kano",
+        "IsPopular": false
+      },
+      {
+        "Text": "Yelken",
+        "IsPopular": false
+      },
+      {
+        "Text": "Binicilik",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sutopu",
+        "IsPopular": false
+      },
+      {
+        "Text": "Hentbol",
+        "IsPopular": false
+      },
+      {
+        "Text": "Badminton",
+        "IsPopular": false
+      },
+      {
+        "Text": "At\u0131c\u0131l\u0131k",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Elementler Tablosundaki Metaller",
+    "Answers": [
+      {
+        "Text": "Demir",
+        "IsPopular": true
+      },
+      {
+        "Text": "Bak\u0131r",
+        "IsPopular": true
+      },
+      {
+        "Text": "Al\u00FCminyum",
+        "IsPopular": false
+      },
+      {
+        "Text": "G\u00FCm\u00FC\u015F",
+        "IsPopular": false
+      },
+      {
+        "Text": "Alt\u0131n",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7inko",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kur\u015Fun",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kalay",
+        "IsPopular": false
+      },
+      {
+        "Text": "C\u0131va",
+        "IsPopular": false
+      },
+      {
+        "Text": "Nikel",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kobalt",
+        "IsPopular": false
+      },
+      {
+        "Text": "Krom",
+        "IsPopular": false
+      },
+      {
+        "Text": "Mangan",
+        "IsPopular": false
+      },
+      {
+        "Text": "Titanyum",
+        "IsPopular": false
+      },
+      {
+        "Text": "Platin",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sodyum",
+        "IsPopular": false
+      },
+      {
+        "Text": "Potasyum",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kalsiyum",
+        "IsPopular": false
+      },
+      {
+        "Text": "Magnezyum",
+        "IsPopular": false
+      },
+      {
+        "Text": "Uranyum",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "T\u00FCrk Sinemas\u0131n\u0131n Efsane Y\u00F6netmenleri",
+    "Answers": [
+      {
+        "Text": "Y\u0131lmaz G\u00FCney",
+        "IsPopular": true
+      },
+      {
+        "Text": "Nuri Bilge Ceylan",
+        "IsPopular": true
+      },
+      {
+        "Text": "Zeki Demirkubuz",
+        "IsPopular": false
+      },
+      {
+        "Text": "Yavuz Turgul",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7a\u011Fan Irmak",
+        "IsPopular": false
+      },
+      {
+        "Text": "Dervi\u015F Zaim",
+        "IsPopular": false
+      },
+      {
+        "Text": "Semih Kaplano\u011Flu",
+        "IsPopular": false
+      },
+      {
+        "Text": "Fatih Ak\u0131n",
+        "IsPopular": false
+      },
+      {
+        "Text": "At\u0131f Y\u0131lmaz",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00D6mer L\u00FCtfi Akad",
+        "IsPopular": false
+      },
+      {
+        "Text": "Metin Erksan",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ertem E\u011Filmez",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u015Eerif G\u00F6ren",
+        "IsPopular": false
+      },
+      {
+        "Text": "Reha Erdem",
+        "IsPopular": false
+      },
+      {
+        "Text": "Emin Alper",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ferzan \u00D6zpetek",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Kahvalt\u0131da Yenilebilecek Yiyecekler",
+    "Answers": [
+      {
+        "Text": "Peynir",
+        "IsPopular": true
+      },
+      {
+        "Text": "Zeytin",
+        "IsPopular": true
+      },
+      {
+        "Text": "Yumurta",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bal",
+        "IsPopular": false
+      },
+      {
+        "Text": "Re\u00E7el",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tereya\u011F\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Domates",
+        "IsPopular": false
+      },
+      {
+        "Text": "Salatal\u0131k",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sosis",
+        "IsPopular": false
+      },
+      {
+        "Text": "Salam",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sucuk",
+        "IsPopular": false
+      },
+      {
+        "Text": "Menemen",
+        "IsPopular": false
+      },
+      {
+        "Text": "Po\u011Fa\u00E7a",
+        "IsPopular": false
+      },
+      {
+        "Text": "Simit",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ekmek",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7ay",
+        "IsPopular": false
+      },
+      {
+        "Text": "S\u00FCt",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kahve",
+        "IsPopular": false
+      },
+      {
+        "Text": "Meyve",
+        "IsPopular": false
+      },
+      {
+        "Text": "M\u0131s\u0131r Gevre\u011Fi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Pankek",
+        "IsPopular": false
+      },
+      {
+        "Text": "Omlet",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tahin-Pekmez",
+        "IsPopular": false
+      },
+      {
+        "Text": "Helva",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Olimpik Spor Dallar\u0131",
+    "Answers": [
+      {
+        "Text": "Y\u00FCzme",
+        "IsPopular": true
+      },
+      {
+        "Text": "Atletizm",
+        "IsPopular": true
+      },
+      {
+        "Text": "Basketbol",
+        "IsPopular": false
+      },
+      {
+        "Text": "Futbol",
+        "IsPopular": false
+      },
+      {
+        "Text": "Voleybol",
+        "IsPopular": false
+      },
+      {
+        "Text": "G\u00FCre\u015F",
+        "IsPopular": false
+      },
+      {
+        "Text": "Boks",
+        "IsPopular": false
+      },
+      {
+        "Text": "Jimnastik",
+        "IsPopular": false
+      },
+      {
+        "Text": "Halter",
+        "IsPopular": false
+      },
+      {
+        "Text": "Eskrim",
+        "IsPopular": false
+      },
+      {
+        "Text": "Judo",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tekvando",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ok\u00E7uluk",
+        "IsPopular": false
+      },
+      {
+        "Text": "K\u00FCrek",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kano",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bisiklet",
+        "IsPopular": false
+      },
+      {
+        "Text": "Masa Tenisi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tenis",
+        "IsPopular": false
+      },
+      {
+        "Text": "Badminton",
+        "IsPopular": false
+      },
+      {
+        "Text": "At\u0131c\u0131l\u0131k",
+        "IsPopular": false
+      },
+      {
+        "Text": "Binicilik",
+        "IsPopular": false
+      },
+      {
+        "Text": "Hokey",
+        "IsPopular": false
+      },
+      {
+        "Text": "Hentbol",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ragbi",
+        "IsPopular": false
+      },
+      {
+        "Text": "S\u00F6rf",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kaykay",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sportif T\u0131rman\u0131\u015F",
+        "IsPopular": false
+      },
+      {
+        "Text": "Karate",
+        "IsPopular": false
+      },
+      {
+        "Text": "Modern Pentatlon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Artistik Y\u00FCzme",
+        "IsPopular": false
+      },
+      {
+        "Text": "Dal\u0131\u015F",
+        "IsPopular": false
+      },
+      {
+        "Text": "Su Topu",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Pop\u00FCler Sosyal Medya Platformlar\u0131",
+    "Answers": [
+      {
+        "Text": "Instagram",
+        "IsPopular": true
+      },
+      {
+        "Text": "YouTube",
+        "IsPopular": true
+      },
+      {
+        "Text": "Facebook",
+        "IsPopular": false
+      },
+      {
+        "Text": "Twitter (X)",
+        "IsPopular": false
+      },
+      {
+        "Text": "TikTok",
+        "IsPopular": false
+      },
+      {
+        "Text": "LinkedIn",
+        "IsPopular": false
+      },
+      {
+        "Text": "Pinterest",
+        "IsPopular": false
+      },
+      {
+        "Text": "Snapchat",
+        "IsPopular": false
+      },
+      {
+        "Text": "Reddit",
+        "IsPopular": false
+      },
+      {
+        "Text": "WhatsApp",
+        "IsPopular": false
+      },
+      {
+        "Text": "Telegram",
+        "IsPopular": false
+      },
+      {
+        "Text": "Discord",
+        "IsPopular": false
+      },
+      {
+        "Text": "Twitch",
+        "IsPopular": false
+      },
+      {
+        "Text": "Threads",
+        "IsPopular": false
+      },
+      {
+        "Text": "BeReal",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tumblr",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Tarihin \u00D6nemli \u0130catlar\u0131",
+    "Answers": [
+      {
+        "Text": "Tekerlek",
+        "IsPopular": false
+      },
+      {
+        "Text": "Matbaa",
+        "IsPopular": false
+      },
+      {
+        "Text": "Pusula",
+        "IsPopular": false
+      },
+      {
+        "Text": "Barut",
+        "IsPopular": false
+      },
+      {
+        "Text": "Buhar Makinesi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ampul",
+        "IsPopular": true
+      },
+      {
+        "Text": "Telefon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Radyo",
+        "IsPopular": false
+      },
+      {
+        "Text": "Televizyon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bilgisayar",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u0130nternet",
+        "IsPopular": true
+      },
+      {
+        "Text": "A\u015F\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Yaz\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ka\u011F\u0131t",
+        "IsPopular": false
+      },
+      {
+        "Text": "Saat",
+        "IsPopular": false
+      },
+      {
+        "Text": "U\u00E7ak",
+        "IsPopular": false
+      },
+      {
+        "Text": "Araba",
+        "IsPopular": false
+      },
+      {
+        "Text": "Buzdolab\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kalem",
+        "IsPopular": false
+      },
+      {
+        "Text": "Mikroskop",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "\u00DCnl\u00FC Resimler",
+    "Answers": [
+      {
+        "Text": "Mona Lisa",
+        "IsPopular": true
+      },
+      {
+        "Text": "Y\u0131ld\u0131zl\u0131 Gece",
+        "IsPopular": true
+      },
+      {
+        "Text": "Son Ak\u015Fam Yeme\u011Fi",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7\u0131\u011Fl\u0131k",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u0130nci K\u00FCpeli K\u0131z",
+        "IsPopular": false
+      },
+      {
+        "Text": "Guernica",
+        "IsPopular": false
+      },
+      {
+        "Text": "Belle\u011Fin Azmi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Adem\u0027in Yarat\u0131l\u0131\u015F\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Su Zambaklar\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Gece Devriyesi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Primavera",
+        "IsPopular": false
+      },
+      {
+        "Text": "Birth of Venus",
+        "IsPopular": false
+      },
+      {
+        "Text": "American Gothic",
+        "IsPopular": false
+      },
+      {
+        "Text": "Whistler\u0027s Mother",
+        "IsPopular": false
+      },
+      {
+        "Text": "The Kiss",
+        "IsPopular": false
+      },
+      {
+        "Text": "Las Meninas",
+        "IsPopular": false
+      },
+      {
+        "Text": "Liberty Leading the People",
+        "IsPopular": false
+      },
+      {
+        "Text": "The Creation of Adam",
+        "IsPopular": false
+      },
+      {
+        "Text": "The Persistence of Memory",
+        "IsPopular": false
+      },
+      {
+        "Text": "Arnolfini Portrait",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Olimpiyatlarda Yer Alan Spor Dallar\u0131",
+    "Answers": [
+      {
+        "Text": "Atletizm",
+        "IsPopular": true
+      },
+      {
+        "Text": "Y\u00FCzme",
+        "IsPopular": true
+      },
+      {
+        "Text": "Jimnastik",
+        "IsPopular": false
+      },
+      {
+        "Text": "Futbol",
+        "IsPopular": false
+      },
+      {
+        "Text": "Basketbol",
+        "IsPopular": false
+      },
+      {
+        "Text": "Voleybol",
+        "IsPopular": false
+      },
+      {
+        "Text": "G\u00FCre\u015F",
+        "IsPopular": false
+      },
+      {
+        "Text": "Boks",
+        "IsPopular": false
+      },
+      {
+        "Text": "Halter",
+        "IsPopular": false
+      },
+      {
+        "Text": "Eskrim",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ok\u00E7uluk",
+        "IsPopular": false
+      },
+      {
+        "Text": "Judo",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tekvando",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tenis",
+        "IsPopular": false
+      },
+      {
+        "Text": "Masa Tenisi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Badminton",
+        "IsPopular": false
+      },
+      {
+        "Text": "K\u00FCrek",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kano",
+        "IsPopular": false
+      },
+      {
+        "Text": "Yelken",
+        "IsPopular": false
+      },
+      {
+        "Text": "Binicilik",
+        "IsPopular": false
+      },
+      {
+        "Text": "At\u0131c\u0131l\u0131k",
+        "IsPopular": false
+      },
+      {
+        "Text": "Hentbol",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bisiklet",
+        "IsPopular": false
+      },
+      {
+        "Text": "Su Topu",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "T\u00FCrkiye\u0027nin Y\u00F6resel Lezzetleri",
+    "Answers": [
+      {
+        "Text": "D\u00F6ner",
+        "IsPopular": true
+      },
+      {
+        "Text": "Lahmacun",
+        "IsPopular": true
+      },
+      {
+        "Text": "Mant\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Adana Kebap",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u0130skender Kebap",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7i\u011F K\u00F6fte",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u0130\u00E7li K\u00F6fte",
+        "IsPopular": false
+      },
+      {
+        "Text": "Mercimek \u00C7orbas\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Karn\u0131yar\u0131k",
+        "IsPopular": false
+      },
+      {
+        "Text": "Hamsi Tava",
+        "IsPopular": false
+      },
+      {
+        "Text": "Yaprak Sarma",
+        "IsPopular": false
+      },
+      {
+        "Text": "Testi Kebab\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "K\u00FCnefe",
+        "IsPopular": false
+      },
+      {
+        "Text": "Baklava",
+        "IsPopular": false
+      },
+      {
+        "Text": "Menemen",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kuru Fasulye",
+        "IsPopular": false
+      },
+      {
+        "Text": "Pide",
+        "IsPopular": false
+      },
+      {
+        "Text": "Zeytinya\u011Fl\u0131 Enginar",
+        "IsPopular": false
+      },
+      {
+        "Text": "G\u00FCve\u00E7",
+        "IsPopular": false
+      },
+      {
+        "Text": "Beyran",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ca\u011F Kebab\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Mara\u015F Dondurmas\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Katmer",
+        "IsPopular": false
+      },
+      {
+        "Text": "Su B\u00F6re\u011Fi",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "D\u00FCnyaca \u00DCnl\u00FC M\u00FCzeler",
+    "Answers": [
+      {
+        "Text": "Louvre M\u00FCzesi",
+        "IsPopular": true
+      },
+      {
+        "Text": "British Museum",
+        "IsPopular": true
+      },
+      {
+        "Text": "Metropolitan Sanat M\u00FCzesi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Vatikan M\u00FCzeleri",
+        "IsPopular": false
+      },
+      {
+        "Text": "Prado M\u00FCzesi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ermitaj M\u00FCzesi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Rijksmuseum",
+        "IsPopular": false
+      },
+      {
+        "Text": "MoMA (Modern Sanat M\u00FCzesi)",
+        "IsPopular": false
+      },
+      {
+        "Text": "Uffizi Galerisi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ulusal Galeri (Londra)",
+        "IsPopular": false
+      },
+      {
+        "Text": "Smithsonian Ulusal Do\u011Fa Tarihi M\u00FCzesi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Akropolis M\u00FCzesi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Topkap\u0131 Saray\u0131 M\u00FCzesi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ayasofya (M\u00FCze olarak)",
+        "IsPopular": false
+      },
+      {
+        "Text": "Pergamon M\u00FCzesi",
+        "IsPopular": false
+      },
+      {
+        "Text": "M\u0131s\u0131r M\u00FCzesi (Kahire)",
+        "IsPopular": false
+      },
+      {
+        "Text": "Van Gogh M\u00FCzesi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Guggenheim M\u00FCzesi (Bilbao)",
+        "IsPopular": false
+      },
+      {
+        "Text": "Centre Pompidou",
+        "IsPopular": false
+      },
+      {
+        "Text": "Orsay M\u00FCzesi",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Uzaydaki G\u00F6k Cisimleri",
+    "Answers": [
+      {
+        "Text": "G\u00FCne\u015F",
+        "IsPopular": true
+      },
+      {
+        "Text": "Ay",
+        "IsPopular": true
+      },
+      {
+        "Text": "D\u00FCnya",
+        "IsPopular": false
+      },
+      {
+        "Text": "Mars",
+        "IsPopular": false
+      },
+      {
+        "Text": "J\u00FCpiter",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sat\u00FCrn",
+        "IsPopular": false
+      },
+      {
+        "Text": "Uran\u00FCs",
+        "IsPopular": false
+      },
+      {
+        "Text": "Nept\u00FCn",
+        "IsPopular": false
+      },
+      {
+        "Text": "Merk\u00FCr",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ven\u00FCs",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kuyruklu Y\u0131ld\u0131z",
+        "IsPopular": false
+      },
+      {
+        "Text": "Asteroit",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kara Delik",
+        "IsPopular": false
+      },
+      {
+        "Text": "Galaksi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Nebula",
+        "IsPopular": false
+      },
+      {
+        "Text": "Y\u0131ld\u0131z",
+        "IsPopular": false
+      },
+      {
+        "Text": "C\u00FCce Gezegen",
+        "IsPopular": false
+      },
+      {
+        "Text": "Uydu",
+        "IsPopular": false
+      },
+      {
+        "Text": "Meteor",
+        "IsPopular": false
+      },
+      {
+        "Text": "S\u00FCpernova",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Mutfakta S\u0131k\u00E7a Kullan\u0131lan Baharatlar",
+    "Answers": [
+      {
+        "Text": "Tuz",
+        "IsPopular": true
+      },
+      {
+        "Text": "Karabiber",
+        "IsPopular": true
+      },
+      {
+        "Text": "K\u0131rm\u0131z\u0131 Biber (Pul Biber)",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kekik",
+        "IsPopular": false
+      },
+      {
+        "Text": "Nane",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kimyon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sumak",
+        "IsPopular": false
+      },
+      {
+        "Text": "K\u00F6ri",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tar\u00E7\u0131n",
+        "IsPopular": false
+      },
+      {
+        "Text": "Zencefil",
+        "IsPopular": false
+      },
+      {
+        "Text": "Yenibahar",
+        "IsPopular": false
+      },
+      {
+        "Text": "Karanfil",
+        "IsPopular": false
+      },
+      {
+        "Text": "Muskat",
+        "IsPopular": false
+      },
+      {
+        "Text": "Safran",
+        "IsPopular": false
+      },
+      {
+        "Text": "Vanilya",
+        "IsPopular": false
+      },
+      {
+        "Text": "Hardal Tohumu",
+        "IsPopular": false
+      },
+      {
+        "Text": "Rezene",
+        "IsPopular": false
+      },
+      {
+        "Text": "Biberiye",
+        "IsPopular": false
+      },
+      {
+        "Text": "Fesle\u011Fen",
+        "IsPopular": false
+      },
+      {
+        "Text": "Defne Yapra\u011F\u0131",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Evde Bulunan Tamir ve Tadilat Aletleri",
+    "Answers": [
+      {
+        "Text": "Tornavida",
+        "IsPopular": true
+      },
+      {
+        "Text": "\u00C7eki\u00E7",
+        "IsPopular": true
+      },
+      {
+        "Text": "Pense",
+        "IsPopular": false
+      },
+      {
+        "Text": "Matkap",
+        "IsPopular": false
+      },
+      {
+        "Text": "Metre",
+        "IsPopular": false
+      },
+      {
+        "Text": "Testere",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u0130ngiliz Anahtar\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Maket B\u0131\u00E7a\u011F\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Su Terazisi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kargaburun",
+        "IsPopular": false
+      },
+      {
+        "Text": "Allen Anahtar\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Boru Anahtar\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "F\u0131r\u00E7a",
+        "IsPopular": false
+      },
+      {
+        "Text": "Rulo",
+        "IsPopular": false
+      },
+      {
+        "Text": "Z\u0131mpara",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ak\u00FCl\u00FC Vidalama",
+        "IsPopular": false
+      },
+      {
+        "Text": "Silikon Tabancas\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kerpeten",
+        "IsPopular": false
+      },
+      {
+        "Text": "Mengene",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kur\u015Fun Kalem",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Temel \u0130nsan Duygular\u0131",
+    "Answers": [
+      {
+        "Text": "Sevin\u00E7",
+        "IsPopular": true
+      },
+      {
+        "Text": "\u00DCz\u00FCnt\u00FC",
+        "IsPopular": true
+      },
+      {
+        "Text": "\u00D6fke",
+        "IsPopular": false
+      },
+      {
+        "Text": "Korku",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u015Ea\u015Fk\u0131nl\u0131k",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tiksinti",
+        "IsPopular": false
+      },
+      {
+        "Text": "A\u015Fk",
+        "IsPopular": false
+      },
+      {
+        "Text": "Nefret",
+        "IsPopular": false
+      },
+      {
+        "Text": "K\u0131skan\u00E7l\u0131k",
+        "IsPopular": false
+      },
+      {
+        "Text": "Utan\u00E7",
+        "IsPopular": false
+      },
+      {
+        "Text": "Merak",
+        "IsPopular": false
+      },
+      {
+        "Text": "Hayranl\u0131k",
+        "IsPopular": false
+      },
+      {
+        "Text": "Memnuniyet",
+        "IsPopular": false
+      },
+      {
+        "Text": "Pi\u015Fmanl\u0131k",
+        "IsPopular": false
+      },
+      {
+        "Text": "G\u00FCven",
+        "IsPopular": false
+      },
+      {
+        "Text": "Hayal K\u0131r\u0131kl\u0131\u011F\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ne\u015Fe",
+        "IsPopular": false
+      },
+      {
+        "Text": "Huzur",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kayg\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Umut",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "D\u00FCnyaca \u00DCnl\u00FC An\u0131tlar ve Yap\u0131lar",
+    "Answers": [
+      {
+        "Text": "Eyfel Kulesi",
+        "IsPopular": true
+      },
+      {
+        "Text": "Tac Mahal",
+        "IsPopular": true
+      },
+      {
+        "Text": "Kolezyum",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00D6zg\u00FCrl\u00FCk Heykeli",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7in Seddi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Giza Piramitleri",
+        "IsPopular": false
+      },
+      {
+        "Text": "Big Ben",
+        "IsPopular": false
+      },
+      {
+        "Text": "Pisa Kulesi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Petra Antik Kenti",
+        "IsPopular": false
+      },
+      {
+        "Text": "Brandenburg Kap\u0131s\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kremlin",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sidney Opera Binas\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Machu Picchu",
+        "IsPopular": false
+      },
+      {
+        "Text": "Golden Gate K\u00F6pr\u00FCs\u00FC",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bur\u00E7 Halife",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kurtar\u0131c\u0131 \u0130sa Heykeli",
+        "IsPopular": false
+      },
+      {
+        "Text": "Stonehenge",
+        "IsPopular": false
+      },
+      {
+        "Text": "Parthenon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sagrada Familia",
+        "IsPopular": false
+      },
+      {
+        "Text": "A\u011Flayan Duvar",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Uzayda Bulunan \u015Eeyler",
+    "Answers": [
+      {
+        "Text": "Y\u0131ld\u0131z",
+        "IsPopular": true
+      },
+      {
+        "Text": "Gezegen",
+        "IsPopular": true
+      },
+      {
+        "Text": "Ay",
+        "IsPopular": false
+      },
+      {
+        "Text": "Meteor",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kuyruklu Y\u0131ld\u0131z",
+        "IsPopular": false
+      },
+      {
+        "Text": "Asteroit",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kara Delik",
+        "IsPopular": false
+      },
+      {
+        "Text": "Galaksi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Nebula",
+        "IsPopular": false
+      },
+      {
+        "Text": "S\u00FCpernova",
+        "IsPopular": false
+      },
+      {
+        "Text": "Uydu",
+        "IsPopular": false
+      },
+      {
+        "Text": "Uzay Gemisi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Roket",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kozmik Toz",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kuasar",
+        "IsPopular": false
+      },
+      {
+        "Text": "Pulsar",
+        "IsPopular": false
+      },
+      {
+        "Text": "Uzay \u0130stasyonu",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ekzoplanet",
+        "IsPopular": false
+      },
+      {
+        "Text": "Karanl\u0131k Madde",
+        "IsPopular": false
+      },
+      {
+        "Text": "Karanl\u0131k Enerji",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "\u00DCnl\u00FC Kurgusal Dedektifler",
+    "Answers": [
+      {
+        "Text": "Sherlock Holmes",
+        "IsPopular": true
+      },
+      {
+        "Text": "Hercule Poirot",
+        "IsPopular": true
+      },
+      {
+        "Text": "Miss Marple",
+        "IsPopular": false
+      },
+      {
+        "Text": "Philip Marlowe",
+        "IsPopular": false
+      },
+      {
+        "Text": "Nancy Drew",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sam Spade",
+        "IsPopular": false
+      },
+      {
+        "Text": "C. Auguste Dupin",
+        "IsPopular": false
+      },
+      {
+        "Text": "Perry Mason",
+        "IsPopular": false
+      },
+      {
+        "Text": "Jessica Fletcher",
+        "IsPopular": false
+      },
+      {
+        "Text": "Columbo",
+        "IsPopular": false
+      },
+      {
+        "Text": "Dirk Gently",
+        "IsPopular": false
+      },
+      {
+        "Text": "Lew Archer",
+        "IsPopular": false
+      },
+      {
+        "Text": "Lord Peter Wimsey",
+        "IsPopular": false
+      },
+      {
+        "Text": "Father Brown",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kinsey Millhone",
+        "IsPopular": false
+      },
+      {
+        "Text": "Detektif Gadget",
+        "IsPopular": false
+      },
+      {
+        "Text": "Scooby-Doo",
+        "IsPopular": false
+      },
+      {
+        "Text": "Dick Tracy",
+        "IsPopular": false
+      },
+      {
+        "Text": "Batman",
+        "IsPopular": false
+      },
+      {
+        "Text": "Hardy Boys",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Makarna \u00C7e\u015Fitleri",
+    "Answers": [
+      {
+        "Text": "Spagetti",
+        "IsPopular": true
+      },
+      {
+        "Text": "Penne",
+        "IsPopular": true
+      },
+      {
+        "Text": "Fettuccine",
+        "IsPopular": false
+      },
+      {
+        "Text": "Lazanya",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ravioli",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tortellini",
+        "IsPopular": false
+      },
+      {
+        "Text": "Farfalle",
+        "IsPopular": false
+      },
+      {
+        "Text": "Linguine",
+        "IsPopular": false
+      },
+      {
+        "Text": "Rigatoni",
+        "IsPopular": false
+      },
+      {
+        "Text": "Fusilli",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tagliatelle",
+        "IsPopular": false
+      },
+      {
+        "Text": "Gnocchi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Conchiglie",
+        "IsPopular": false
+      },
+      {
+        "Text": "Orecchiette",
+        "IsPopular": false
+      },
+      {
+        "Text": "Macaroni",
+        "IsPopular": false
+      },
+      {
+        "Text": "Orzo",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ditalini",
+        "IsPopular": false
+      },
+      {
+        "Text": "Cannelloni",
+        "IsPopular": false
+      },
+      {
+        "Text": "Manicotti",
+        "IsPopular": false
+      },
+      {
+        "Text": "Pappardelle",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Pop\u00FCler Sosyal Medya Platformlar\u0131",
+    "Answers": [
+      {
+        "Text": "Instagram",
+        "IsPopular": true
+      },
+      {
+        "Text": "Facebook",
+        "IsPopular": true
+      },
+      {
+        "Text": "Twitter (X)",
+        "IsPopular": false
+      },
+      {
+        "Text": "YouTube",
+        "IsPopular": false
+      },
+      {
+        "Text": "TikTok",
+        "IsPopular": false
+      },
+      {
+        "Text": "WhatsApp",
+        "IsPopular": false
+      },
+      {
+        "Text": "LinkedIn",
+        "IsPopular": false
+      },
+      {
+        "Text": "Snapchat",
+        "IsPopular": false
+      },
+      {
+        "Text": "Pinterest",
+        "IsPopular": false
+      },
+      {
+        "Text": "Reddit",
+        "IsPopular": false
+      },
+      {
+        "Text": "Telegram",
+        "IsPopular": false
+      },
+      {
+        "Text": "Discord",
+        "IsPopular": false
+      },
+      {
+        "Text": "Twitch",
+        "IsPopular": false
+      },
+      {
+        "Text": "Threads",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tumblr",
+        "IsPopular": false
+      },
+      {
+        "Text": "Vimeo",
+        "IsPopular": false
+      },
+      {
+        "Text": "Flickr",
+        "IsPopular": false
+      },
+      {
+        "Text": "BeReal",
+        "IsPopular": false
+      },
+      {
+        "Text": "WeChat",
+        "IsPopular": false
+      },
+      {
+        "Text": "Clubhouse",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Yaz Olimpiyatlar\u0131 Spor Dallar\u0131",
+    "Answers": [
+      {
+        "Text": "Atletizm",
+        "IsPopular": true
+      },
+      {
+        "Text": "Y\u00FCzme",
+        "IsPopular": true
+      },
+      {
+        "Text": "Jimnastik",
+        "IsPopular": false
+      },
+      {
+        "Text": "Basketbol",
+        "IsPopular": false
+      },
+      {
+        "Text": "Futbol",
+        "IsPopular": false
+      },
+      {
+        "Text": "Voleybol",
+        "IsPopular": false
+      },
+      {
+        "Text": "Halter",
+        "IsPopular": false
+      },
+      {
+        "Text": "G\u00FCre\u015F",
+        "IsPopular": false
+      },
+      {
+        "Text": "Boks",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tekvando",
+        "IsPopular": false
+      },
+      {
+        "Text": "Judo",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ok\u00E7uluk",
+        "IsPopular": false
+      },
+      {
+        "Text": "Badminton",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tenis",
+        "IsPopular": false
+      },
+      {
+        "Text": "Masa Tenisi",
+        "IsPopular": false
+      },
+      {
+        "Text": "K\u00FCrek",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kano",
+        "IsPopular": false
+      },
+      {
+        "Text": "Binicilik",
+        "IsPopular": false
+      },
+      {
+        "Text": "Eskrim",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bisiklet",
+        "IsPopular": false
+      },
+      {
+        "Text": "Triatlon",
+        "IsPopular": false
+      },
+      {
+        "Text": "S\u00F6rf",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kaykay",
+        "IsPopular": false
+      },
+      {
+        "Text": "T\u0131rmanma",
+        "IsPopular": false
+      },
+      {
+        "Text": "Hentbol",
+        "IsPopular": false
+      },
+      {
+        "Text": "Su Topu",
+        "IsPopular": false
+      },
+      {
+        "Text": "Golf",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ragbi Yedili",
+        "IsPopular": false
+      },
+      {
+        "Text": "Yelken",
+        "IsPopular": false
+      },
+      {
+        "Text": "At\u0131c\u0131l\u0131k",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Kimyasal Elementler",
+    "Answers": [
+      {
+        "Text": "Oksijen",
+        "IsPopular": true
+      },
+      {
+        "Text": "Demir",
+        "IsPopular": true
+      },
+      {
+        "Text": "Hidrojen",
+        "IsPopular": false
+      },
+      {
+        "Text": "Helyum",
+        "IsPopular": false
+      },
+      {
+        "Text": "Karbon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Azot",
+        "IsPopular": false
+      },
+      {
+        "Text": "Alt\u0131n",
+        "IsPopular": false
+      },
+      {
+        "Text": "G\u00FCm\u00FC\u015F",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bak\u0131r",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7inko",
+        "IsPopular": false
+      },
+      {
+        "Text": "C\u0131va",
+        "IsPopular": false
+      },
+      {
+        "Text": "Klor",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sodyum",
+        "IsPopular": false
+      },
+      {
+        "Text": "Potasyum",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kalsiyum",
+        "IsPopular": false
+      },
+      {
+        "Text": "Al\u00FCminyum",
+        "IsPopular": false
+      },
+      {
+        "Text": "Fosfor",
+        "IsPopular": false
+      },
+      {
+        "Text": "K\u00FCk\u00FCrt",
+        "IsPopular": false
+      },
+      {
+        "Text": "Neon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Argon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Uranyum",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "M\u00FCzik Aletleri",
+    "Answers": [
+      {
+        "Text": "Gitar",
+        "IsPopular": true
+      },
+      {
+        "Text": "Piyano",
+        "IsPopular": true
+      },
+      {
+        "Text": "Keman",
+        "IsPopular": false
+      },
+      {
+        "Text": "Davul",
+        "IsPopular": false
+      },
+      {
+        "Text": "Fl\u00FCt",
+        "IsPopular": false
+      },
+      {
+        "Text": "Klarnet",
+        "IsPopular": false
+      },
+      {
+        "Text": "Trompet",
+        "IsPopular": false
+      },
+      {
+        "Text": "Saksafon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bateri",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7ello",
+        "IsPopular": false
+      },
+      {
+        "Text": "Arp",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ba\u011Flama",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ud",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ney",
+        "IsPopular": false
+      },
+      {
+        "Text": "Zurna",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kanun",
+        "IsPopular": false
+      },
+      {
+        "Text": "Akordeon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Mandolin",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ukulele",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kontrbas",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Ev Temizli\u011Finde Kullan\u0131lan \u00DCr\u00FCnler",
+    "Answers": [
+      {
+        "Text": "Deterjan",
+        "IsPopular": true
+      },
+      {
+        "Text": "\u00C7ama\u015F\u0131r Suyu",
+        "IsPopular": true
+      },
+      {
+        "Text": "Y\u00FCzey Temizleyici",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bula\u015F\u0131k Deterjan\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ya\u011F \u00C7\u00F6z\u00FCc\u00FC",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kire\u00E7 \u00C7\u00F6z\u00FCc\u00FC",
+        "IsPopular": false
+      },
+      {
+        "Text": "Cam Temizleyici",
+        "IsPopular": false
+      },
+      {
+        "Text": "Oda Spreyi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tuvalet Temizleyici",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ah\u015Fap Temizleyici",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sirke",
+        "IsPopular": false
+      },
+      {
+        "Text": "Karbonat",
+        "IsPopular": false
+      },
+      {
+        "Text": "Mikrofiber Bez",
+        "IsPopular": false
+      },
+      {
+        "Text": "S\u00FCnger",
+        "IsPopular": false
+      },
+      {
+        "Text": "Paspas",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kova",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7\u00F6p Po\u015Feti",
+        "IsPopular": false
+      },
+      {
+        "Text": "Eldiven",
+        "IsPopular": false
+      },
+      {
+        "Text": "F\u0131r\u00E7a",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7ekpas",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "D\u00FCnya Mutfaklar\u0131ndan \u00DCnl\u00FC Yemekler",
+    "Answers": [
+      {
+        "Text": "Pizza",
+        "IsPopular": true
+      },
+      {
+        "Text": "Sushi",
+        "IsPopular": true
+      },
+      {
+        "Text": "Hamburger",
+        "IsPopular": false
+      },
+      {
+        "Text": "Makarna",
+        "IsPopular": false
+      },
+      {
+        "Text": "Taco",
+        "IsPopular": false
+      },
+      {
+        "Text": "Paella",
+        "IsPopular": false
+      },
+      {
+        "Text": "K\u00F6ri",
+        "IsPopular": false
+      },
+      {
+        "Text": "D\u00F6ner",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ramen",
+        "IsPopular": false
+      },
+      {
+        "Text": "Fajita",
+        "IsPopular": false
+      },
+      {
+        "Text": "Risotto",
+        "IsPopular": false
+      },
+      {
+        "Text": "Lazanya",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kebab",
+        "IsPopular": false
+      },
+      {
+        "Text": "Fond\u00FC",
+        "IsPopular": false
+      },
+      {
+        "Text": "Falafel",
+        "IsPopular": false
+      },
+      {
+        "Text": "Borscht",
+        "IsPopular": false
+      },
+      {
+        "Text": "Pho",
+        "IsPopular": false
+      },
+      {
+        "Text": "Moussaka",
+        "IsPopular": false
+      },
+      {
+        "Text": "Dim Sum",
+        "IsPopular": false
+      },
+      {
+        "Text": "Fish and Chips",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kimchi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Couscous",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "T\u00FCrkiye\u0027deki Milli Parklar",
+    "Answers": [
+      {
+        "Text": "Yedig\u00F6ller Milli Park\u0131",
+        "IsPopular": true
+      },
+      {
+        "Text": "G\u00F6reme Tarihi Milli Park\u0131",
+        "IsPopular": true
+      },
+      {
+        "Text": "Uluda\u011F Milli Park\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kazda\u011F\u0131 Milli Park\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Dilek Yar\u0131madas\u0131-B\u00FCy\u00FCk Menderes Deltas\u0131 Milli Park\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Alada\u011Flar Milli Park\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ka\u00E7kar Da\u011Flar\u0131 Milli Park\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "K\u00F6pr\u00FCl\u00FC Kanyon Milli Park\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sakl\u0131kent Milli Park\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Karatepe Aslanta\u015F Milli Park\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Beyda\u011Flar\u0131 Sahil Milli Park\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ku\u015Fcenneti Milli Park\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Hatila Vadisi Milli Park\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Alt\u0131ndere Vadisi Milli Park\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ba\u015Fkomutan Tarihi Milli Park\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Gelibolu Yar\u0131madas\u0131 Tarihi Milli Park\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Troya Tarihi Milli Park\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bo\u011Fazk\u00F6y-Alacah\u00F6y\u00FCk Milli Park\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "So\u011Fanl\u0131 Vadisi Tarihi Milli Park\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kap\u0131da\u011F\u0131 Yar\u0131madas\u0131 Milli Park\u0131",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Bir T\u00FCrk mutfa\u011F\u0131nda s\u0131k\u00E7a kullan\u0131lan temel malzemelerden biri",
+    "Answers": [
+      {
+        "Text": "Ya\u011F",
+        "IsPopular": true
+      },
+      {
+        "Text": "Tuz",
+        "IsPopular": true
+      },
+      {
+        "Text": "So\u011Fan",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sar\u0131msak",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sal\u00E7a",
+        "IsPopular": false
+      },
+      {
+        "Text": "Domates",
+        "IsPopular": false
+      },
+      {
+        "Text": "Biber",
+        "IsPopular": false
+      },
+      {
+        "Text": "Un",
+        "IsPopular": false
+      },
+      {
+        "Text": "Yumurta",
+        "IsPopular": false
+      },
+      {
+        "Text": "Yo\u011Furt",
+        "IsPopular": false
+      },
+      {
+        "Text": "Baharat",
+        "IsPopular": false
+      },
+      {
+        "Text": "Patates",
+        "IsPopular": false
+      },
+      {
+        "Text": "Pirin\u00E7",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bulgur",
+        "IsPopular": false
+      },
+      {
+        "Text": "Limon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Maydanoz",
+        "IsPopular": false
+      },
+      {
+        "Text": "Nane",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u015Eeker",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sirke",
+        "IsPopular": false
+      },
+      {
+        "Text": "Mercimek",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Pop\u00FCler bir sosyal medya platformu",
+    "Answers": [
+      {
+        "Text": "Instagram",
+        "IsPopular": true
+      },
+      {
+        "Text": "TikTok",
+        "IsPopular": true
+      },
+      {
+        "Text": "Facebook",
+        "IsPopular": false
+      },
+      {
+        "Text": "X (Twitter)",
+        "IsPopular": false
+      },
+      {
+        "Text": "YouTube",
+        "IsPopular": false
+      },
+      {
+        "Text": "WhatsApp",
+        "IsPopular": false
+      },
+      {
+        "Text": "LinkedIn",
+        "IsPopular": false
+      },
+      {
+        "Text": "Snapchat",
+        "IsPopular": false
+      },
+      {
+        "Text": "Pinterest",
+        "IsPopular": false
+      },
+      {
+        "Text": "Reddit",
+        "IsPopular": false
+      },
+      {
+        "Text": "Threads",
+        "IsPopular": false
+      },
+      {
+        "Text": "Telegram",
+        "IsPopular": false
+      },
+      {
+        "Text": "Discord",
+        "IsPopular": false
+      },
+      {
+        "Text": "Twitch",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tumblr",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Olimpiyat Oyunlar\u0131\u0027nda yer alan bir spor dal\u0131",
+    "Answers": [
+      {
+        "Text": "Atletizm",
+        "IsPopular": true
+      },
+      {
+        "Text": "Y\u00FCzme",
+        "IsPopular": true
+      },
+      {
+        "Text": "Jimnastik",
+        "IsPopular": false
+      },
+      {
+        "Text": "Basketbol",
+        "IsPopular": false
+      },
+      {
+        "Text": "Voleybol",
+        "IsPopular": false
+      },
+      {
+        "Text": "Futbol",
+        "IsPopular": false
+      },
+      {
+        "Text": "Boks",
+        "IsPopular": false
+      },
+      {
+        "Text": "G\u00FCre\u015F",
+        "IsPopular": false
+      },
+      {
+        "Text": "Judo",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tekvando",
+        "IsPopular": false
+      },
+      {
+        "Text": "Halter",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ok\u00E7uluk",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tenis",
+        "IsPopular": false
+      },
+      {
+        "Text": "Masa Tenisi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Badminton",
+        "IsPopular": false
+      },
+      {
+        "Text": "Hentbol",
+        "IsPopular": false
+      },
+      {
+        "Text": "K\u00FCrek",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bisiklet",
+        "IsPopular": false
+      },
+      {
+        "Text": "Eskrim",
+        "IsPopular": false
+      },
+      {
+        "Text": "Golf",
+        "IsPopular": false
+      },
+      {
+        "Text": "S\u00F6rf",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kaykay",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Bir m\u00FCzik aleti",
+    "Answers": [
+      {
+        "Text": "Piyano",
+        "IsPopular": true
+      },
+      {
+        "Text": "Gitar",
+        "IsPopular": true
+      },
+      {
+        "Text": "Keman",
+        "IsPopular": false
+      },
+      {
+        "Text": "Davul",
+        "IsPopular": false
+      },
+      {
+        "Text": "Fl\u00FCt",
+        "IsPopular": false
+      },
+      {
+        "Text": "Klarnet",
+        "IsPopular": false
+      },
+      {
+        "Text": "Saksafon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Trompet",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7ello",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bateri",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ba\u011Flama",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ud",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kanun",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ney",
+        "IsPopular": false
+      },
+      {
+        "Text": "Akordeon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Mandolin",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kontrabas",
+        "IsPopular": false
+      },
+      {
+        "Text": "Org",
+        "IsPopular": false
+      },
+      {
+        "Text": "Harp",
+        "IsPopular": false
+      },
+      {
+        "Text": "Zurna",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Bir deniz canl\u0131s\u0131",
+    "Answers": [
+      {
+        "Text": "Bal\u0131k",
+        "IsPopular": true
+      },
+      {
+        "Text": "Yunus",
+        "IsPopular": true
+      },
+      {
+        "Text": "K\u00F6pekbal\u0131\u011F\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Yenge\u00E7",
+        "IsPopular": false
+      },
+      {
+        "Text": "Istakoz",
+        "IsPopular": false
+      },
+      {
+        "Text": "Denizanas\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ahtapot",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kalamar",
+        "IsPopular": false
+      },
+      {
+        "Text": "Denizy\u0131ld\u0131z\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Midye",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u0130stiridye",
+        "IsPopular": false
+      },
+      {
+        "Text": "Fok",
+        "IsPopular": false
+      },
+      {
+        "Text": "Deniz Kaplumba\u011Fas\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Denizat\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Balina",
+        "IsPopular": false
+      },
+      {
+        "Text": "Mercan",
+        "IsPopular": false
+      },
+      {
+        "Text": "S\u00FCnger",
+        "IsPopular": false
+      },
+      {
+        "Text": "Hamsi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Palamut",
+        "IsPopular": false
+      },
+      {
+        "Text": "Orkinos",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Bir mutfakta bulunan temel e\u015Fyalar",
+    "Answers": [
+      {
+        "Text": "Buzdolab\u0131",
+        "IsPopular": true
+      },
+      {
+        "Text": "F\u0131r\u0131n",
+        "IsPopular": true
+      },
+      {
+        "Text": "Ocak",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bula\u015F\u0131k Makinesi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Mikrodalga F\u0131r\u0131n",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tencere",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tava",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tabak",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bardak",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7atal",
+        "IsPopular": false
+      },
+      {
+        "Text": "B\u0131\u00E7ak",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ka\u015F\u0131k",
+        "IsPopular": false
+      },
+      {
+        "Text": "Su Is\u0131t\u0131c\u0131s\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ekmek K\u0131zartma Makinesi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Blender",
+        "IsPopular": false
+      },
+      {
+        "Text": "Mutfak Robotu",
+        "IsPopular": false
+      },
+      {
+        "Text": "S\u00FCrahi",
+        "IsPopular": false
+      },
+      {
+        "Text": "S\u00FCzge\u00E7",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kesme Tahtas\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Baharatl\u0131k",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7aydanl\u0131k",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kahve Makinesi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Mutfak Tart\u0131s\u0131",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Afrika k\u0131tas\u0131na \u00F6zg\u00FC vah\u015Fi hayvanlar",
+    "Answers": [
+      {
+        "Text": "Aslan",
+        "IsPopular": true
+      },
+      {
+        "Text": "Fil",
+        "IsPopular": true
+      },
+      {
+        "Text": "Z\u00FCrafa",
+        "IsPopular": false
+      },
+      {
+        "Text": "Zebra",
+        "IsPopular": false
+      },
+      {
+        "Text": "Gergedan",
+        "IsPopular": false
+      },
+      {
+        "Text": "Hipopotam",
+        "IsPopular": false
+      },
+      {
+        "Text": "Leopar",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7ita",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bufalo",
+        "IsPopular": false
+      },
+      {
+        "Text": "Deveku\u015Fu",
+        "IsPopular": false
+      },
+      {
+        "Text": "Antilop",
+        "IsPopular": false
+      },
+      {
+        "Text": "S\u0131rtlan",
+        "IsPopular": false
+      },
+      {
+        "Text": "Timsah",
+        "IsPopular": false
+      },
+      {
+        "Text": "Babun",
+        "IsPopular": false
+      },
+      {
+        "Text": "Goril",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u015Eempanze",
+        "IsPopular": false
+      },
+      {
+        "Text": "Va\u015Fak",
+        "IsPopular": false
+      },
+      {
+        "Text": "Lemur",
+        "IsPopular": false
+      },
+      {
+        "Text": "Mirket",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7akal",
+        "IsPopular": false
+      },
+      {
+        "Text": "Afrika Yaban K\u00F6pe\u011Fi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Pangolin",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Top kullan\u0131lan tak\u0131m sporlar\u0131",
+    "Answers": [
+      {
+        "Text": "Futbol",
+        "IsPopular": true
+      },
+      {
+        "Text": "Basketbol",
+        "IsPopular": true
+      },
+      {
+        "Text": "Voleybol",
+        "IsPopular": false
+      },
+      {
+        "Text": "Hentbol",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ragbi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Amerikan Futbolu",
+        "IsPopular": false
+      },
+      {
+        "Text": "Beysbol",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kriket",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sutopu",
+        "IsPopular": false
+      },
+      {
+        "Text": "Polo",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7im Hokeyi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Korfbol",
+        "IsPopular": false
+      },
+      {
+        "Text": "Lakros",
+        "IsPopular": false
+      },
+      {
+        "Text": "Avustralya Futbolu",
+        "IsPopular": false
+      },
+      {
+        "Text": "Futsal",
+        "IsPopular": false
+      },
+      {
+        "Text": "Plaj Voleybolu",
+        "IsPopular": false
+      },
+      {
+        "Text": "Plaj Futbolu",
+        "IsPopular": false
+      },
+      {
+        "Text": "Netbol",
+        "IsPopular": false
+      },
+      {
+        "Text": "Squash (\u00C7iftler)",
+        "IsPopular": false
+      },
+      {
+        "Text": "Badminton (\u00C7iftler)",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tenis (\u00C7iftler)",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "En \u00E7ok bilinen m\u00FCzik aletleri",
+    "Answers": [
+      {
+        "Text": "Piyano",
+        "IsPopular": true
+      },
+      {
+        "Text": "Gitar",
+        "IsPopular": true
+      },
+      {
+        "Text": "Keman",
+        "IsPopular": false
+      },
+      {
+        "Text": "Davul",
+        "IsPopular": false
+      },
+      {
+        "Text": "Fl\u00FCt",
+        "IsPopular": false
+      },
+      {
+        "Text": "Saksafon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Trompet",
+        "IsPopular": false
+      },
+      {
+        "Text": "Klarnet",
+        "IsPopular": false
+      },
+      {
+        "Text": "Akordeon",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7ello",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bateri",
+        "IsPopular": false
+      },
+      {
+        "Text": "Harp",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ba\u011Flama",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ud",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kanun",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ney",
+        "IsPopular": false
+      },
+      {
+        "Text": "Zurna",
+        "IsPopular": false
+      },
+      {
+        "Text": "M\u0131z\u0131ka",
+        "IsPopular": false
+      },
+      {
+        "Text": "Trombon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Obua",
+        "IsPopular": false
+      },
+      {
+        "Text": "Fagot",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ukulele",
+        "IsPopular": false
+      },
+      {
+        "Text": "Mandolin",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "En yayg\u0131n kullan\u0131lan sosyal medya ve ileti\u015Fim platformlar\u0131",
+    "Answers": [
+      {
+        "Text": "Instagram",
+        "IsPopular": true
+      },
+      {
+        "Text": "Facebook",
+        "IsPopular": true
+      },
+      {
+        "Text": "YouTube",
+        "IsPopular": false
+      },
+      {
+        "Text": "X (eski Twitter)",
+        "IsPopular": false
+      },
+      {
+        "Text": "TikTok",
+        "IsPopular": false
+      },
+      {
+        "Text": "LinkedIn",
+        "IsPopular": false
+      },
+      {
+        "Text": "Snapchat",
+        "IsPopular": false
+      },
+      {
+        "Text": "Pinterest",
+        "IsPopular": false
+      },
+      {
+        "Text": "Reddit",
+        "IsPopular": false
+      },
+      {
+        "Text": "WhatsApp",
+        "IsPopular": false
+      },
+      {
+        "Text": "Telegram",
+        "IsPopular": false
+      },
+      {
+        "Text": "Discord",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tumblr",
+        "IsPopular": false
+      },
+      {
+        "Text": "Twitch",
+        "IsPopular": false
+      },
+      {
+        "Text": "Quora",
+        "IsPopular": false
+      },
+      {
+        "Text": "Vimeo",
+        "IsPopular": false
+      },
+      {
+        "Text": "Flickr",
+        "IsPopular": false
+      },
+      {
+        "Text": "Mastodon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Threads",
+        "IsPopular": false
+      },
+      {
+        "Text": "WeChat",
+        "IsPopular": false
+      },
+      {
+        "Text": "Messenger (Facebook Messenger)",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "\u00DCnl\u00FC Sosyal Medya Platformlar\u0131",
+    "Answers": [
+      {
+        "Text": "Facebook",
+        "IsPopular": true
+      },
+      {
+        "Text": "Instagram",
+        "IsPopular": true
+      },
+      {
+        "Text": "Twitter (X)",
+        "IsPopular": false
+      },
+      {
+        "Text": "YouTube",
+        "IsPopular": false
+      },
+      {
+        "Text": "TikTok",
+        "IsPopular": false
+      },
+      {
+        "Text": "LinkedIn",
+        "IsPopular": false
+      },
+      {
+        "Text": "Pinterest",
+        "IsPopular": false
+      },
+      {
+        "Text": "Reddit",
+        "IsPopular": false
+      },
+      {
+        "Text": "Snapchat",
+        "IsPopular": false
+      },
+      {
+        "Text": "WhatsApp",
+        "IsPopular": false
+      },
+      {
+        "Text": "Telegram",
+        "IsPopular": false
+      },
+      {
+        "Text": "Discord",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tumblr",
+        "IsPopular": false
+      },
+      {
+        "Text": "Threads",
+        "IsPopular": false
+      },
+      {
+        "Text": "BeReal",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Mutfakta Bulunan Yayg\u0131n Ara\u00E7 Gere\u00E7ler",
+    "Answers": [
+      {
+        "Text": "B\u0131\u00E7ak",
+        "IsPopular": true
+      },
+      {
+        "Text": "\u00C7atal",
+        "IsPopular": true
+      },
+      {
+        "Text": "Ka\u015F\u0131k",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tencere",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tava",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tabak",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bardak",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kep\u00E7e",
+        "IsPopular": false
+      },
+      {
+        "Text": "Spatula",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7\u0131rp\u0131c\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kesme tahtas\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Rende",
+        "IsPopular": false
+      },
+      {
+        "Text": "S\u00FCzge\u00E7",
+        "IsPopular": false
+      },
+      {
+        "Text": "Mikser",
+        "IsPopular": false
+      },
+      {
+        "Text": "F\u0131r\u0131n tepsisi",
+        "IsPopular": false
+      },
+      {
+        "Text": "S\u00FCrahi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Konserve a\u00E7aca\u011F\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Soyacak",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7aydanl\u0131k",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kahve makinesi",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "D\u00FCnyan\u0131n B\u00FCy\u00FCk Okyanuslar\u0131 ve Denizleri",
+    "Answers": [
+      {
+        "Text": "Pasifik Okyanusu",
+        "IsPopular": true
+      },
+      {
+        "Text": "Atlantik Okyanusu",
+        "IsPopular": true
+      },
+      {
+        "Text": "Hint Okyanusu",
+        "IsPopular": false
+      },
+      {
+        "Text": "G\u00FCney Okyanusu",
+        "IsPopular": false
+      },
+      {
+        "Text": "Arktik Okyanusu",
+        "IsPopular": false
+      },
+      {
+        "Text": "Akdeniz",
+        "IsPopular": false
+      },
+      {
+        "Text": "Karadeniz",
+        "IsPopular": false
+      },
+      {
+        "Text": "K\u0131z\u0131ldeniz",
+        "IsPopular": false
+      },
+      {
+        "Text": "Balt\u0131k Denizi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kuzey Denizi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bering Denizi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Karayip Denizi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Japon Denizi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Do\u011Fu \u00C7in Denizi",
+        "IsPopular": false
+      },
+      {
+        "Text": "G\u00FCney \u00C7in Denizi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Marmara Denizi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Hazar Denizi",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "\u00DCnl\u00FC \u00C7izgi Film Karakterleri",
+    "Answers": [
+      {
+        "Text": "Mickey Mouse",
+        "IsPopular": true
+      },
+      {
+        "Text": "Bugs Bunny",
+        "IsPopular": true
+      },
+      {
+        "Text": "S\u00FCnger Bob",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tom ve Jerry",
+        "IsPopular": false
+      },
+      {
+        "Text": "Scooby-Doo",
+        "IsPopular": false
+      },
+      {
+        "Text": "Homer Simpson",
+        "IsPopular": false
+      },
+      {
+        "Text": "Shrek",
+        "IsPopular": false
+      },
+      {
+        "Text": "Elsa",
+        "IsPopular": false
+      },
+      {
+        "Text": "Woody",
+        "IsPopular": false
+      },
+      {
+        "Text": "Pikachu",
+        "IsPopular": false
+      },
+      {
+        "Text": "Temel Reis",
+        "IsPopular": false
+      },
+      {
+        "Text": "Fred \u00C7akmakta\u015F",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tweety",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sylvester",
+        "IsPopular": false
+      },
+      {
+        "Text": "Daffy Duck",
+        "IsPopular": false
+      },
+      {
+        "Text": "Batman",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00D6r\u00FCmcek Adam",
+        "IsPopular": false
+      },
+      {
+        "Text": "K\u00FClkedisi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Pamuk Prenses",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Futbolda S\u0131k\u00E7a Kullan\u0131lan Terimler",
+    "Answers": [
+      {
+        "Text": "Gol",
+        "IsPopular": true
+      },
+      {
+        "Text": "Ofsayt",
+        "IsPopular": true
+      },
+      {
+        "Text": "Faul",
+        "IsPopular": false
+      },
+      {
+        "Text": "Penalt\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "K\u00F6\u015Fe vuru\u015Fu (Korner)",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ta\u00E7 at\u0131\u015F\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Serbest vuru\u015F",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sar\u0131 kart",
+        "IsPopular": false
+      },
+      {
+        "Text": "K\u0131rm\u0131z\u0131 kart",
+        "IsPopular": false
+      },
+      {
+        "Text": "Hakem",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kaleci",
+        "IsPopular": false
+      },
+      {
+        "Text": "Forvet",
+        "IsPopular": false
+      },
+      {
+        "Text": "Defans",
+        "IsPopular": false
+      },
+      {
+        "Text": "Orta saha",
+        "IsPopular": false
+      },
+      {
+        "Text": "Teknik direkt\u00F6r",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ma\u00E7",
+        "IsPopular": false
+      },
+      {
+        "Text": "Derbi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Pas",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u015Eut",
+        "IsPopular": false
+      },
+      {
+        "Text": "Frikik",
+        "IsPopular": false
+      },
+      {
+        "Text": "VAR (Video Yard\u0131mc\u0131 Hakem)",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Periyodik Tablo\u0027da s\u0131k\u00E7a duydu\u011Fumuz, temel kimyasal elementler nelerdir?",
+    "Answers": [
+      {
+        "Text": "Oksijen",
+        "IsPopular": true
+      },
+      {
+        "Text": "Hidrojen",
+        "IsPopular": true
+      },
+      {
+        "Text": "Karbon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Azot",
+        "IsPopular": false
+      },
+      {
+        "Text": "Demir",
+        "IsPopular": false
+      },
+      {
+        "Text": "Alt\u0131n",
+        "IsPopular": false
+      },
+      {
+        "Text": "G\u00FCm\u00FC\u015F",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bak\u0131r",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7inko",
+        "IsPopular": false
+      },
+      {
+        "Text": "Klor",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sodyum",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kalsiyum",
+        "IsPopular": false
+      },
+      {
+        "Text": "Potasyum",
+        "IsPopular": false
+      },
+      {
+        "Text": "Helyum",
+        "IsPopular": false
+      },
+      {
+        "Text": "Neon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Argon",
+        "IsPopular": false
+      },
+      {
+        "Text": "Al\u00FCminyum",
+        "IsPopular": false
+      },
+      {
+        "Text": "C\u0131va",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kur\u015Fun",
+        "IsPopular": false
+      },
+      {
+        "Text": "Platin",
+        "IsPopular": false
+      },
+      {
+        "Text": "Uranyum",
+        "IsPopular": false
+      },
+      {
+        "Text": "Silisyum",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "T\u00FCrk kahvalt\u0131 sofras\u0131nda s\u0131k\u00E7a rastlad\u0131\u011F\u0131m\u0131z yiyecekler ve i\u00E7ecekler nelerdir?",
+    "Answers": [
+      {
+        "Text": "Peynir",
+        "IsPopular": true
+      },
+      {
+        "Text": "Zeytin",
+        "IsPopular": true
+      },
+      {
+        "Text": "Yumurta",
+        "IsPopular": false
+      },
+      {
+        "Text": "Domates",
+        "IsPopular": false
+      },
+      {
+        "Text": "Salatal\u0131k",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bal",
+        "IsPopular": false
+      },
+      {
+        "Text": "Re\u00E7el",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tereya\u011F\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ekmek",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7ay",
+        "IsPopular": false
+      },
+      {
+        "Text": "Simit",
+        "IsPopular": false
+      },
+      {
+        "Text": "Po\u011Fa\u00E7a",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sucuk",
+        "IsPopular": false
+      },
+      {
+        "Text": "Past\u0131rma",
+        "IsPopular": false
+      },
+      {
+        "Text": "Menemen",
+        "IsPopular": false
+      },
+      {
+        "Text": "B\u00F6rek",
+        "IsPopular": false
+      },
+      {
+        "Text": "Helva",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tahin-Pekmez",
+        "IsPopular": false
+      },
+      {
+        "Text": "S\u00FCt",
+        "IsPopular": false
+      },
+      {
+        "Text": "Patates K\u0131zartmas\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sosis",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Bir tak\u0131mla oynanan pop\u00FCler spor dallar\u0131 nelerdir?",
+    "Answers": [
+      {
+        "Text": "Futbol",
+        "IsPopular": true
+      },
+      {
+        "Text": "Basketbol",
+        "IsPopular": true
+      },
+      {
+        "Text": "Voleybol",
+        "IsPopular": false
+      },
+      {
+        "Text": "Hentbol",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ragbi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Beyzbol",
+        "IsPopular": false
+      },
+      {
+        "Text": "Buz Hokeyi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Su Topu",
+        "IsPopular": false
+      },
+      {
+        "Text": "Amerikan Futbolu",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kriket",
+        "IsPopular": false
+      },
+      {
+        "Text": "Polo",
+        "IsPopular": false
+      },
+      {
+        "Text": "Curling",
+        "IsPopular": false
+      },
+      {
+        "Text": "Futsal",
+        "IsPopular": false
+      },
+      {
+        "Text": "Plaj Voleybolu",
+        "IsPopular": false
+      },
+      {
+        "Text": "Korfbol",
+        "IsPopular": false
+      },
+      {
+        "Text": "Lacrosse",
+        "IsPopular": false
+      },
+      {
+        "Text": "Badminton (\u00E7iftler)",
+        "IsPopular": false
+      },
+      {
+        "Text": "Tenis (\u00E7iftler)",
+        "IsPopular": false
+      },
+      {
+        "Text": "Masa Tenisi (\u00E7iftler)",
+        "IsPopular": false
+      },
+      {
+        "Text": "K\u00FCrek",
+        "IsPopular": false
+      },
+      {
+        "Text": "Halter (tak\u0131m)",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "D\u00FCnyaca \u00FCnl\u00FC, ikonik resim eserleri hangileri?",
+    "Answers": [
+      {
+        "Text": "Mona Lisa",
+        "IsPopular": true
+      },
+      {
+        "Text": "Y\u0131ld\u0131zl\u0131 Gece",
+        "IsPopular": true
+      },
+      {
+        "Text": "Son Ak\u015Fam Yeme\u011Fi",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u00C7\u0131\u011Fl\u0131k",
+        "IsPopular": false
+      },
+      {
+        "Text": "\u0130nci K\u00FCpeli K\u0131z",
+        "IsPopular": false
+      },
+      {
+        "Text": "Guernica",
+        "IsPopular": false
+      },
+      {
+        "Text": "Belle\u011Fin Azmi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Adem\u0027in Yarat\u0131l\u0131\u015F\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ven\u00FCs\u0027\u00FCn Do\u011Fu\u015Fu",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sistine \u015Eapeli Tavan\u0131",
+        "IsPopular": false
+      },
+      {
+        "Text": "Amerikan Gotik",
+        "IsPopular": false
+      },
+      {
+        "Text": "Nymph\u00E9as (Nil\u00FCferler)",
+        "IsPopular": false
+      },
+      {
+        "Text": "Ay\u00E7i\u00E7ekleri",
+        "IsPopular": false
+      },
+      {
+        "Text": "Gece Devriyesi",
+        "IsPopular": false
+      },
+      {
+        "Text": "K\u0131z\u0131l Kare",
+        "IsPopular": false
+      },
+      {
+        "Text": "Whistler\u0027\u0131n Annesi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kiraz \u00C7i\u00E7ekleri",
+        "IsPopular": false
+      },
+      {
+        "Text": "Yatak Odas\u0131 (Van Gogh)",
+        "IsPopular": false
+      },
+      {
+        "Text": "Kahve Evleri",
+        "IsPopular": false
+      },
+      {
+        "Text": "D\u00FC\u015F\u00FCn\u00FCr",
+        "IsPopular": false
+      }
+    ]
+  },
+  {
+    "Question": "Telefonlar\u0131m\u0131zda s\u0131kl\u0131kla kulland\u0131\u011F\u0131m\u0131z, sosyal medya veya mesajla\u015Fma d\u0131\u015F\u0131ndaki pop\u00FCler mobil uygulamalar nelerdir?",
+    "Answers": [
+      {
+        "Text": "YouTube",
+        "IsPopular": true
+      },
+      {
+        "Text": "Spotify",
+        "IsPopular": true
+      },
+      {
+        "Text": "Netflix",
+        "IsPopular": false
+      },
+      {
+        "Text": "Google Haritalar",
+        "IsPopular": false
+      },
+      {
+        "Text": "Trendyol",
+        "IsPopular": false
+      },
+      {
+        "Text": "Hepsiburada",
+        "IsPopular": false
+      },
+      {
+        "Text": "Yemeksepeti",
+        "IsPopular": false
+      },
+      {
+        "Text": "Getir",
+        "IsPopular": false
+      },
+      {
+        "Text": "E-Devlet",
+        "IsPopular": false
+      },
+      {
+        "Text": "Bankac\u0131l\u0131k Uygulamalar\u0131 (\u00F6rn. \u0130\u015FCep, Garanti BBVA Mobil)",
+        "IsPopular": false
+      },
+      {
+        "Text": "Sahibinden",
+        "IsPopular": false
+      },
+      {
+        "Text": "Letgo",
+        "IsPopular": false
+      },
+      {
+        "Text": "Shazam",
+        "IsPopular": false
+      },
+      {
+        "Text": "Duolingo",
+        "IsPopular": false
+      },
+      {
+        "Text": "Zoom",
+        "IsPopular": false
+      },
+      {
+        "Text": "Microsoft Office (Word, Excel, PowerPoint)",
+        "IsPopular": false
+      },
+      {
+        "Text": "Google Drive",
+        "IsPopular": false
+      },
+      {
+        "Text": "Google Foto\u011Fraflar",
+        "IsPopular": false
+      },
+      {
+        "Text": "Uber",
+        "IsPopular": false
+      },
+      {
+        "Text": "BiTaksi",
+        "IsPopular": false
+      },
+      {
+        "Text": "Moovit",
+        "IsPopular": false
+      },
+      {
+        "Text": "Google \u00C7eviri",
+        "IsPopular": false
+      }
+    ]
+  }
+]
