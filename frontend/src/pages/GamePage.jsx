@@ -3,9 +3,10 @@ import { useAuth } from '../contexts/AuthContext';
 import { useToast } from '../contexts/ToastContext';
 import { useTimer } from '../hooks/useTimer';
 import { GAME } from '../utils/constants';
+import { api } from '../services/api';
 
 export default function GamePage({ gameState: initialState, connection, onGameEnd }) {
-  const { user } = useAuth();
+  const { user, updateUser } = useAuth();
   const { addToast } = useToast();
   const [answer, setAnswer] = useState('');
   const [answers, setAnswers] = useState([]);
@@ -17,6 +18,8 @@ export default function GamePage({ gameState: initialState, connection, onGameEn
   const [matchEnded, setMatchEnded] = useState(false);
   const [matchResult, setMatchResult] = useState(null);
   const [hint, setHint] = useState(null);
+  const [changeRequestedByMe, setChangeRequestedByMe] = useState(false);
+  const [changeRequestedByOpponent, setChangeRequestedByOpponent] = useState(false);
   const [isStartingUp, setIsStartingUp] = useState(false);
   const [startupTimer, setStartupTimer] = useState(10);
   const inputRef = useRef(null);
@@ -60,8 +63,38 @@ export default function GamePage({ gameState: initialState, connection, onGameEn
     setMyScore(0);
     setOpponentScore(0);
     setRoundEnded(false);
+    setChangeRequestedByMe(false);
+    setChangeRequestedByOpponent(false);
     startIntermission();
   }, [gameState?.roundId]);
+
+  // Alt menüyü gizlemek için CSS class'ı ekle
+  useEffect(() => {
+    document.body.classList.add('in-game');
+    return () => document.body.classList.remove('in-game');
+  }, []);
+
+  const handleExitGame = useCallback(async () => {
+    if (window.confirm("Oyundan çıkmak istediğinize emin misiniz? Hükmen mağlup sayılacaksınız.")) {
+      if (connection && gameState?.sessionId) {
+        try {
+          await connection.invoke('Surrender', gameState.sessionId);
+        } catch (e) {
+          console.error("Surrender error:", e);
+        }
+      }
+      
+      // Kullanıcı istatistiklerini güncelle (Toplam maç vb. yansıması için)
+      try {
+        const updatedProfile = await api.get('/profile');
+        updateUser(updatedProfile);
+      } catch (e) {
+        console.error("Profile update error:", e);
+      }
+
+      onGameEnd();
+    }
+  }, [connection, gameState, onGameEnd, updateUser]);
 
   // SignalR event dinleyicileri
   useEffect(() => {
@@ -140,8 +173,25 @@ export default function GamePage({ gameState: initialState, connection, onGameEn
       addToast('Rakibiniz rövanş istiyor!', 'info');
     });
 
+    connection.on('ChangeQuestionRequested', () => {
+      setChangeRequestedByOpponent(true);
+      addToast('Rakip soruyu değiştirmek istiyor!', 'info');
+    });
+
+    connection.on('QuestionChanged', (state) => {
+      setGameState(prev => ({ ...prev, questionText: state.questionText }));
+      setActiveTurnPlayerId(state.activeTurnPlayerId);
+      setAnswers([]);
+      setMyScore(0);
+      setOpponentScore(0);
+      setChangeRequestedByMe(false);
+      setChangeRequestedByOpponent(false);
+      startIntermission();
+      addToast('Soru değiştirildi!', 'success');
+    });
+
     return () => {
-      ['AnswerResult', 'OpponentScoreUpdate', 'OpponentAnswer', 'TurnChanged', 'RoundEnded', 'NewRound', 'JokerResult', 'HintResult', 'RematchStarted', 'RematchRequested']
+      ['AnswerResult', 'OpponentScoreUpdate', 'OpponentAnswer', 'TurnChanged', 'RoundEnded', 'NewRound', 'JokerResult', 'HintResult', 'RematchStarted', 'RematchRequested', 'ChangeQuestionRequested', 'QuestionChanged']
         .forEach(e => connection.off(e));
     };
   }, [connection]);
@@ -192,6 +242,17 @@ export default function GamePage({ gameState: initialState, connection, onGameEn
     }
   };
 
+  const handleChangeQuestion = async () => {
+    if (!connection || changeRequestedByMe) return;
+    try {
+      await connection.invoke('RequestChangeQuestion', gameState.sessionId, gameState.roundId);
+      setChangeRequestedByMe(true);
+      addToast('Soru değiştirme isteği gönderildi.', 'info');
+    } catch {
+      addToast('İstek gönderilemedi', 'error');
+    }
+  };
+
   // ======== MATCH ENDED SCREEN ========
   if (matchEnded) {
     const won = matchResult?.winnerId === user?.id;
@@ -223,7 +284,16 @@ export default function GamePage({ gameState: initialState, connection, onGameEn
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', maxWidth: 480, margin: '0 auto', padding: '12px' }}>
       {/* Header */}
       <div className="glass" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px 20px', marginBottom: '16px', borderRadius: 'var(--radius-full)', opacity: isStartingUp ? 0.3 : 1, transition: '0.3s', border: '1px solid rgba(255,255,255,0.1)' }}>
-        <div style={{ fontSize: '0.85rem', fontWeight: 900, color: 'var(--accent)', letterSpacing: '2px' }}>TUR {gameState?.roundNumber || 1}/3</div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <button onClick={handleExitGame} style={{ background: 'rgba(239, 68, 68, 0.15)', border: '1px solid rgba(239, 68, 68, 0.3)', color: 'var(--wrong)', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '6px', borderRadius: '8px', transition: 'var(--transition)' }} title="Pes Et ve Çık">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+              <polyline points="16 17 21 12 16 7"></polyline>
+              <line x1="21" y1="12" x2="9" y2="12"></line>
+            </svg>
+          </button>
+          <div style={{ fontSize: '0.85rem', fontWeight: 900, color: 'var(--accent)', letterSpacing: '2px' }}>TUR {gameState?.roundNumber || 1}/3</div>
+        </div>
         <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
           <span style={{ fontSize: '0.9rem', fontWeight: 900, color: 'var(--correct)', textShadow: '0 0 10px var(--correct-glow)' }}>{gameState?.player1RoundWins || 0}</span>
           <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>⚔️</span>
@@ -246,7 +316,44 @@ export default function GamePage({ gameState: initialState, connection, onGameEn
                 {startupTimer}
               </div>
             </div>
-            <div style={{ marginTop: '24px', fontSize: '0.9rem', color: 'var(--text-muted)', letterSpacing: '2px' }}>HAZIRLANIN...</div>
+            
+            <div style={{ marginTop: '24px', fontSize: '0.9rem', color: 'var(--text-muted)', letterSpacing: '2px', marginBottom: '16px' }}>HAZIRLANIN...</div>
+
+            {/* Soru Değiştirme Paneli */}
+            <div style={{ display: 'flex', gap: '8px', marginTop: '16px' }}>
+              <button 
+                  className="btn btn-full" 
+                  onClick={handleChangeQuestion} 
+                  disabled={changeRequestedByMe}
+                  style={{ 
+                      background: changeRequestedByOpponent ? 'linear-gradient(135deg, var(--correct), #10b981)' : (changeRequestedByMe ? 'rgba(255,255,255,0.1)' : 'linear-gradient(135deg, rgba(59,130,246,0.2), rgba(37,99,235,0.1))'), 
+                      color: changeRequestedByOpponent ? 'white' : (changeRequestedByMe ? 'var(--text-muted)' : 'var(--accent-cyan)'), 
+                      border: changeRequestedByOpponent ? 'none' : '1px solid rgba(59,130,246,0.3)', 
+                      fontSize: '0.9rem',
+                      padding: '12px',
+                      fontWeight: 800,
+                      boxShadow: changeRequestedByOpponent ? '0 0 15px var(--correct-glow)' : 'none',
+                      transition: 'all 0.3s'
+                  }}
+              >
+                  {changeRequestedByOpponent ? (
+                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        RAKİP SORUYU DEĞİŞTİRMEK İSTİYOR (ONAYLA)
+                      </div>
+                  ) : changeRequestedByMe ? (
+                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        İSTEK GÖNDERİLDİ (BEKLENİYOR)
+                      </div>
+                  ) : (
+                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="16 3 21 3 21 8"></polyline><line x1="4" y1="20" x2="21" y2="3"></line><polyline points="21 16 21 21 16 21"></polyline><line x1="15" y1="15" x2="21" y2="21"></line><line x1="4" y1="4" x2="9" y2="9"></line></svg>
+                        SORUYU DEĞİŞTİR
+                      </div>
+                  )}
+              </button>
+            </div>
           </div>
         </div>
       ) : (

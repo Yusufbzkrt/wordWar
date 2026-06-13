@@ -15,4 +15,6 @@ public interface IGameManager
     Task EndRoundAsync(Guid sessionId, Guid roundId);
     Task<GameSession?> GetSessionAsync(Guid sessionId);
     Task<bool> UseJokerAsync(Guid sessionId, Guid roundId, Guid playerId, string jokerType);
+    Task SurrenderAsync(Guid sessionId, Guid playerId);
+    Task<(bool Changed, string NewQuestionText)> RequestChangeQuestionAsync(Guid sessionId, Guid roundId, Guid playerId);
 }

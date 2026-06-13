@@ -72,6 +72,9 @@ builder.Services.AddScoped<IValidationEngine, ValidationEngine>();
 builder.Services.AddScoped<IEconomyManager, EconomyManager>();
 builder.Services.AddScoped<ISocialManager, SocialManager>();
 builder.Services.AddScoped<ILeaderboardService, LeaderboardService>();
+builder.Services.AddScoped<IQuestManager, QuestManager>();
+builder.Services.AddScoped<KelimeOyunu.Core.Interfaces.IQuestNotificationService, KelimeOyunu.API.Services.QuestNotificationService>();
+builder.Services.AddHttpClient<KelimeOyunu.Core.Interfaces.IAIService, KelimeOyunu.Infrastructure.Services.GeminiAIService>();
 builder.Services.AddSingleton<IBotManager, BotManager>();
 
 // SignalR

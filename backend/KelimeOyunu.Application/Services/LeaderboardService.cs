@@ -14,6 +14,7 @@ public class LeaderboardService : ILeaderboardService
     public async Task<IEnumerable<LeaderboardEntryDto>> GetGlobalLeaderboardAsync(int top = 50)
     {
         var users = await _context.Users
+            .Where(u => u.Username != "KelimeBotu_AI")
             .OrderByDescending(u => u.TotalWins)
             .Take(top)
             .Select(u => new { u.Id, u.Username, u.TotalWins })

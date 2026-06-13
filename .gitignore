@@ -4,6 +4,7 @@ obj/
 *.dll
 *.exe
 *.pdb
+*.log
 appsettings.Development.json
 
 # === React / Node.js Klasörleri ===

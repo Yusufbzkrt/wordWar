@@ -17,11 +17,13 @@ public class AuthController : ControllerBase
 {
     private readonly AppDbContext _context;
     private readonly IConfiguration _config;
+    private readonly KelimeOyunu.Core.Interfaces.IQuestManager _questManager;
 
-    public AuthController(AppDbContext context, IConfiguration config)
+    public AuthController(AppDbContext context, IConfiguration config, KelimeOyunu.Core.Interfaces.IQuestManager questManager)
     {
         _context = context;
         _config = config;
+        _questManager = questManager;
     }
 
     [HttpPost("register")]
@@ -50,6 +52,11 @@ public class AuthController : ControllerBase
             return Unauthorized("Geçersiz kullanıcı adı veya şifre.");
 
         var token = GenerateToken(user);
+        
+        // Günlük görevleri ata ve Login eventini tetikle
+        await _questManager.GetOrAssignDailyQuestsAsync(user.Id);
+        await _questManager.TrackEventAsync(user.Id, KelimeOyunu.Core.Enums.QuestEventType.Login);
+
         return Ok(new AuthResponseDto(token, new UserProfileDto(user.Id, user.Username, user.Gold, user.Diamonds, user.TotalWins, user.TotalLosses, user.LastAdRewardTime)));
     }
 

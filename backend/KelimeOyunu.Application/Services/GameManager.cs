@@ -16,15 +16,19 @@ public class GameManager : IGameManager
     private readonly AppDbContext _context;
     private readonly IValidationEngine _validationEngine;
     private readonly IEconomyManager _economyManager;
+    private readonly IQuestManager _questManager;
+    private static readonly System.Collections.Concurrent.ConcurrentDictionary<Guid, System.Collections.Concurrent.ConcurrentDictionary<Guid, bool>> _changeRequests = new();
 
     public GameManager(
         AppDbContext context,
         IValidationEngine validationEngine,
-        IEconomyManager economyManager)
+        IEconomyManager economyManager,
+        IQuestManager questManager)
     {
         _context = context;
         _validationEngine = validationEngine;
         _economyManager = economyManager;
+        _questManager = questManager;
     }
 
     public async Task<GameSession> CreateSessionAsync(Guid player1Id, Guid player2Id)
@@ -102,7 +106,7 @@ public class GameManager : IGameManager
         // Daha önce bulunmuş cevapları listeye al
         var alreadyFound = new HashSet<string>(round.FoundAnswers, StringComparer.OrdinalIgnoreCase);
 
-        var result = _validationEngine.ValidateAnswer(answer, validAnswers, alreadyFound);
+        var result = await _validationEngine.ValidateAnswerAsync(round.Question.Text, answer, validAnswers, alreadyFound);
 
         int goldEarned = 0;
         bool isPlayer1 = round.GameSession.Player1Id == playerId;
@@ -121,9 +125,34 @@ public class GameManager : IGameManager
             // Bulunanlar listesine ekle
             round.FoundAnswers.Add(result.MatchedAnswer ?? answer);
 
+            // Yapay zeka tarafından öğrenilen yepyeni bir kelimeyse veritabanına kaydet
+            if (result.IsAIValidated)
+            {
+                var newAnswer = new KelimeOyunu.Core.Entities.Answer
+                {
+                    Text = result.MatchedAnswer ?? answer.Trim().ToLowerInvariant(),
+                    IsPopular = false,
+                    QuestionId = round.QuestionId
+                };
+                round.Question.Answers.Add(newAnswer);
+                await _context.SaveChangesAsync();
+            }
+
             // Doğru bildiği için sıra karşı tarafa geçer
             round.ActiveTurnPlayerId = isPlayer1 ? round.GameSession.Player2Id : round.GameSession.Player1Id;
         }
+
+        int myWordsInRound = isPlayer1 ? round.Player1Score : round.Player2Score;
+        bool isFirstBlood = round.FoundAnswers.Count == 1 && result.IsMatch;
+
+        await _questManager.TrackEventAsync(playerId, QuestEventType.WordSubmitted, new WordSubmissionData(
+            Word: answer,
+            IsValid: result.IsMatch,
+            IsPopular: result.IsPopular,
+            IsFirstBlood: isFirstBlood,
+            WordsInThisRound: myWordsInRound,
+            PopularAnswersInThisRound: result.IsPopular ? 1 : 0
+        ));
 
         await _context.SaveChangesAsync();
 
@@ -178,6 +207,12 @@ public class GameManager : IGameManager
             var loser = await _context.Users.FindAsync(session.Player2Id);
             if (winner != null) winner.TotalWins++;
             if (loser != null) loser.TotalLosses++;
+
+            var category = round.Question?.Category ?? "";
+            int scoreDiff = Math.Abs(session.Player1RoundWins - session.Player2RoundWins);
+            
+            await _questManager.TrackEventAsync(session.Player1Id, QuestEventType.MatchCompleted, new MatchEndData(true, scoreDiff, category, false));
+            await _questManager.TrackEventAsync(session.Player2Id, QuestEventType.MatchCompleted, new MatchEndData(false, scoreDiff, category, false));
         }
         else if (session.Player2RoundWins >= 2)
         {
@@ -190,6 +225,12 @@ public class GameManager : IGameManager
             var loser = await _context.Users.FindAsync(session.Player1Id);
             if (winner != null) winner.TotalWins++;
             if (loser != null) loser.TotalLosses++;
+
+            var category = round.Question?.Category ?? "";
+            int scoreDiff = Math.Abs(session.Player1RoundWins - session.Player2RoundWins);
+            
+            await _questManager.TrackEventAsync(session.Player2Id, QuestEventType.MatchCompleted, new MatchEndData(true, scoreDiff, category, false));
+            await _questManager.TrackEventAsync(session.Player1Id, QuestEventType.MatchCompleted, new MatchEndData(false, scoreDiff, category, false));
         }
         else
         {
@@ -219,6 +260,89 @@ public class GameManager : IGameManager
         if (!canAfford) return false;
 
         await _economyManager.DeductJokerCostAsync(playerId, joker);
+        await _questManager.TrackEventAsync(playerId, QuestEventType.JokerUsed);
+        
         return true;
+    }
+
+    public async Task SurrenderAsync(Guid sessionId, Guid playerId)
+    {
+        var session = await _context.GameSessions
+            .Include(s => s.Rounds)
+            .FirstOrDefaultAsync(s => s.Id == sessionId);
+
+        if (session == null || session.Status == GameStatus.Completed) return;
+
+        var winnerId = session.Player1Id == playerId ? session.Player2Id : session.Player1Id;
+
+        session.Status = GameStatus.Completed;
+        session.WinnerId = winnerId;
+        session.CompletedAt = DateTime.UtcNow;
+
+        var currentRound = session.Rounds.FirstOrDefault(r => r.Result == RoundResult.InProgress);
+        if (currentRound != null)
+        {
+            currentRound.Result = winnerId == session.Player1Id ? RoundResult.Player1Won : RoundResult.Player2Won;
+            currentRound.RoundWinnerId = winnerId;
+            currentRound.EndedAt = DateTime.UtcNow;
+        }
+
+        var winner = await _context.Users.FindAsync(winnerId);
+        var loser = await _context.Users.FindAsync(playerId);
+
+        if (winner != null) winner.TotalWins++;
+        if (loser != null) loser.TotalLosses++;
+
+        await _economyManager.AddMatchWinRewardAsync(winnerId);
+        
+        var category = session.Rounds.FirstOrDefault()?.Question?.Category ?? "";
+        int scoreDiff = Math.Abs(session.Player1RoundWins - session.Player2RoundWins);
+        
+        await _questManager.TrackEventAsync(winnerId, QuestEventType.MatchCompleted, new MatchEndData(true, scoreDiff, category, false));
+        await _questManager.TrackEventAsync(playerId, QuestEventType.MatchCompleted, new MatchEndData(false, scoreDiff, category, false));
+
+        await _context.SaveChangesAsync();
+    }
+
+    public async Task<(bool Changed, string NewQuestionText)> RequestChangeQuestionAsync(Guid sessionId, Guid roundId, Guid playerId)
+    {
+        var round = await _context.GameRounds
+            .Include(r => r.GameSession)
+            .FirstOrDefaultAsync(r => r.Id == roundId && r.GameSessionId == sessionId);
+
+        if (round == null || round.Result != RoundResult.InProgress) 
+            return (false, null);
+
+        var roundRequests = _changeRequests.GetOrAdd(roundId, _ => new System.Collections.Concurrent.ConcurrentDictionary<Guid, bool>());
+        roundRequests.TryAdd(playerId, true);
+
+        if (roundRequests.Count >= 2)
+        {
+            var usedQuestionIds = await _context.GameRounds
+                .Where(r => r.GameSessionId == sessionId)
+                .Select(r => r.QuestionId)
+                .ToListAsync();
+
+            var newQuestion = await _context.Questions
+                .Where(q => !usedQuestionIds.Contains(q.Id))
+                .OrderBy(_ => Guid.NewGuid())
+                .FirstOrDefaultAsync();
+
+            if (newQuestion == null) return (false, null);
+
+            round.QuestionId = newQuestion.Id;
+            round.FoundAnswers.Clear();
+            round.Player1Score = 0;
+            round.Player2Score = 0;
+            round.ActiveTurnPlayerId = round.GameSession.Player1Id;
+
+            await _context.SaveChangesAsync();
+            
+            _changeRequests.TryRemove(roundId, out _);
+
+            return (true, newQuestion.Text);
+        }
+
+        return (false, null);
     }
 }

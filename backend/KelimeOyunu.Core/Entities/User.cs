@@ -20,4 +20,5 @@ public class User
     public ICollection<Message> SentMessages { get; set; } = new List<Message>();
     public ICollection<Message> ReceivedMessages { get; set; } = new List<Message>();
     public ICollection<Transaction> Transactions { get; set; } = new List<Transaction>();
+    public ICollection<UserDailyQuest> DailyQuests { get; set; } = new List<UserDailyQuest>();
 }

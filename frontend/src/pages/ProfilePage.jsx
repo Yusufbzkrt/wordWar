@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import { useToast } from '../contexts/ToastContext';
 import { api } from '../services/api';
@@ -10,6 +10,40 @@ export default function ProfilePage() {
   const [editing, setEditing] = useState(false);
   const [newName, setNewName] = useState(user?.username || '');
   const [claiming, setClaiming] = useState(false);
+  const [adTimeLeft, setAdTimeLeft] = useState(null);
+
+
+  useEffect(() => {
+    if (!user?.lastAdRewardTime) {
+      setAdTimeLeft(null);
+      return;
+    }
+
+    const calculateTimeLeft = () => {
+      // Backend'den gelen tarih UTC olabilir, new Date(Z'li tarih) doğru parse eder.
+      const lastWatch = new Date(user.lastAdRewardTime);
+      const nextWatch = new Date(lastWatch.getTime() + (GAME.AD_COOLDOWN_HOURS || 2) * 60 * 60 * 1000);
+      const now = new Date();
+      const diff = nextWatch - now;
+
+      if (diff <= 0) {
+        return null;
+      }
+
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / 1000 / 60) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    };
+
+    setAdTimeLeft(calculateTimeLeft());
+    const timer = setInterval(() => {
+      setAdTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [user?.lastAdRewardTime]);
 
   const handleUpdateName = async () => {
     try {
@@ -24,7 +58,11 @@ export default function ProfilePage() {
     setClaiming(true);
     try {
       await api.post('/profile/ad-reward');
-      updateUser({ diamonds: (user?.diamonds || 0) + 3 });
+      // Kullanıcının elmasını artır ve son izleme zamanını şu an olarak güncelle
+      updateUser({ 
+        diamonds: (user?.diamonds || 0) + 3,
+        lastAdRewardTime: new Date().toISOString()
+      });
       addToast('3 Elmas kazandınız! 💎', 'success');
     } catch (err) { addToast(err.message, 'error'); }
     finally { setClaiming(false); }
@@ -85,15 +123,17 @@ export default function ProfilePage() {
       </div>
 
       {/* Reklam Ödülü */}
-      <div className="card" style={{ marginBottom: '16px', background: 'linear-gradient(135deg, rgba(6,182,212,0.1), rgba(139,92,246,0.1))', borderColor: 'rgba(6,182,212,0.2)' }}>
+      <div className="card" style={{ marginBottom: '16px', background: 'linear-gradient(135deg, rgba(6,182,212,0.1), rgba(139,92,246,0.1))', borderColor: 'rgba(6,182,212,0.2)', opacity: adTimeLeft ? 0.8 : 1, transition: 'all 0.3s' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-          <div style={{ fontSize: '2rem' }}>🎬</div>
+          <div style={{ fontSize: '2rem', filter: adTimeLeft ? 'grayscale(1)' : 'none' }}>🎬</div>
           <div style={{ flex: 1 }}>
             <h3 style={{ fontSize: '0.9rem', fontWeight: 700 }}>Video İzle, Elmas Kazan!</h3>
-            <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)' }}>{GAME.AD_COOLDOWN_HOURS} saatte bir 3 Elmas kazanın</p>
+            <p style={{ fontSize: '0.75rem', color: adTimeLeft ? 'var(--accent-pink)' : 'var(--correct)', fontWeight: 700, marginTop: '2px' }}>
+              {adTimeLeft ? `Sıradaki video: ${adTimeLeft}` : 'Hemen izle, 3 elmas kap!'}
+            </p>
           </div>
-          <button className="btn btn-diamond btn-sm" onClick={handleClaimAd} disabled={claiming}>
-            {claiming ? '...' : '💎 +3'}
+          <button className="btn btn-diamond btn-sm" onClick={handleClaimAd} disabled={claiming || adTimeLeft !== null} style={{ opacity: adTimeLeft ? 0.5 : 1 }}>
+            {claiming ? '...' : (adTimeLeft ? '⏳ Bekle' : '▶️ İzle')}
           </button>
         </div>
       </div>

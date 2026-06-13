@@ -296,6 +296,10 @@ body {
   box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.4);
 }
 
+body.in-game .bottom-nav {
+  display: none !important;
+}
+
 .nav-item {
   display: flex;
   flex-direction: column;

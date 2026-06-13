@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import { useToast } from '../contexts/ToastContext';
 import { useGameConnection } from '../hooks/useGameConnection';
+import { api } from '../services/api';
 import GamePage from './GamePage';
 
 const ADJECTIVES = ["Dark", "Shadow", "Pro", "Neon", "Cyber", "Fast", "Crazy", "Epic", "Ghost", "Alpha", "Savage", "Silent", "Iron", "Venom", "Deadly", "Mystic", "Turbo", "Cosmic", "Toxic", "Swift", "Mad", "Ice", "Fire", "Elite", "Prime", "Deli", "Karanlik", "Yenilmez", "Bordo", "Mavi", "Kizil", "Efsane", "Genc", "Kral", "Usta", "Cesur", "Gizli", "Hizli", "Zehir"];
@@ -37,8 +38,58 @@ export default function LobbyPage() {
   const { connection, connected, connect } = useGameConnection();
   const [searching, setSearching] = useState(false);
   const [gameState, setGameState] = useState(null);
+  const [quests, setQuests] = useState([]);
+  const [timeLeft, setTimeLeft] = useState('');
+
+  useEffect(() => {
+    const calculateTimeLeft = () => {
+      const now = new Date();
+      const tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+      const diff = tomorrow - now;
+      
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / 1000 / 60) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+      
+      return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    };
+
+    setTimeLeft(calculateTimeLeft());
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
 
   useEffect(() => { connect(); }, [connect]);
+
+  const fetchQuests = useCallback(async () => {
+    try {
+      const response = await api.get('/quests');
+      setQuests(response || []);
+    } catch (err) {
+      console.error('Görevler yüklenirken hata oluştu:', err);
+      setQuests([]);
+    }
+  }, []);
+
+  useEffect(() => {
+    fetchQuests();
+  }, [fetchQuests]);
+
+  const handleClaimReward = async (questId) => {
+    try {
+      const res = await api.post(`/quests/${questId}/claim`);
+      addToast('Ödül başarıyla alındı! 🎉', 'success');
+      setQuests(prev => prev.map(q => q.id === questId ? { ...q, isClaimed: true } : q));
+      // AuthContext içindeki updateUser çağrılarak altın güncellenebilir 
+      // User update is available via window refresh or explicit call if updateUser supports it
+      setTimeout(() => window.location.reload(), 1000); // En garanti yol
+    } catch (err) {
+      addToast(err.response?.data || 'Ödül alınamadı', 'error');
+    }
+  };
 
   useEffect(() => {
     if (!connection) return;
@@ -53,12 +104,17 @@ export default function LobbyPage() {
     connection.on('SearchCancelled', () => {
       setSearching(false);
     });
+    connection.on('QuestCompleted', (questTitle) => {
+      addToast(`🎉 GÖREV TAMAMLANDI: ${questTitle}! Lobiye dönerek ödülünü alabilirsin.`, 'success');
+      fetchQuests(); // Update quests list behind the scenes
+    });
     return () => {
       connection.off('MatchFound');
       connection.off('SearchingMatch');
       connection.off('SearchCancelled');
+      connection.off('QuestCompleted');
     };
-  }, [connection, addToast]);
+  }, [connection, addToast, fetchQuests]);
 
   const handleSearch = useCallback(async () => {
     if (!connection || !connected) {
@@ -169,32 +225,82 @@ export default function LobbyPage() {
         </div>
       </div>
 
-      {/* Hızlı Kurallar Modülü */}
+      {/* Günlük Görevler Modülü */}
+      <div className="glass" style={{ padding: '24px', borderRadius: 'var(--radius-lg)', marginBottom: '24px', border: '1px solid rgba(139,92,246,0.3)' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
+          <h3 style={{ fontSize: '1.1rem', fontWeight: 800, display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <span style={{ filter: 'drop-shadow(0 0 8px var(--gold))' }}>🎯</span> Günlük Görevler
+          </h3>
+          <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--accent-cyan)', background: 'rgba(6,182,212,0.1)', padding: '4px 8px', borderRadius: '4px' }}>YENİLENİYOR: {timeLeft}</span>
+        </div>
+        
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+          {(quests || []).slice(0, 5).map(quest => {
+            const percent = Math.min(100, Math.round((quest.currentProgress / quest.targetProgress) * 100));
+            let color = 'var(--correct)'; // easy
+            if (quest.difficulty === 1) color = 'var(--accent-cyan)'; // medium
+            if (quest.difficulty === 2) color = 'var(--accent-pink)'; // hard
+            if (quest.isClaimed) color = 'var(--text-muted)';
+            
+            return (
+              <div key={quest.id} style={{ background: 'rgba(0,0,0,0.3)', borderRadius: '12px', padding: '16px', borderLeft: `4px solid ${color}`, opacity: quest.isClaimed ? 0.6 : 1, transition: 'all 0.3s' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '8px' }}>
+                  <div style={{ flex: 1, paddingRight: '8px' }}>
+                    <div style={{ fontWeight: 700, fontSize: '0.95rem', textDecoration: quest.isClaimed ? 'line-through' : 'none' }}>{quest.title}</div>
+                    <div style={{ color: 'var(--text-secondary)', fontSize: '0.8rem' }}>{quest.description}</div>
+                  </div>
+                  {quest.rewardDiamonds > 0 ? (
+                      <div className="badge badge-diamond" style={{ fontSize: '0.75rem', padding: '4px 8px', flexShrink: 0 }}>💎 +{quest.rewardDiamonds}</div>
+                  ) : (
+                      <div className="badge badge-gold" style={{ fontSize: '0.75rem', padding: '4px 8px', flexShrink: 0 }}>🪙 +{quest.rewardGold}</div>
+                  )}
+                </div>
+                
+                {quest.isCompleted && !quest.isClaimed ? (
+                  <button onClick={() => handleClaimReward(quest.id)} className="btn btn-sm btn-full" style={{ background: 'linear-gradient(135deg, var(--correct), #10b981)', color: 'white', border: 'none', padding: '10px', fontSize: '0.9rem', fontWeight: 800, boxShadow: '0 4px 15px rgba(34,197,94,0.4)' }}>
+                    Ödülü Al
+                  </button>
+                ) : (
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                    <div style={{ flex: 1, height: '6px', background: 'var(--bg-hover)', borderRadius: '10px', overflow: 'hidden' }}>
+                      <div style={{ width: `${percent}%`, height: '100%', background: color, borderRadius: '10px' }}></div>
+                    </div>
+                    <span style={{ fontSize: '0.8rem', fontWeight: 800, color: quest.isCompleted ? 'var(--correct)' : 'var(--text-muted)' }}>
+                      {quest.isCompleted ? 'TAMAMLANDI' : `${quest.currentProgress} / ${quest.targetProgress}`}
+                    </span>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+          {(quests || []).length === 0 && <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', textAlign: 'center' }}>Görevler yükleniyor...</p>}
+        </div>
+      </div>
+
+      {/* Mini Liderlik Panosu */}
       <div className="glass" style={{ padding: '24px', borderRadius: 'var(--radius-lg)' }}>
-        <h3 style={{ fontSize: '1rem', fontWeight: 800, marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <span>📖</span> Nasıl Oynanır?
-        </h3>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-          <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-            <div style={{ background: 'var(--bg-hover)', padding: '8px', borderRadius: '10px', fontSize: '1.2rem' }}>⏱</div>
-            <div>
-              <div style={{ fontWeight: 700, fontSize: '0.9rem' }}>30 Saniye</div>
-              <div style={{ color: 'var(--text-secondary)', fontSize: '0.8rem' }}>Sorulan soruya uygun kelimeleri süre bitmeden gönder.</div>
-            </div>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
+          <h3 style={{ fontSize: '1.1rem', fontWeight: 800, display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <span style={{ filter: 'drop-shadow(0 0 8px var(--accent))' }}>👑</span> Haftanın En İyileri
+          </h3>
+          <span style={{ fontSize: '0.8rem', color: 'var(--accent-cyan)', fontWeight: 700, cursor: 'pointer' }}>Tümünü Gör →</span>
+        </div>
+
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', padding: '12px', background: 'linear-gradient(90deg, rgba(234,179,8,0.15) 0%, transparent 100%)', borderRadius: '8px', borderLeft: '2px solid var(--gold)' }}>
+            <div style={{ width: '24px', fontWeight: 900, color: 'var(--gold)', fontSize: '1.1rem' }}>#1</div>
+            <div style={{ flex: 1, fontWeight: 700, marginLeft: '8px' }}>Pro_Slayer99</div>
+            <div style={{ fontWeight: 800, color: 'var(--text-muted)' }}>142 Maç</div>
           </div>
-          <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-            <div style={{ background: 'var(--bg-hover)', padding: '8px', borderRadius: '10px', fontSize: '1.2rem' }}>🏆</div>
-            <div>
-              <div style={{ fontWeight: 700, fontSize: '0.9rem' }}>Best of 3</div>
-              <div style={{ color: 'var(--text-secondary)', fontSize: '0.8rem' }}>En çok doğru cevabı veren turu kazanır. 2 turu alan maçı kazanır.</div>
-            </div>
+          <div style={{ display: 'flex', alignItems: 'center', padding: '12px', background: 'linear-gradient(90deg, rgba(148,163,184,0.1) 0%, transparent 100%)', borderRadius: '8px', borderLeft: '2px solid #94a3b8' }}>
+            <div style={{ width: '24px', fontWeight: 900, color: '#94a3b8', fontSize: '1.1rem' }}>#2</div>
+            <div style={{ flex: 1, fontWeight: 700, marginLeft: '8px' }}>Cyber_Queen</div>
+            <div style={{ fontWeight: 800, color: 'var(--text-muted)' }}>115 Maç</div>
           </div>
-          <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-            <div style={{ background: 'var(--bg-hover)', padding: '8px', borderRadius: '10px', fontSize: '1.2rem' }}>🪙</div>
-            <div>
-              <div style={{ fontWeight: 700, fontSize: '0.9rem' }}>Bonuslar</div>
-              <div style={{ color: 'var(--text-secondary)', fontSize: '0.8rem' }}>Popüler kelimeleri bularak +10 Altın bonus kazanabilirsin.</div>
-            </div>
+          <div style={{ display: 'flex', alignItems: 'center', padding: '12px', background: 'linear-gradient(90deg, rgba(180,83,9,0.1) 0%, transparent 100%)', borderRadius: '8px', borderLeft: '2px solid #b45309' }}>
+            <div style={{ width: '24px', fontWeight: 900, color: '#b45309', fontSize: '1.1rem' }}>#3</div>
+            <div style={{ flex: 1, fontWeight: 700, marginLeft: '8px' }}>{user?.username}</div>
+            <div style={{ fontWeight: 800, color: 'var(--correct)', fontSize: '0.8rem' }}>🔥 Yükselişte!</div>
           </div>
         </div>
       </div>

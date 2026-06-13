@@ -13,6 +13,7 @@ public class BotManager : IBotManager
     private readonly IServiceScopeFactory _scopeFactory;
     private static Guid? _botId;
     private readonly Random _random = new Random();
+    private static readonly System.Collections.Concurrent.ConcurrentDictionary<Guid, System.Collections.Concurrent.ConcurrentQueue<string>> _pendingMessages = new();
 
     // Sahte/Yanlış cevaplar havuzu
     private readonly List<string> _fakeAnswers = new List<string>
@@ -22,9 +23,47 @@ public class BotManager : IBotManager
         "deniz", "güneş", "ay", "yıldız", "bulut", "ağaç", "çiçek", "kuş"
     };
 
+    private readonly List<string> _botNames = new List<string>
+    {
+        // 150 Kız İsmi
+        "Ayşe", "Fatma", "Zeynep", "Elif", "Merve", "Büşra", "Kübra", "Aslı", "Eda", "Gizem", 
+        "Esra", "Selin", "Pelin", "İrem", "Ceren", "Tuğçe", "Burcu", "Ece", "Özge", "Cansu", 
+        "Şeyma", "Melis", "Aleyna", "Ebru", "Beyza", "İlayda", "Buse", "Sena", "Deniz", "Derya", 
+        "Ceyda", "Sinem", "Pınar", "Gamze", "Yasemin", "Damla", "Özlem", "Ceylan", "Şevval", "Berrin", 
+        "Nisa", "Sude", "Yağmur", "Zehra", "Sümeyye", "Sibel", "Aylin", "Nur", "Başak", "Tuğba", 
+        "Dilan", "Gözde", "Rabia", "Hande", "Handan", "Asuman", "Ayten", "Aysel", "Zeliha", "Ayşegül", 
+        "Nermin", "Nevin", "Nilgün", "Serpil", "Seda", "Sevgi", "Seval", "Sevil", "Sevda", "Songül", 
+        "Şengül", "Hülya", "Hatice", "Halime", "Emine", "Havva", "Melek", "Meryem", "Cemile", "Huriye", 
+        "Saliha", "Gülsüm", "Ayfer", "Aynur", "İlknur", "Öznur", "Güllü", "Leyla", "Hayriye", "Kadriye", 
+        "Leman", "Lütfiye", "Şükran", "Necla", "Nesrin", "Gülay", "Tülay", "Nilay", "Türkan", "Şermin", 
+        "Zuhal", "Zerrin", "Yeşim", "Yonca", "Yıldız", "Ülkü", "Seçil", "Nazlı", "Nalan", "Müge", 
+        "Mine", "Meltem", "Lale", "İpek", "İncilay", "Işıl", "Işık", "Güzin", "Gülçin", "Gülcan", 
+        "Füsun", "Funda", "Filiz", "Feride", "Esin", "Esen", "Ender", "Emel", "Duygu", "Dilek", 
+        "Didem", "Demet", "Defne", "Çiğdem", "Buket", "Bilge", "Binnur", "Birsen", "Bedia", "Bahar", 
+        "Ayşenur", "Aycan", "Arzu", "Aysun", "Ayla", "Belgin", "Banu", "Berna", "Canan", "Şule", 
+        // 50 Erkek İsmi
+        "Ahmet", "Mehmet", "Ali", "Mustafa", "Can", "Cem", "Burak", "Kaan", "Emre", "Enes", 
+        "Yasin", "Yusuf", "Furkan", "Onur", "Umut", "Uğur", "Hakan", "Serkan", "Gökhan", "Volkan", 
+        "Murat", "Fatih", "Osman", "Ömer", "Bekir", "Hasan", "Hüseyin", "Efe", "Ege", "Arda", 
+        "Mert", "Cenk", "Berk", "Barış", "Savaş", "Ufuk", "Şafak", "Aydın", "Doğan", "Şahin", 
+        "Kartal", "Aslan", "Poyraz", "Rüzgar", "Çınar", "Özgür", "Engin", "Erdem", "Eren", "Batuhan"
+    };
+
     public BotManager(IServiceScopeFactory scopeFactory)
     {
         _scopeFactory = scopeFactory;
+    }
+
+    public string GetRandomBotName()
+    {
+        string name = _botNames[_random.Next(_botNames.Count)];
+        // Rastgele 1 veya 4 uzunluğunda sayı ekleme
+        bool isLengthOne = _random.Next(2) == 0;
+        string numberSuffix = isLengthOne 
+            ? _random.Next(0, 10).ToString() 
+            : _random.Next(1000, 10000).ToString();
+            
+        return name + numberSuffix;
     }
 
     public async Task<Guid> GetOrCreateBotAsync()
@@ -51,6 +90,13 @@ public class BotManager : IBotManager
 
         _botId = bot.Id;
         return _botId.Value;
+    }
+
+    public Task AddPendingMessageAsync(Guid sessionId, string message)
+    {
+        var queue = _pendingMessages.GetOrAdd(sessionId, _ => new System.Collections.Concurrent.ConcurrentQueue<string>());
+        queue.Enqueue(message);
+        return Task.CompletedTask;
     }
 
     public async Task SimulateBotTurnAsync(Guid sessionId, Guid roundId, Guid botId)
@@ -89,7 +135,30 @@ public class BotManager : IBotManager
                     continue;
                 }
 
-                // Sıra botta, düşünme süresi
+                // Easter egg mesajı var mı kontrol et
+                if (_pendingMessages.TryGetValue(sessionId, out var queue) && queue.TryDequeue(out var pendingMsg))
+                {
+                    await Task.Delay(_random.Next(2000, 4000));
+
+                    using var tempScope = _scopeFactory.CreateScope();
+                    var tempGm = tempScope.ServiceProvider.GetRequiredService<IGameManager>();
+                    var tempResult = await tempGm.SubmitAnswerAsync(sessionId, roundId, botId, pendingMsg);
+
+                    var tempOppConn = tempScope.ServiceProvider.GetRequiredService<ISessionManager>().GetConnectionId(session.Player1Id == botId ? session.Player2Id : session.Player1Id);
+                    if (tempOppConn != null)
+                    {
+                        var hubContext = tempScope.ServiceProvider.GetRequiredService<IHubContext<GameHub>>();
+                        await hubContext.Clients.Client(tempOppConn).SendAsync("OpponentAnswer", new { 
+                            answer = pendingMsg, 
+                            isCorrect = false, 
+                            matchedAnswer = (string)null,
+                            isPopular = false
+                        });
+                    }
+                    continue; // Mesajı yolladıktan sonra başa dönüp asıl kelimeyi bulmaya/yanlış yapmaya çalışsın.
+                }
+
+                // Sıra botta, normal düşünme süresi
                 int delayMin = 4000;
                 int delayMax = 8000;
                 await Task.Delay(_random.Next(delayMin, delayMax));

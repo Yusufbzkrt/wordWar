@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using KelimeOyunu.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -12,9 +13,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace KelimeOyunu.Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260613091935_AddDailyQuests")]
+    partial class AddDailyQuests
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -44,7 +47,7 @@ namespace KelimeOyunu.Infrastructure.Migrations
 
                     b.HasIndex("QuestionId");
 
-                    b.ToTable("Answers", (string)null);
+                    b.ToTable("Answers");
 
                     b.HasData(
                         new
@@ -1281,7 +1284,7 @@ namespace KelimeOyunu.Infrastructure.Migrations
                     b.HasIndex("RequesterId", "AddresseeId")
                         .IsUnique();
 
-                    b.ToTable("Friendships", (string)null);
+                    b.ToTable("Friendships");
                 });
 
             modelBuilder.Entity("KelimeOyunu.Core.Entities.GameRound", b =>
@@ -1330,7 +1333,7 @@ namespace KelimeOyunu.Infrastructure.Migrations
 
                     b.HasIndex("QuestionId");
 
-                    b.ToTable("GameRounds", (string)null);
+                    b.ToTable("GameRounds");
                 });
 
             modelBuilder.Entity("KelimeOyunu.Core.Entities.GameSession", b =>
@@ -1371,7 +1374,7 @@ namespace KelimeOyunu.Infrastructure.Migrations
 
                     b.HasIndex("WinnerId");
 
-                    b.ToTable("GameSessions", (string)null);
+                    b.ToTable("GameSessions");
                 });
 
             modelBuilder.Entity("KelimeOyunu.Core.Entities.Message", b =>
@@ -1405,7 +1408,7 @@ namespace KelimeOyunu.Infrastructure.Migrations
 
                     b.HasIndex("SentAt");
 
-                    b.ToTable("Messages", (string)null);
+                    b.ToTable("Messages");
                 });
 
             modelBuilder.Entity("KelimeOyunu.Core.Entities.Question", b =>
@@ -1429,7 +1432,7 @@ namespace KelimeOyunu.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Questions", (string)null);
+                    b.ToTable("Questions");
 
                     b.HasData(
                         new
@@ -1606,7 +1609,7 @@ namespace KelimeOyunu.Infrastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Transactions", (string)null);
+                    b.ToTable("Transactions");
                 });
 
             modelBuilder.Entity("KelimeOyunu.Core.Entities.User", b =>
@@ -1647,7 +1650,7 @@ namespace KelimeOyunu.Infrastructure.Migrations
                     b.HasIndex("Username")
                         .IsUnique();
 
-                    b.ToTable("Users", (string)null);
+                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("KelimeOyunu.Core.Entities.UserDailyQuest", b =>
@@ -1698,7 +1701,7 @@ namespace KelimeOyunu.Infrastructure.Migrations
 
                     b.HasIndex("UserId", "AssignedDate");
 
-                    b.ToTable("DailyQuests", (string)null);
+                    b.ToTable("DailyQuests");
                 });
 
             modelBuilder.Entity("KelimeOyunu.Core.Entities.Answer", b =>

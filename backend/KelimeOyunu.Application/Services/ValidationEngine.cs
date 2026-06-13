@@ -9,16 +9,22 @@ namespace KelimeOyunu.Application.Services;
 /// </summary>
 public class ValidationEngine : IValidationEngine
 {
-    // Kabul edilebilir maksimum Levenshtein mesafesi
     private const int MaxAllowedDistance = 2;
+    private readonly IAIService _aiService;
 
-    public (bool IsMatch, string? MatchedAnswer, bool IsPopular) ValidateAnswer(
+    public ValidationEngine(IAIService aiService)
+    {
+        _aiService = aiService;
+    }
+
+    public async Task<(bool IsMatch, string? MatchedAnswer, bool IsPopular, bool IsAIValidated)> ValidateAnswerAsync(
+        string questionText,
         string userInput,
         IEnumerable<(string Text, bool IsPopular)> validAnswers,
         ISet<string> alreadyFoundAnswers)
     {
         if (string.IsNullOrWhiteSpace(userInput))
-            return (false, null, false);
+            return (false, null, false, false);
 
         string normalizedInput = NormalizeText(userInput);
 
@@ -32,7 +38,7 @@ public class ValidationEngine : IValidationEngine
                 continue;
 
             if (normalizedInput == normalizedAnswer)
-                return (true, answer.Text, answer.IsPopular);
+                return (true, answer.Text, answer.IsPopular, false);
         }
 
         // Fuzzy matching — Levenshtein Distance ile
@@ -61,9 +67,20 @@ public class ValidationEngine : IValidationEngine
         }
 
         if (bestMatch != null)
-            return (true, bestMatch, bestIsPopular);
+            return (true, bestMatch, bestIsPopular, false);
 
-        return (false, null, false);
+        // --- AI Validation ---
+        // Sadece tek kelimelik (boşluk içermeyen) cevaplar AI'a gönderilir.
+        if (!userInput.Trim().Contains(' '))
+        {
+            bool isValidatedByAI = await _aiService.ValidateAnswerWithAIAsync(questionText, userInput);
+            if (isValidatedByAI)
+            {
+                return (true, userInput.Trim().ToLowerInvariant(), false, true);
+            }
+        }
+
+        return (false, null, false, false);
     }
 
     private static string NormalizeText(string text)

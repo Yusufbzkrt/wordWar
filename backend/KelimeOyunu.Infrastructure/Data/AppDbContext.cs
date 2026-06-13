@@ -15,6 +15,7 @@ public class AppDbContext : DbContext
     public DbSet<Friendship> Friendships => Set<Friendship>();
     public DbSet<Message> Messages => Set<Message>();
     public DbSet<Transaction> Transactions => Set<Transaction>();
+    public DbSet<UserDailyQuest> DailyQuests => Set<UserDailyQuest>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -122,6 +123,17 @@ public class AppDbContext : DbContext
                   .HasForeignKey(e => e.UserId)
                   .OnDelete(DeleteBehavior.Cascade);
             entity.HasIndex(e => e.CreatedAt);
+        });
+
+        // DailyQuest Configuration
+        modelBuilder.Entity<UserDailyQuest>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+            entity.HasOne(e => e.User)
+                  .WithMany(u => u.DailyQuests)
+                  .HasForeignKey(e => e.UserId)
+                  .OnDelete(DeleteBehavior.Cascade);
+            entity.HasIndex(e => new { e.UserId, e.AssignedDate });
         });
 
         // Seed Data
