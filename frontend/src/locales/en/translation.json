@@ -1,0 +1,62 @@
+{
+  "app": {
+    "nav_game": "Game",
+    "nav_leaderboard": "Rankings",
+    "nav_store": "Store",
+    "nav_friends": "Friends",
+    "nav_profile": "Profile",
+    "loading": "Loading..."
+  },
+  "profile": {
+    "title": "Warrior Profile",
+    "edit": "Edit",
+    "gold": "Gold",
+    "diamonds": "Diamonds",
+    "battle_records": "Battle Records",
+    "matches_played": "Matches Played",
+    "win_rate": "Win Rate",
+    "wins": "Total Wins",
+    "ad_title": "Sponsor Reward",
+    "ad_wait": "Next reward in: {{time}}",
+    "ad_ready": "Watch now, earn 3 diamonds!",
+    "btn_watch": "WATCH",
+    "btn_wait": "WAIT",
+    "btn_logout": "LOG OUT",
+    "ad_reward_success": "Ad completed, you earned 3 Diamonds! 💎",
+    "ad_reward_web": "(Web Sim) You earned 3 Diamonds! 💎",
+    "ad_failed": "Ad failed to load, please try again later.",
+    "rank_newbie": "NEWBIE",
+    "rank_rookie": "ROOKIE",
+    "rank_developing": "DEVELOPING WARRIOR",
+    "rank_experienced": "EXPERIENCED",
+    "rank_elite": "ELITE PLAYER",
+    "rank_legendary": "LEGENDARY"
+  },
+  "settings": {
+    "title": "Settings",
+    "sound_notif": "Sound & Notifications",
+    "sound_effects": "Sound Effects",
+    "bg_music": "Background Music",
+    "notifications": "Notifications",
+    "app_settings": "Application",
+    "language": "Language",
+    "about": "About",
+    "privacy_policy": "Privacy Policy",
+    "terms_of_use": "Terms of Use",
+    "version": "Version",
+    "account_mgmt": "Account Management",
+    "delete_account": "DELETE ACCOUNT PERMANENTLY",
+    "delete_confirm": "Are you sure you want to permanently delete your account? This action cannot be undone!",
+    "not_implemented": "This feature is currently in testing."
+  },
+  "lobby": {
+    "play_now": "Quick Play",
+    "find_opponent": "Find Opponent Now",
+    "waiting": "Searching for Opponent",
+    "cancel": "Cancel",
+    "play_friend": "Play with Friend",
+    "invite_friend": "Create Private Room",
+    "create_room": "Create Room",
+    "join_room": "Join Room"
+  }
+}

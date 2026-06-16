@@ -4,6 +4,10 @@ using KelimeOyunu.Core.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
+using Microsoft.AspNetCore.SignalR;
+using KelimeOyunu.API.Hubs;
+using KelimeOyunu.Infrastructure.Data;
+
 namespace KelimeOyunu.API.Controllers;
 
 [ApiController]
@@ -12,7 +16,22 @@ namespace KelimeOyunu.API.Controllers;
 public class FriendController : ControllerBase
 {
     private readonly ISocialManager _socialManager;
-    public FriendController(ISocialManager socialManager) => _socialManager = socialManager;
+    private readonly IHubContext<GameHub> _hubContext;
+    private readonly ISessionManager _sessionManager;
+    private readonly AppDbContext _dbContext;
+
+    public FriendController(
+        ISocialManager socialManager, 
+        IHubContext<GameHub> hubContext,
+        ISessionManager sessionManager,
+        AppDbContext dbContext)
+    {
+        _socialManager = socialManager;
+        _hubContext = hubContext;
+        _sessionManager = sessionManager;
+        _dbContext = dbContext;
+    }
+    
     private Guid GetUserId() => Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
 
     [HttpGet]
@@ -26,7 +45,24 @@ public class FriendController : ControllerBase
     [HttpPost("request/{addresseeId}")]
     public async Task<IActionResult> SendRequest(Guid addresseeId)
     {
-        try { await _socialManager.SendFriendRequestAsync(GetUserId(), addresseeId); return Ok(); }
+        try 
+        { 
+            var userId = GetUserId();
+            await _socialManager.SendFriendRequestAsync(userId, addresseeId); 
+            
+            // Send real-time notification
+            var connId = _sessionManager.GetConnectionId(addresseeId);
+            if (connId != null)
+            {
+                var requester = await _dbContext.Users.FindAsync(userId);
+                if (requester != null)
+                {
+                    await _hubContext.Clients.Client(connId).SendAsync("FriendRequestReceived", requester.Username);
+                }
+            }
+            
+            return Ok(); 
+        }
         catch (InvalidOperationException ex) { return BadRequest(new { message = ex.Message }); }
     }
 

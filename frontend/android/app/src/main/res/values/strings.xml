@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">KelimeOyunu</string>
+    <string name="title_activity_main">KelimeOyunu</string>
+    <string name="package_name">com.yusuf.kelimeoyunu</string>
+    <string name="custom_url_scheme">com.yusuf.kelimeoyunu</string>
+</resources>

@@ -4,12 +4,16 @@ import './index.css';
 import App from './App';
 import { AuthProvider } from './contexts/AuthContext';
 import { ToastProvider } from './contexts/ToastContext';
+import { AudioProvider } from './contexts/AudioContext';
+import './i18n';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <AuthProvider>
       <ToastProvider>
-        <App />
+        <AudioProvider>
+          <App />
+        </AudioProvider>
       </ToastProvider>
     </AuthProvider>
   </StrictMode>

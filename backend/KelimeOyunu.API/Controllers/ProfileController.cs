@@ -59,4 +59,21 @@ public class ProfileController : ControllerBase
         var canClaim = await _economyManager.CanClaimAdRewardAsync(GetUserId());
         return Ok(new { canClaim });
     }
+
+    [HttpDelete]
+    public async Task<IActionResult> DeleteProfile()
+    {
+        var user = await _context.Users.FindAsync(GetUserId());
+        if (user == null) return NotFound();
+
+        // Anonymize user to preserve referential integrity (match history for other players)
+        user.Username = "Deleted_" + Guid.NewGuid().ToString("N").Substring(0, 8);
+        user.PasswordHash = Guid.NewGuid().ToString(); // Make it impossible to login
+        user.Tokens = 0;
+        user.Gold = 0;
+        user.Diamonds = 0;
+        
+        await _context.SaveChangesAsync();
+        return Ok(new { message = "Hesabınız başarıyla silindi." });
+    }
 }

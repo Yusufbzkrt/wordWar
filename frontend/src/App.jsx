@@ -6,16 +6,18 @@ import ProfilePage from './pages/ProfilePage';
 import StorePage from './pages/StorePage';
 import FriendsPage from './pages/FriendsPage';
 import LeaderboardPage from './pages/LeaderboardPage';
+import { useTranslation } from 'react-i18next';
 
 function App() {
   const { user, loading } = useAuth();
   const [activePage, setActivePage] = useState('lobby');
+  const { t } = useTranslation();
 
   if (loading) {
     return (
       <div className="loading-screen">
         <div className="spinner" style={{ width: 48, height: 48, borderWidth: 4 }} />
-        <p style={{ color: 'var(--text-secondary)', fontWeight: 600 }}>Yükleniyor...</p>
+        <p style={{ color: 'var(--text-secondary)', fontWeight: 600 }}>{t('app.loading')}</p>
       </div>
     );
   }
@@ -41,23 +43,23 @@ function App() {
       <nav className="bottom-nav">
         <button className={`nav-item ${activePage === 'lobby' ? 'active' : ''}`} onClick={() => setActivePage('lobby')}>
           <span className="nav-icon">🎮</span>
-          <span>Oyun</span>
+          <span>{t('app.nav_game')}</span>
         </button>
         <button className={`nav-item ${activePage === 'leaderboard' ? 'active' : ''}`} onClick={() => setActivePage('leaderboard')}>
           <span className="nav-icon">🏆</span>
-          <span>Sıralama</span>
+          <span>{t('app.nav_leaderboard')}</span>
         </button>
         <button className={`nav-item ${activePage === 'store' ? 'active' : ''}`} onClick={() => setActivePage('store')}>
           <span className="nav-icon">🛒</span>
-          <span>Market</span>
+          <span>{t('app.nav_store')}</span>
         </button>
         <button className={`nav-item ${activePage === 'friends' ? 'active' : ''}`} onClick={() => setActivePage('friends')}>
           <span className="nav-icon">👥</span>
-          <span>Arkadaşlar</span>
+          <span>{t('app.nav_friends')}</span>
         </button>
         <button className={`nav-item ${activePage === 'profile' ? 'active' : ''}`} onClick={() => setActivePage('profile')}>
           <span className="nav-icon">👤</span>
-          <span>Profil</span>
+          <span>{t('app.nav_profile')}</span>
         </button>
       </nav>
     </>

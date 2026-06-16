@@ -4,6 +4,8 @@ import { useToast } from '../contexts/ToastContext';
 import { useGameConnection } from '../hooks/useGameConnection';
 import { api } from '../services/api';
 import GamePage from './GamePage';
+import { useTranslation } from 'react-i18next';
+import { useAudio } from '../contexts/AudioContext';
 
 const ADJECTIVES = ["Dark", "Shadow", "Pro", "Neon", "Cyber", "Fast", "Crazy", "Epic", "Ghost", "Alpha", "Savage", "Silent", "Iron", "Venom", "Deadly", "Mystic", "Turbo", "Cosmic", "Toxic", "Swift", "Mad", "Ice", "Fire", "Elite", "Prime", "Deli", "Karanlik", "Yenilmez", "Bordo", "Mavi", "Kizil", "Efsane", "Genc", "Kral", "Usta", "Cesur", "Gizli", "Hizli", "Zehir"];
 const NOUNS = ["Hunter", "Gamer", "Slayer", "Wolf", "Ninja", "Blade", "King", "Queen", "Knight", "Master", "Sniper", "Dragon", "Wizard", "Rogue", "Walker", "Striker", "Phantom", "Beast", "Fox", "Viper", "Hawk", "Eagle", "Storm", "Thunder", "Coder", "Ahmet", "Mehmet", "Zeynep", "Elif", "Bora", "Kaan", "Can", "Kerem", "Yusuf", "Ayse", "Fatma", "Efe", "Canavar", "Avci", "Kartal", "Kurt"];
@@ -40,6 +42,9 @@ export default function LobbyPage() {
   const [gameState, setGameState] = useState(null);
   const [quests, setQuests] = useState([]);
   const [timeLeft, setTimeLeft] = useState('');
+  const [showLeaderboard, setShowLeaderboard] = useState(false);
+  const { t } = useTranslation();
+  const { playClick } = useAudio();
 
   useEffect(() => {
     const calculateTimeLeft = () => {
@@ -108,15 +113,22 @@ export default function LobbyPage() {
       addToast(`🎉 GÖREV TAMAMLANDI: ${questTitle}! Lobiye dönerek ödülünü alabilirsin.`, 'success');
       fetchQuests(); // Update quests list behind the scenes
     });
+
+    connection.on('FriendRequestReceived', (requesterName) => {
+      addToast(`🔔 ${requesterName} sana arkadaşlık isteği gönderdi!`, 'info');
+    });
+
     return () => {
       connection.off('MatchFound');
       connection.off('SearchingMatch');
       connection.off('SearchCancelled');
       connection.off('QuestCompleted');
+      connection.off('FriendRequestReceived');
     };
   }, [connection, addToast, fetchQuests]);
 
   const handleSearch = useCallback(async () => {
+    playClick();
     if (!connection || !connected) {
       addToast('Bağlantı kurulamadı', 'error');
       return;
@@ -131,11 +143,12 @@ export default function LobbyPage() {
   }, [connection, connected, addToast]);
 
   const handleCancel = useCallback(async () => {
+    playClick();
     if (connection) {
       await connection.invoke('CancelSearch');
       setSearching(false);
     }
-  }, [connection]);
+  }, [connection, playClick]);
 
   // Oyun başladıysa GamePage'e geç
   if (gameState) {
@@ -188,37 +201,49 @@ export default function LobbyPage() {
   return (
     <div className="page" style={{ paddingBottom: '100px' }}>
       {/* Üst Header Alanı */}
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '32px', paddingTop: '10px' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '24px', paddingTop: '10px' }}>
+        
+        {/* Oklar (Can) */}
         <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
-          <div className="glass" style={{ padding: '8px 16px', borderRadius: 'var(--radius-full)', display: 'flex', alignItems: 'center', gap: '16px', border: '1px solid rgba(251, 191, 36, 0.4)', background: 'rgba(251, 191, 36, 0.1)' }}>
-            <div style={{ display: 'flex', marginLeft: '6px' }}>
-              {[...Array(10)].map((_, i) => (
-                <div key={i} style={{
-                  width: '8px',
-                  height: '24px',
-                  borderRadius: '3px',
-                  marginLeft: '-4px', // Tırtıklı dizilim (overlap)
-                  background: i < localTokens ? 'linear-gradient(to right, #f59e0b, #fcd34d 50%, #d97706)' : 'rgba(0,0,0,0.6)',
-                  backgroundImage: i < localTokens ? 'repeating-linear-gradient(to bottom, transparent, transparent 2px, rgba(0,0,0,0.2) 2px, rgba(0,0,0,0.2) 4px)' : 'none',
-                  border: i < localTokens ? '1px solid #d97706' : '1px solid rgba(255,255,255,0.1)',
-                  boxShadow: i < localTokens ? '2px 0 4px rgba(0,0,0,0.3)' : 'none',
-                  zIndex: 10 - i,
-                  transition: 'all 0.3s'
-                }} />
-              ))}
+          <div className="glass" style={{ padding: '6px 10px', borderRadius: 'var(--radius-full)', display: 'flex', alignItems: 'center', gap: '8px', border: '1px solid rgba(251, 191, 36, 0.4)', background: 'rgba(251, 191, 36, 0.1)' }}>
+            <div style={{ display: 'flex', gap: '1px' }}>
+              {[...Array(10)].map((_, i) => {
+                const isActive = i < localTokens;
+                return (
+                  <div key={i} className={isActive ? 'arrow-life' : ''} style={{
+                    width: '12px',
+                    height: '16px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    opacity: isActive ? 0 : 0.4,
+                    animationDelay: isActive ? `${i * 0.08}s` : '0s',
+                    transform: isActive ? 'none' : 'rotate(-45deg)',
+                    filter: isActive ? 'drop-shadow(0 0 2px rgba(6, 182, 212, 0.8))' : 'grayscale(100%)',
+                  }}>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="12" y1="3" x2="12" y2="15" stroke={isActive ? "#06B6D4" : "rgba(255,255,255,0.4)"} strokeWidth="3" strokeLinecap="round"/>
+                      <path d="M12 7L8 4M12 5L8 2M12 7L16 4M12 5L16 2" stroke={isActive ? "#06B6D4" : "rgba(255,255,255,0.4)"} strokeWidth="3" strokeLinecap="round"/>
+                      <path d="M12 23L7 14L12 16L17 14L12 23Z" fill={isActive ? "#06B6D4" : "rgba(255,255,255,0.4)"}/>
+                    </svg>
+                  </div>
+                );
+              })}
             </div>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
-              <span style={{ fontWeight: 900, fontSize: '1rem', lineHeight: 1, color: 'white', textShadow: '0 0 10px rgba(251,191,36,0.5)' }}>{localTokens} / 10</span>
-              {tokenTimer && <span style={{ fontSize: '0.7rem', color: '#fcd34d', fontWeight: 800, marginTop: '2px' }}>{tokenTimer}</span>}
+              <span style={{ fontWeight: 900, fontSize: '0.85rem', lineHeight: 1, color: 'white', textShadow: '0 0 10px rgba(251,191,36,0.5)' }}>{localTokens} / 10</span>
+              {tokenTimer && <span style={{ fontSize: '0.65rem', color: '#fcd34d', fontWeight: 800, marginTop: '2px' }}>{tokenTimer}</span>}
             </div>
           </div>
         </div>
-        <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
-          <div className="glass" style={{ padding: '6px 12px', borderRadius: 'var(--radius-full)', display: 'flex', alignItems: 'center', gap: '6px', fontWeight: 800, fontSize: '0.85rem' }}>
+
+        {/* Altın ve Elmas */}
+        <div style={{ display: 'flex', gap: '6px', alignItems: 'center' }}>
+          <div className="glass" style={{ padding: '6px 10px', borderRadius: 'var(--radius-full)', display: 'flex', alignItems: 'center', gap: '4px', fontWeight: 800, fontSize: '0.8rem', border: '1px solid rgba(251, 191, 36, 0.2)' }}>
             <span style={{ color: 'var(--gold)', textShadow: '0 0 10px var(--gold-glow)' }}>🪙</span> 
             {user?.gold || 0}
           </div>
-          <div className="glass" style={{ padding: '6px 12px', borderRadius: 'var(--radius-full)', display: 'flex', alignItems: 'center', gap: '6px', fontWeight: 800, fontSize: '0.85rem' }}>
+          <div className="glass" style={{ padding: '6px 10px', borderRadius: 'var(--radius-full)', display: 'flex', alignItems: 'center', gap: '4px', fontWeight: 800, fontSize: '0.8rem', border: '1px solid rgba(6, 182, 212, 0.2)' }}>
             <span style={{ color: 'var(--diamond)', textShadow: '0 0 10px var(--diamond-glow)' }}>💎</span> 
             {user?.diamonds || 0}
           </div>
@@ -237,23 +262,23 @@ export default function LobbyPage() {
         
         <div style={{ padding: '40px 24px', textAlign: 'center', position: 'relative', zIndex: 2 }}>
           <div style={{ fontSize: '4.5rem', marginBottom: '16px', filter: 'drop-shadow(0 0 20px var(--accent-glow))' }}>⚔️</div>
-          <h2 className="gradient-text" style={{ fontSize: '1.8rem', fontWeight: 900, marginBottom: '8px', letterSpacing: '1px', textTransform: 'uppercase' }}>Kelime Düellosu</h2>
+          <h2 className="gradient-text" style={{ fontSize: '1.8rem', fontWeight: 900, marginBottom: '8px', letterSpacing: '1px', textTransform: 'uppercase' }}>{t('lobby.play_now')}</h2>
           <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '32px', fontWeight: 500 }}>Gerçek zamanlı, 30 saniyelik arena.</p>
           
           {!searching ? (
             <button className="btn btn-lg btn-full" onClick={handleSearch} disabled={!connected || localTokens < 1} 
               style={{ background: localTokens < 1 ? 'rgba(255,255,255,0.05)' : 'var(--bg-primary)', color: localTokens < 1 ? 'var(--text-muted)' : 'var(--accent-cyan)', fontSize: '1.2rem', padding: '18px', boxShadow: localTokens < 1 ? 'none' : '0 8px 32px rgba(0,0,0,0.5)', borderRadius: 'var(--radius-xl)', border: localTokens < 1 ? '2px solid rgba(255,255,255,0.1)' : '2px solid rgba(6, 182, 212, 0.4)', textTransform: 'uppercase', letterSpacing: '2px', transition: 'all 0.3s' }}>
-              {localTokens < 1 ? 'YETERLİ JETON YOK' : 'Rakip Bul (1 🪙)'}
+              {localTokens < 1 ? 'YETERLİ OK YOK' : `${t('lobby.find_opponent')} (1 🏹)`}
             </button>
           ) : (
             <div style={{ background: 'rgba(11, 15, 25, 0.8)', padding: '24px', borderRadius: 'var(--radius-xl)', backdropFilter: 'blur(20px)', border: '1px solid rgba(6, 182, 212, 0.3)' }}>
-              <p style={{ color: 'var(--accent-cyan)', fontWeight: 800, marginBottom: '16px', letterSpacing: '1px', fontSize: '0.85rem' }}>ARENAYA BAĞLANILIYOR...</p>
+              <p style={{ color: 'var(--accent-cyan)', fontWeight: 800, marginBottom: '16px', letterSpacing: '1px', fontSize: '0.85rem' }}>{t('lobby.waiting').toUpperCase()}...</p>
               
               <div style={{ marginBottom: '24px', display: 'flex', justifyContent: 'center' }}>
                 <AvatarRoulette />
               </div>
 
-              <button className="btn btn-sm btn-ghost" onClick={handleCancel} style={{ color: 'var(--text-muted)' }}>İptal Et</button>
+              <button className="btn btn-sm btn-ghost" onClick={handleCancel} style={{ color: 'var(--text-muted)' }}>{t('lobby.cancel')}</button>
             </div>
           )}
           {!connected && <p style={{ color: 'var(--wrong)', fontSize: '0.8rem', marginTop: '16px', fontWeight: 600 }}>⚠ Sunucuya bağlanılıyor...</p>}
@@ -341,27 +366,80 @@ export default function LobbyPage() {
           <h3 style={{ fontSize: '1.1rem', fontWeight: 800, display: 'flex', alignItems: 'center', gap: '8px' }}>
             <span style={{ filter: 'drop-shadow(0 0 8px var(--accent))' }}>👑</span> Haftanın En İyileri
           </h3>
-          <span style={{ fontSize: '0.8rem', color: 'var(--accent-cyan)', fontWeight: 700, cursor: 'pointer' }}>Tümünü Gör →</span>
+          <span style={{ fontSize: '0.8rem', color: 'var(--accent-cyan)', fontWeight: 700, cursor: 'pointer' }} onClick={() => setShowLeaderboard(true)}>Tümünü Gör →</span>
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
           <div style={{ display: 'flex', alignItems: 'center', padding: '12px', background: 'linear-gradient(90deg, rgba(234,179,8,0.15) 0%, transparent 100%)', borderRadius: '8px', borderLeft: '2px solid var(--gold)' }}>
             <div style={{ width: '24px', fontWeight: 900, color: 'var(--gold)', fontSize: '1.1rem' }}>#1</div>
-            <div style={{ flex: 1, fontWeight: 700, marginLeft: '8px' }}>Pro_Slayer99</div>
-            <div style={{ fontWeight: 800, color: 'var(--text-muted)' }}>142 Maç</div>
+            <div style={{ flex: 1, fontWeight: 700, marginLeft: '8px' }}>Kral54</div>
+            <div style={{ fontWeight: 800, color: 'var(--text-muted)' }}>1245 Maç</div>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', padding: '12px', background: 'linear-gradient(90deg, rgba(148,163,184,0.1) 0%, transparent 100%)', borderRadius: '8px', borderLeft: '2px solid #94a3b8' }}>
             <div style={{ width: '24px', fontWeight: 900, color: '#94a3b8', fontSize: '1.1rem' }}>#2</div>
-            <div style={{ flex: 1, fontWeight: 700, marginLeft: '8px' }}>Cyber_Queen</div>
-            <div style={{ fontWeight: 800, color: 'var(--text-muted)' }}>115 Maç</div>
+            <div style={{ flex: 1, fontWeight: 700, marginLeft: '8px' }}>Zeynep_K</div>
+            <div style={{ fontWeight: 800, color: 'var(--text-muted)' }}>1103 Maç</div>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', padding: '12px', background: 'linear-gradient(90deg, rgba(180,83,9,0.1) 0%, transparent 100%)', borderRadius: '8px', borderLeft: '2px solid #b45309' }}>
             <div style={{ width: '24px', fontWeight: 900, color: '#b45309', fontSize: '1.1rem' }}>#3</div>
-            <div style={{ flex: 1, fontWeight: 700, marginLeft: '8px' }}>{user?.username}</div>
-            <div style={{ fontWeight: 800, color: 'var(--correct)', fontSize: '0.8rem' }}>🔥 Yükselişte!</div>
+            <div style={{ flex: 1, fontWeight: 700, marginLeft: '8px' }}>UstaOyuncu</div>
+            <div style={{ fontWeight: 800, color: 'var(--text-muted)' }}>985 Maç</div>
           </div>
         </div>
       </div>
+
+      {/* Liderlik Tablosu Modal */}
+      {showLeaderboard && (
+        <div className="modal-overlay" onClick={() => setShowLeaderboard(false)}>
+          <div className="modal" onClick={e => e.stopPropagation()} style={{ maxWidth: '450px', maxHeight: '80vh', display: 'flex', flexDirection: 'column' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+              <h2 style={{ fontSize: '1.5rem', fontWeight: 900, color: 'var(--text-primary)' }}>👑 Haftalık Liderlik</h2>
+              <button className="btn btn-ghost" style={{ padding: '8px' }} onClick={() => setShowLeaderboard(false)}>✕</button>
+            </div>
+            
+            <div style={{ overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: '8px', paddingRight: '8px' }}>
+              {[
+                { name: 'Kral54', matches: 1245 },
+                { name: 'Zeynep_K', matches: 1103 },
+                { name: 'UstaOyuncu', matches: 985 },
+                { name: 'EfsaneBey', matches: 874 },
+                { name: 'Yusuf1907', matches: 742 },
+                { name: 'GeceKusu', matches: 651 },
+                { name: 'ElifNur', matches: 520 },
+                { name: 'SiyahInci', matches: 418 },
+                { name: 'CanerBey', matches: 395 },
+                { name: 'Ayse_G', matches: 341 }
+              ].map((p, i) => {
+                let medalColor = 'var(--text-muted)';
+                let bgColor = 'rgba(255,255,255,0.03)';
+                let borderColor = 'transparent';
+                
+                if (i === 0) { medalColor = 'var(--gold)'; bgColor = 'linear-gradient(90deg, rgba(234,179,8,0.15) 0%, transparent 100%)'; borderColor = 'var(--gold)'; }
+                if (i === 1) { medalColor = '#94a3b8'; bgColor = 'linear-gradient(90deg, rgba(148,163,184,0.1) 0%, transparent 100%)'; borderColor = '#94a3b8'; }
+                if (i === 2) { medalColor = '#b45309'; bgColor = 'linear-gradient(90deg, rgba(180,83,9,0.1) 0%, transparent 100%)'; borderColor = '#b45309'; }
+
+                return (
+                  <div key={i} style={{ display: 'flex', alignItems: 'center', padding: '12px', background: bgColor, borderRadius: '8px', borderLeft: `2px solid ${borderColor}` }}>
+                    <div style={{ width: '28px', fontWeight: 900, color: medalColor, fontSize: '1.1rem' }}>#{i + 1}</div>
+                    <div style={{ flex: 1, fontWeight: 700, marginLeft: '8px' }}>{p.name}</div>
+                    <div style={{ fontWeight: 800, color: 'var(--text-muted)' }}>{p.matches} Maç</div>
+                  </div>
+                );
+              })}
+              
+              <div style={{ textAlign: 'center', padding: '8px 0', color: 'var(--text-muted)', fontWeight: 900, letterSpacing: '4px' }}>
+                •••
+              </div>
+              
+              <div style={{ display: 'flex', alignItems: 'center', padding: '12px', background: 'linear-gradient(90deg, rgba(16,185,129,0.15) 0%, transparent 100%)', borderRadius: '8px', borderLeft: '2px solid var(--correct)' }}>
+                <div style={{ width: '28px', fontWeight: 900, color: 'var(--correct)', fontSize: '1.2rem', textAlign: 'center' }}>-</div>
+                <div style={{ flex: 1, fontWeight: 700, marginLeft: '8px', color: 'var(--correct)' }}>{user?.username}</div>
+                <div style={{ fontWeight: 800, color: 'var(--correct)', fontSize: '0.8rem' }}>🔥 Yükselişte!</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

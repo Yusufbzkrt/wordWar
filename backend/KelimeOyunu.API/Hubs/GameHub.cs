@@ -60,7 +60,7 @@ public class GameHub : Hub
         
         if (!await ecoManager.ConsumeMatchTokenAsync(userId))
         {
-            await Clients.Caller.SendAsync("MatchSearchError", "Yeterli Jeton Yok!");
+            await Clients.Caller.SendAsync("MatchSearchError", "Yeterli Ok Yok!");
             return;
         }
 
@@ -334,7 +334,9 @@ public class GameHub : Hub
             Player1Wins = session.Player1RoundWins, 
             Player2Wins = session.Player2RoundWins, 
             Status = session.Status.ToString(), 
-            WinnerId = session.WinnerId 
+            WinnerId = session.WinnerId,
+            Player1Id = session.Player1Id,
+            Player2Id = session.Player2Id
         };
 
         var p1Conn = _sessionManager.GetConnectionId(session.Player1Id);
@@ -378,7 +380,9 @@ public class GameHub : Hub
             Player1Wins = session.Player1RoundWins, 
             Player2Wins = session.Player2RoundWins, 
             Status = session.Status.ToString(), 
-            WinnerId = session.WinnerId 
+            WinnerId = session.WinnerId,
+            Player1Id = session.Player1Id,
+            Player2Id = session.Player2Id
         };
 
         var p1Conn = _sessionManager.GetConnectionId(session.Player1Id);

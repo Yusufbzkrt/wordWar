@@ -299,10 +299,21 @@ export default function GamePage({ gameState: initialState, connection, onGameEn
     const won = matchResult?.winnerId === user?.id;
     const myName = user?.username || 'Sen';
     const opponentName = isPlayer1 ? gameState?.player2Name : gameState?.player1Name;
+    const opponentId = isPlayer1 ? matchResult?.player2Id : matchResult?.player1Id;
     const myWins = isPlayer1 ? matchResult?.player1Wins : matchResult?.player2Wins;
     const opponentWins = !isPlayer1 ? matchResult?.player1Wins : matchResult?.player2Wins;
     const iWon = matchResult?.winnerId === user?.id;
     const opponentWon = matchResult?.winnerId !== user?.id && matchResult?.winnerId != null;
+
+    const handleAddFriend = async () => {
+      if (!opponentId) return;
+      try {
+        await api.post(`/friend/request/${opponentId}`);
+        addToast('Arkadaşlık isteği gönderildi!', 'success');
+      } catch (e) {
+        addToast(e.response?.data?.message || 'İstek gönderilemedi veya zaten istek atıldı.', 'error');
+      }
+    };
 
     return (
       <div className="page" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', paddingBottom: 16 }}>
@@ -374,6 +385,22 @@ export default function GamePage({ gameState: initialState, connection, onGameEn
           )}
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+            <button className="btn btn-lg btn-full" onClick={handleAddFriend} style={{ 
+              background: 'linear-gradient(135deg, rgba(59,130,246,0.2), rgba(37,99,235,0.4))', 
+              color: 'var(--accent-cyan)', border: '1px solid rgba(59,130,246,0.4)', 
+              fontWeight: 800, fontSize: '1.1rem', letterSpacing: '1px', 
+              boxShadow: '0 8px 25px rgba(59,130,246,0.2)',
+              display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px' 
+            }}>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="8.5" cy="7" r="4"></circle>
+                <line x1="20" y1="8" x2="20" y2="14"></line>
+                <line x1="23" y1="11" x2="17" y2="11"></line>
+              </svg>
+              ARKADAŞ EKLE
+            </button>
+
             <button className="btn btn-lg btn-full" onClick={handleRematch} style={{ 
               background: 'linear-gradient(135deg, var(--accent), var(--accent-hover))', 
               color: 'white', border: '1px solid var(--accent-glow)', 

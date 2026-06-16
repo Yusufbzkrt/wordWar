@@ -1,0 +1,62 @@
+{
+  "app": {
+    "nav_game": "Oyun",
+    "nav_leaderboard": "Sıralama",
+    "nav_store": "Market",
+    "nav_friends": "Arkadaşlar",
+    "nav_profile": "Profil",
+    "loading": "Yükleniyor..."
+  },
+  "profile": {
+    "title": "Savaşçı Profili",
+    "edit": "Düzenle",
+    "gold": "Altın",
+    "diamonds": "Elmas",
+    "battle_records": "Savaş Kayıtları",
+    "matches_played": "Oynanan Düello",
+    "win_rate": "Kazanma Oranı",
+    "wins": "Kazanılan",
+    "ad_title": "Sponsor Ganimeti",
+    "ad_wait": "Sıradaki ganimet: {{time}}",
+    "ad_ready": "Hemen izle, 3 elmas kazan!",
+    "btn_watch": "İZLE",
+    "btn_wait": "BEKLE",
+    "btn_logout": "OTURUMU KAPAT",
+    "ad_reward_success": "Reklamı tamamladın, 3 Elmas kazandın! 💎",
+    "ad_reward_web": "(Web Simülasyonu) 3 Elmas kazandınız! 💎",
+    "ad_failed": "Reklam yüklenemedi, lütfen sonra tekrar dene.",
+    "rank_newbie": "YENİ BAŞLAYAN",
+    "rank_rookie": "ACEMİ",
+    "rank_developing": "GELİŞEN SAVAŞÇI",
+    "rank_experienced": "DENEYİMLİ",
+    "rank_elite": "ELİT OYUNCU",
+    "rank_legendary": "EFSANEVİ"
+  },
+  "settings": {
+    "title": "Ayarlar",
+    "sound_notif": "Ses & Bildirim",
+    "sound_effects": "Ses Efektleri",
+    "bg_music": "Arkaplan Müziği",
+    "notifications": "Bildirimler",
+    "app_settings": "Uygulama",
+    "language": "Dil Seçeneği",
+    "about": "Hakkında",
+    "privacy_policy": "Gizlilik Politikası",
+    "terms_of_use": "Kullanım Koşulları",
+    "version": "Sürüm",
+    "account_mgmt": "Hesap Yönetimi",
+    "delete_account": "HESABI KALICI OLARAK SİL",
+    "delete_confirm": "Hesabınızı kalıcı olarak silmek istediğinize emin misiniz? Bu işlem geri alınamaz!",
+    "not_implemented": "Bu özellik test aşamasındadır."
+  },
+  "lobby": {
+    "play_now": "Hızlı Oyna",
+    "find_opponent": "Hemen Rakip Bul",
+    "waiting": "Rakip Aranıyor",
+    "cancel": "İptal Et",
+    "play_friend": "Arkadaşınla Oyna",
+    "invite_friend": "Özel Oda Kur",
+    "create_room": "Oda Kur",
+    "join_room": "Odaya Katıl"
+  }
+}

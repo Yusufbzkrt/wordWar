@@ -423,3 +423,28 @@ body.in-game .bottom-nav {
 
 .flash-dark { animation: flashDark 0.4s ease-out; }
 @keyframes flashDark { 0% { filter: brightness(0.2) contrast(1.2); } 100% { filter: brightness(1) contrast(1); } }
+
+@keyframes arrowStickIn {
+  0% {
+    transform: translateY(-200px) translateX(-100px) rotate(-30deg);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(5px) translateX(5px) rotate(-48deg);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(-2px) translateX(-2px) rotate(-43deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) translateX(0) rotate(-45deg);
+    opacity: 1;
+  }
+}
+
+.arrow-life {
+  animation: arrowStickIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  opacity: 0;
+  transform-origin: bottom center;
+}
